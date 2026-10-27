@@ -61,10 +61,16 @@ a:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
 .qrow button:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
 
 /* contents */
-.toc{border-top:1px solid var(--clay);border-bottom:1px solid var(--clay);margin-top:28px;padding-block:14px}
-.toc .lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--clay);margin-bottom:8px}
-.toc nav{display:flex;flex-wrap:wrap;gap:6px 18px}
-.toc nav a{font-weight:500;font-size:15px;text-decoration:none;border-bottom:1px solid var(--sand);padding-block:4px}
+.toc{margin-top:36px;scroll-margin-top:16px}
+.toc .lbl{font-family:var(--display);font-size:clamp(22px,4vw,28px);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-bottom:6px}
+.toc .hint{font-size:14px;margin:0 0 16px}
+.toc nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:8px}
+@media (max-width:620px){.toc nav a{gap:10px;padding:8px 10px;font-size:14px}.toc nav a i{font-size:19px;min-width:22px}}
+.toc nav a{display:flex;align-items:center;gap:14px;min-height:52px;padding:10px 14px;border:1px solid var(--clay);text-decoration:none;color:var(--clay);font-weight:600;font-size:15px;line-height:1.25;background:transparent;transition:background .15s,color .15s}
+.toc nav a i{font-style:italic;font-family:var(--accent-serif);font-weight:400;font-size:22px;line-height:1;min-width:26px}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--clay);color:var(--linen)}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;background:var(--clay);color:var(--linen);font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(74,40,29,.25)}
+.totop:hover{color:var(--linen);background:var(--walnut)}
 
 /* guide body (shared with the print design) */
 .g{width:auto !important;padding:0 !important;background:transparent !important}
@@ -136,9 +142,10 @@ img{max-width:100%}
     <a href="mailto:habitat@habitatretreats.com?subject=Greece%202027%20question"><b>Questions</b><span>habitat@habitatretreats.com</span></a>
     <a href="Habitat_Greece_2027_Retreat_Guide.pdf" download><b>Download PDF</b><span>Save the guide for travel day and offline</span></a>
   </div>
-  <div class="toc">
-    <div class="lbl">In this guide</div>
-    <nav><a href="#your-retreat-at-a-glance">Your retreat at a glance</a><a href="#housekeeping">Housekeeping</a><a href="#day-by-day-itinerary">Day-by-day itinerary</a><a href="#what-s-included-and-what-isn">What's included (and what isn't)</a><a href="#where-you-ll-stay">Where you'll stay</a><a href="#getting-there-getting-home">Getting there + getting home</a><a href="#payments-cancellations-insur">Payments, cancellations + insurance</a><a href="#passports-health-safety">Passports, health + safety</a><a href="#know-before-you-go-greece">Know before you go: Greece</a><a href="#what-to-expect-on-retreat">What to expect on retreat</a><a href="#packing-list">Packing list</a><a href="#your-timeline-to-do-list">Your timeline + to-do list</a><a href="#faq">FAQ</a><a href="#contacts">Contacts + emergencies</a></nav>
+  <div class="toc" id="contents">
+    <div class="lbl">Jump to a section</div>
+    <p class="hint">Tap any section to go straight there. The Contents button in the corner brings you back here.</p>
+    <nav><a href="#your-retreat-at-a-glance"><i>01</i><span>At a glance</span></a><a href="#housekeeping"><i>02</i><span>Housekeeping</span></a><a href="#day-by-day-itinerary"><i>03</i><span>Itinerary</span></a><a href="#what-s-included-and-what-isn"><i>04</i><span>What's included</span></a><a href="#where-you-ll-stay"><i>05</i><span>Where you'll stay</span></a><a href="#getting-there-getting-home"><i>06</i><span>Flights + ferries</span></a><a href="#payments-cancellations-insur"><i>07</i><span>Payments + cancellations</span></a><a href="#passports-health-safety"><i>08</i><span>Passports + health</span></a><a href="#know-before-you-go-greece"><i>09</i><span>Know before you go</span></a><a href="#what-to-expect-on-retreat"><i>10</i><span>What to expect</span></a><a href="#packing-list"><i>11</i><span>Packing list</span></a><a href="#your-timeline-to-do-list"><i>12</i><span>Timeline + to&#8209;dos</span></a><a href="#faq"><i>13</i><span>FAQ</span></a><a href="#contacts"><i>14</i><span>Contacts + emergencies</span></a></nav>
   </div>
   <div class="g">
 
@@ -864,6 +871,7 @@ img{max-width:100%}
     </div>
   </div>
 </footer>
+<a class="totop" href="#contents">&#8593; Contents</a>
 
 </body>
 </html>
