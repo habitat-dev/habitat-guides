@@ -32,15 +32,17 @@ mark{background:linear-gradient(transparent 58%,var(--chartreuse) 58%);color:inh
 
 /* cover */
 .top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
-.hero{text-align:center;padding-block:72px 64px;border-bottom:1px solid var(--merlot)}
+.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--merlot)}
 .hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
-.hero h1{margin:22px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(46px,8.5vw,82px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
-.hero h1 em{display:block;font-style:italic;font-weight:400}
-.hero .sub{margin:22px auto 0;max-width:30ch;font-size:22px;font-style:italic}
-.diamonds{display:flex;justify-content:center;gap:10px;margin:28px 0 0}
+.hero h1{margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .sub{margin:12px 0 0;font-size:21px;font-style:italic}
+.diamonds{display:none}
 .diamonds i{width:9px;height:9px;transform:rotate(45deg);background:var(--chartreuse);border:1px solid var(--merlot)}
-.hero .when{margin-top:26px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
-.hero .collab{margin-top:18px;font-family:var(--display);font-style:italic;font-size:24px}
+.hero .when{margin-top:16px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
+.hero .collab{margin-top:14px;font-family:var(--display);font-style:italic;font-size:24px}
+.contacts-top{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:18px}
+.contacts-top b{font-weight:600}
 
 /* quick links */
 .quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
@@ -52,8 +54,8 @@ mark{background:linear-gradient(transparent 58%,var(--chartreuse) 58%);color:inh
 .toc{margin-top:40px;scroll-margin-top:16px}
 .toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
 .toc p{margin:4px 0 16px;font-size:17px}
-.toc nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(170px,100%),1fr));gap:8px}
-.toc nav a{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 14px;border:1px solid var(--rule);text-decoration:none;font-family:var(--label);font-weight:500;font-size:14px;line-height:1.25;transition:background .15s,border-color .15s}
+.toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
 .toc nav a i{font-family:var(--display);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
 .toc nav a:hover,.toc nav a:focus-visible{background:var(--chartreuse);border-color:var(--merlot)}
 
@@ -121,12 +123,16 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
 
 @media (max-width:680px){
   body{font-size:18px}
-  .hero{padding-block:48px 44px}
+  .hero{padding-block:28px 24px}
+  .contacts-top{flex-direction:column}
   .day,.tl{grid-template-columns:minmax(0,1fr);gap:8px}
   .hosts,.two,.times{grid-template-columns:minmax(0,1fr)}
   .callout{padding:22px 18px 10px}
-  .toc nav a{font-size:13px;padding:8px 10px;gap:8px}
-  .toc nav a i{font-size:21px;min-width:22px}
+  .toc nav a{font-size:18px;padding:8px 12px;gap:10px}
+}
+@media (max-width:520px){
+  .toc nav{grid-template-columns:minmax(0,1fr)}
+  .toc nav a i{font-size:20px;min-width:22px}
   table.kv td:first-child{width:90px}
 }
 
@@ -137,8 +143,9 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
   .wrap{max-width:none;padding:0}
   .totop{display:none}
   .top{padding-top:0}
-  .hero{min-height:9.1in;display:flex;flex-direction:column;justify-content:center;border-bottom:none}
-  .quick{break-before:page;padding-top:0}
+  .hero{padding-block:8px 18px}
+  .quick{break-before:auto}
+  .quick{padding-top:18px}
   .sec{break-before:page;padding-top:0}
   h2.st,h3,.num{break-after:avoid}
   li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
@@ -160,6 +167,11 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <div class="diamonds" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="when">March 26 to 31, 2027 | Marrakech, Morocco</div>
     <div class="collab">Sarah Lord Photo x Habitat</div>
+    <ul class="contacts-top">
+      <li><b>Sarah Lord</b> | <a href="mailto:hello@sarahlordphoto.com">hello@sarahlordphoto.com</a></li>
+      <li><b>Habitat</b> | <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></li>
+      <li><b>Carrigan (Habitat)</b> | <a href="tel:+19035150061">903-515-0061</a></li>
+    </ul>
   </div>
 </header>
 
@@ -188,16 +200,14 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
       <a href="#packing"><i>11</i><span>Packing list</span></a>
       <a href="#timeline"><i>12</i><span>Timeline + to&#8209;dos</span></a>
       <a href="#faq"><i>13</i><span>FAQ</span></a>
-      <a href="#contacts"><i>14</i><span>Contacts</span></a>
+      <a href="#contacts"><i>14</i><span>Contacts + emergencies</span></a>
     </nav>
   </div>
 
   <!-- 01 -->
   <section class="sec" id="welcome">
     <span class="num">01</span>
-    <h2 class="st">Hey hey,</h2>
-    <p class="lead">You applied, you're in, you booked it. That's the hardest part, and you already did it.</p>
-    <p>You're in for the Morocco Retreat! We can't wait to sip Aperol Spritz at sunset with you.</p>
+    <h2 class="st">You're in for the Morocco Retreat! We can't wait to sip Aperol Spritz at sunset with you.</h2>
     <p>This guide has everything you need for the Morocco Wedding Photographers Retreat, in one place. Inside you'll find:</p>
     <ul class="d">
       <li>Flight info: which airports to fly into, what times work, transfers</li>
@@ -218,7 +228,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
       <tr><td>Dates</td><td>Friday, March 26 to Wednesday, March 31, 2027 (5 nights)</td></tr>
       <tr><td>Where</td><td>Riad BE Marrakech (3 nights) + BE Agafay desert camp (2 nights), Morocco</td></tr>
       <tr><td>Arrive</td><td>Marrakesh Menara Airport (RAK) on Friday, March 26. Land whenever works for you. Our first group get-together is at 5pm</td></tr>
-      <tr><td>Depart</td><td>Check out of camp by 11:30am on Wednesday, March 31. Book the latest flight possible, it's about an hour and a half from the desert to the airport</td></tr>
+      <tr><td>Depart</td><td>Check out of camp by 11:30am on Wednesday, March 31. Book the latest flight possible. It's about 45 minutes from the desert to the airport</td></tr>
       <tr><td>Hosts</td><td>Sarah Lord (Sarah Lord Photo) + Carrigan Whiteley (Habitat)</td></tr>
       <tr><td>The week</td><td>Medina souks, a sunrise hot air balloon, the YSL gardens, quad bikes and pottery in the desert. Everything optional</td></tr>
       <tr><td>Your room</td><td>Shared, see Where You'll Stay</td></tr>
@@ -228,10 +238,9 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
 
   <!-- 02 -->
   <section class="sec" id="housekeeping">
-    <div class="callout">
+    <div>
       <span class="num">02</span>
       <h2 class="st">Housekeeping</h2>
-      <p>Here's the real talk on trip info you need right away. We want you on the right trip and having the best week possible.</p>
       <ul class="d">
         <li><span class="q">This is a retreat, not a workshop.</span> There are no styled shoots, content days, etc. Obviously bring your camera if you want it! But no one is forcing you to if you don't want to. Also, everything is optional. If you would rather skip the Hot Air Balloon ride and spend the afternoon by the pool, go for it!</li>
         <li><span class="q">Leave the drone at home.</span> Drones are banned in Morocco. Customs confiscates them at the airport and you won't get it back. Cameras are completely fine.</li>
@@ -326,7 +335,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
         <ul class="d">
           <li>Breakfast at camp, one last look at the desert</li>
           <li>Check out by 11:30am</li>
-          <li>Your car back to RAK, about an hour and a half</li>
+          <li>Your car back to RAK, about 45 minutes</li>
         </ul>
         <p class="meta"><b>Meals:</b> Breakfast</p>
       </div>
@@ -424,7 +433,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
       <h3 style="margin-top:0">The only two times you need</h3>
       <div class="times">
         <div><b>Arrive</b><p>Land at Marrakesh Menara Airport (RAK) <b>whenever works for you on Friday, March 26</b>. Our first group get-together is at 5pm.</p></div>
-        <div><b>Depart</b><p>Book the <b>latest flight possible on Wednesday, March 31</b>. We have to drive about an hour and a half from the desert to get back to the airport.</p></div>
+        <div><b>Depart</b><p>Book the <b>latest flight possible on Wednesday, March 31</b>. It's about 45 minutes from the desert to the airport.</p></div>
       </div>
     </div>
     <p>How you get there is up to you. Many people add a few days on the front or back end. Want help planning that part? Tell us.</p>
@@ -578,6 +587,8 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     </div>
     <h3>The activities</h3>
     <ul class="d">
+      <li><b>Souk visit:</b> a morning in the souks together on Day 2, then free time to keep shopping. Shoulders and knees covered.</li>
+      <li><b>Jardin Majorelle (YSL gardens):</b> an afternoon visit on Day 3, after the balloon and a quick rest.</li>
       <li><b>Hot air balloon:</b> sunrise flight, pickup before dawn. Flights depend on the weather. If it's grounded, we have a plan B.</li>
       <li><b>Quad bikes:</b> about an hour across the desert. No experience needed. Closed shoes, sunglasses and a scarf for dust.</li>
       <li><b>Pottery:</b> a hands-on workshop at the camp. No experience needed.</li>
@@ -776,7 +787,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <div class="ctw"><table>
       <tr><th>Who</th><th>How to reach</th><th>When</th></tr>
       <tr><td><b>Habitat</b></td><td><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></td><td>All logistics, anytime. The best way to reach us</td></tr>
-      <tr><td><b>Carrigan</b></td><td>+1 903 515 0061 (call, text, WhatsApp)</td><td>Travel day + on the ground</td></tr>
+      <tr><td><b>Carrigan</b></td><td>+1 903 515 0061 (call, text, WhatsApp)</td><td>Anytime before the retreat, travel day + on the ground</td></tr>
       <tr><td><b>Riad BE Marrakech</b></td><td>+212 524 38 45 11<br>beincontact@be-marrakech.com</td><td>If you can't reach us</td></tr>
       <tr><td><b>BE Agafay</b></td><td>+212 6 61 73 06 65<br>beincontact@be-agafay.com</td><td>If you can't reach us</td></tr>
       <tr><td><b>Local emergency</b></td><td>Police 19 (190 from mobile)<br>Ambulance 15 (150 from mobile)</td><td>Police, ambulance, fire</td></tr>
