@@ -12,10 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column on Sarah's warm paper, Moroccan arch-framed photos, sky + chartreuse callouts, merlot footer. Single light brand theme by choice. */
+/* Layout: one reading column on Sarah's warm paper. Merlot type and hairlines, chartreuse as the single accent (bullets, highlights, callouts). No photo or color blocks. */
 :root{
-  --paper:#F9F5F1; --merlot:#371715; --teal:#557D78; --teal-ink:#3F625E; --sky:#AEC9DC;
-  --chartreuse:#E7DD87; --tan:#C8A776; --gold:#DDC585;
+  --paper:#F9F5F1; --merlot:#371715; --chartreuse:#E7DD87; --rule:rgba(55,23,21,.22);
   --display:'Cormorant','Cormorant Garamond',Garamond,'Times New Roman',serif;
   --body:'Cormorant Garamond','Cormorant',Garamond,Georgia,serif;
   --label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
@@ -25,56 +24,51 @@
 html{background:var(--paper);scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--merlot);font-family:var(--body);font-size:19px;line-height:1.55;-webkit-text-size-adjust:100%}
-img{max-width:100%;display:block}
-.wrap{max-width:780px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
-a{color:var(--teal-ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-a:hover{color:var(--merlot)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+a{color:var(--merlot);font-weight:600;text-decoration:underline;text-decoration-color:var(--chartreuse);text-decoration-thickness:3px;text-underline-offset:2px}
+a:hover{background:var(--chartreuse)}
+a:focus-visible{outline:2px solid var(--merlot);outline-offset:3px}
+mark{background:linear-gradient(transparent 58%,var(--chartreuse) 58%);color:inherit;padding:0 .08em}
 
-/* photo slots: show a labeled frame until a real photo is dropped into /photos */
-.ph{position:relative;margin:0;background:var(--sky);overflow:hidden}
-.ph::before{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-family:var(--label);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--merlot)}
-.ph img{position:relative;width:100%;height:100%;object-fit:cover}
-
-/* hero */
-.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--teal-ink)}
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:36px 48px}
-.hero .ph{aspect-ratio:3/4;border-radius:999px 999px 0 0}
-.hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-ink)}
-.hero h1{margin:14px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(44px,7vw,68px);line-height:.98;letter-spacing:-.005em;color:var(--merlot);text-wrap:balance}
-.hero h1 em{display:block;font-style:italic;font-weight:400;color:var(--teal)}
-.hero .sub{margin:18px 0 0;font-size:21px;font-style:italic}
-.hero .when{margin-top:22px;padding-top:16px;border-top:1px solid var(--tan);font-family:var(--label);font-size:12px;line-height:1.8;letter-spacing:.16em;text-transform:uppercase}
-.hero .collab{margin-top:14px;font-family:var(--display);font-style:italic;font-size:22px;color:var(--teal-ink)}
-.band{height:14px;background:repeating-linear-gradient(90deg,var(--teal) 0 40px,var(--tan) 40px 80px,var(--sky) 80px 120px,var(--chartreuse) 120px 160px)}
+/* cover */
+.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.hero{text-align:center;padding-block:72px 64px;border-bottom:1px solid var(--merlot)}
+.hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{margin:22px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(46px,8.5vw,82px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1 em{display:block;font-style:italic;font-weight:400}
+.hero .sub{margin:22px auto 0;max-width:30ch;font-size:22px;font-style:italic}
+.diamonds{display:flex;justify-content:center;gap:10px;margin:28px 0 0}
+.diamonds i{width:9px;height:9px;transform:rotate(45deg);background:var(--chartreuse);border:1px solid var(--merlot)}
+.hero .when{margin-top:26px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
+.hero .collab{margin-top:18px;font-family:var(--display);font-style:italic;font-size:24px}
 
 /* quick links */
 .quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
-.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;border:1px solid var(--merlot);text-decoration:none;color:var(--merlot);font-weight:400;background:transparent;transition:background .15s}
+.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;border:1px solid var(--merlot);text-decoration:none;font-weight:400;transition:background .15s}
 .quick a b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.1}
 .quick a span{font-size:16px;line-height:1.35}
-.quick a:hover{background:var(--chartreuse)}
 
 /* jump grid */
 .toc{margin-top:40px;scroll-margin-top:16px}
-.toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px);color:var(--merlot)}
+.toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
 .toc p{margin:4px 0 16px;font-size:17px}
 .toc nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(170px,100%),1fr));gap:8px}
-.toc nav a{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 14px;background:#fff;border:1px solid var(--gold);text-decoration:none;color:var(--merlot);font-family:var(--label);font-weight:500;font-size:14px;line-height:1.25;transition:background .15s,border-color .15s}
-.toc nav a i{font-family:var(--display);font-style:italic;font-weight:500;font-size:24px;line-height:1;color:var(--teal);min-width:26px}
-.toc nav a:hover,.toc nav a:focus-visible{background:var(--sky);border-color:var(--sky)}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:54px;padding:10px 14px;border:1px solid var(--rule);text-decoration:none;font-family:var(--label);font-weight:500;font-size:14px;line-height:1.25;transition:background .15s,border-color .15s}
+.toc nav a i{font-family:var(--display);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--chartreuse);border-color:var(--merlot)}
 
 /* sections */
-.sec{padding-top:72px;scroll-margin-top:12px}
-.num{display:block;font-family:var(--display);font-style:italic;font-size:26px;color:var(--teal)}
-h2.st{margin:2px 0 22px;font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;color:var(--merlot);text-wrap:balance}
-h3{margin:30px 0 10px;font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-ink)}
+.sec{padding-top:76px;scroll-margin-top:12px}
+.num{display:block;font-family:var(--display);font-style:italic;font-size:26px}
+h2.st{margin:2px 0 22px;font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;text-wrap:balance}
+h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--chartreuse)}
+h3{margin:30px 0 10px;font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
 p{margin:0 0 14px;text-wrap:pretty}
 .lead{font-family:var(--display);font-size:25px;line-height:1.35;font-style:italic}
 ul.d{list-style:none;margin:0 0 14px;padding:0}
 ul.d li{position:relative;padding-left:24px;margin:0 0 8px;text-wrap:pretty}
-ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--teal);background:var(--chartreuse);transform:rotate(45deg)}
-ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--teal);background:transparent;transform:none}
+ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--merlot);background:var(--chartreuse);transform:rotate(45deg)}
+ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--merlot);background:transparent;transform:none}
 .note{font-size:16px}
 b,strong{font-weight:600}
 .q{font-weight:600}
@@ -82,64 +76,55 @@ b,strong{font-weight:600}
 table{width:100%;border-collapse:collapse;font-size:17px;line-height:1.4}
 .tw table{min-width:460px}
 .tw table.kv{min-width:0}
-th{background:var(--merlot);color:var(--paper);text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-td{border-bottom:1px solid var(--gold);padding:10px 12px;vertical-align:top}
-table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-ink);padding-top:14px}
-.box{padding:28px 30px 16px;margin:6px 0 10px}
-.box.sky{background:var(--sky)}
-.box.ch{background:var(--chartreuse)}
-.box.line{border:1px solid var(--merlot)}
-.box h2.st{margin-top:0}
+th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--merlot)}
+td{border-bottom:1px solid var(--rule);padding:10px 12px;vertical-align:top}
+table.kv{border-top:1.5px solid var(--merlot)}
+table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:14px}
+.callout{background:var(--chartreuse);padding:28px 30px 16px;margin:6px 0 10px}
+.callout h2.st::after{background:var(--merlot)}
+.callout ul.d li::before{background:var(--paper)}
+.frame{border:1px solid var(--merlot);padding:22px 24px 10px;margin:18px 0}
 
 /* itinerary */
-.day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--gold)}
-.day:first-of-type{border-top-color:var(--merlot)}
+.day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--rule)}
+.days .day:first-child{border-top:1.5px solid var(--merlot)}
 .day .when b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.05}
-.day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-ink);margin-top:6px}
-.day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px;color:var(--teal-ink)}
+.day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+.day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px}
 .meta{font-size:16px}
-.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0 6px}
-.strip .ph{aspect-ratio:4/5}
-.strip .ph:nth-child(2){border-radius:999px 999px 0 0}
 
 /* venues + hosts */
-.venue{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;margin:10px 0 24px;align-items:start}
-.venue .ph{aspect-ratio:3/4;border-radius:999px 999px 0 0}
-.venue h3{margin-top:4px}
+.venue{margin:10px 0 26px;padding-top:4px}
 .hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:12px}
-.host .ph{aspect-ratio:1/1;border-radius:50%;width:150px;margin-bottom:14px}
+.host{border-top:1.5px solid var(--merlot);padding-top:14px}
 .host b{display:block;font-family:var(--display);font-size:25px;font-weight:600;line-height:1.1}
-.host i{display:block;margin-bottom:8px;color:var(--teal-ink)}
+.host i{display:block;margin-bottom:8px}
 .host p{font-size:17px}
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
 .times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .times b{display:block;font-family:var(--display);font-weight:600;font-size:28px}
-.tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--gold)}
-.tl:last-of-type{border-bottom:1px solid var(--merlot)}
+.tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--rule)}
+.tls .tl:first-child{border-top:1.5px solid var(--merlot)}
 .tl > div:first-child{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
 
 /* contacts + footer */
 .ctw{overflow-x:auto}
 .ctw table{min-width:520px}
-.addr{margin-top:18px;padding:16px 20px;border:1px solid var(--merlot);display:flex;flex-direction:column;gap:4px;font-size:17px}
-.addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-ink)}
-footer{margin-top:72px;background:var(--merlot);color:var(--paper)}
-footer .wrap{padding-block:48px;display:flex;flex-wrap:wrap;gap:20px 40px;align-items:flex-end;justify-content:space-between}
-footer .big{font-family:var(--display);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1;max-width:460px}
-footer .meta2{font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2;color:var(--gold)}
-footer a{color:var(--paper)}
-.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--teal-ink);color:var(--paper);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
-.totop:hover{background:var(--merlot);color:var(--paper)}
+.addr{margin-top:14px;padding:14px 18px;border:1px solid var(--merlot);display:flex;flex-direction:column;gap:4px;font-size:17px}
+.addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+footer{margin-top:80px}
+footer .wrap{padding-block:40px 64px;border-top:1px solid var(--merlot);text-align:center}
+footer .big{font-family:var(--display);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1}
+footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--merlot);color:var(--paper);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
+.totop:hover{background:var(--merlot);color:var(--chartreuse)}
 
 @media (max-width:680px){
   body{font-size:18px}
-  .hero{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:24px 36px}
-  .hero .ph{max-width:260px;width:100%;margin:0 auto}
-  .day,.tl,.venue{grid-template-columns:minmax(0,1fr);gap:8px}
-  .venue .ph{max-width:260px}
+  .hero{padding-block:48px 44px}
+  .day,.tl{grid-template-columns:minmax(0,1fr);gap:8px}
   .hosts,.two,.times{grid-template-columns:minmax(0,1fr)}
-  .box{padding:22px 18px 10px}
-  .strip{gap:6px}
+  .callout{padding:22px 18px 10px}
   .toc nav a{font-size:13px;padding:8px 10px;gap:8px}
   .toc nav a i{font-size:21px;min-width:22px}
   table.kv td:first-child{width:90px}
@@ -152,38 +137,31 @@ footer a{color:var(--paper)}
   .wrap{max-width:none;padding:0}
   .totop{display:none}
   .top{padding-top:0}
-  .hero{min-height:9.2in;align-content:center;padding-block:0}
-  .band{display:none}
+  .hero{min-height:9.1in;display:flex;flex-direction:column;justify-content:center;border-bottom:none}
   .quick{break-before:page;padding-top:0}
   .sec{break-before:page;padding-top:0}
   h2.st,h3,.num{break-after:avoid}
-  li,tr,.day,.tl,.venue,.host,.box,.strip,.times,.addr{break-inside:avoid}
-  .ph{break-inside:avoid}
-  footer{margin-top:28px;break-inside:avoid;break-before:avoid}
-  #contacts{padding-bottom:0}
-  footer .wrap{padding:22px 26px;display:block}
-  footer .big{font-size:28px;max-width:none}
+  li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
+  footer{margin-top:24px;break-inside:avoid;break-before:avoid}
+  footer .wrap{padding:18px 0 0}
+  footer .big{font-size:28px}
   footer .meta2{display:none}
-  a{color:var(--teal-ink)}
 }
 </style>
 </head>
 <body>
 
 <header class="wrap">
-  <div class="top"><span>Your retreat guide</span><span>Sarah Lord Photo x Habitat</span></div>
+  <div class="top"><span>Habitat Retreats</span><span>Sarah Lord Photo</span></div>
   <div class="hero">
-    <figure class="ph" data-label="Cover photo"><img src="photos/cover.jpg" alt="Morocco" onerror="this.remove()"></figure>
-    <div>
-      <div class="eyebrow">March 26 to 31, 2027</div>
-      <h1>Morocco <em>Wedding Photographers Retreat</em></h1>
-      <p class="sub">A retreat for wedding photographers in Marrakech and the Agafay Desert.</p>
-      <div class="when">Riad BE Marrakech | 3 nights<br>BE Agafay desert camp | 2 nights</div>
-      <div class="collab">Sarah Lord Photo x Habitat</div>
-    </div>
+    <div class="eyebrow">Your retreat guide</div>
+    <h1>Morocco <em>Wedding Photographers Retreat</em></h1>
+    <p class="sub">A retreat for wedding photographers in Marrakech and the Agafay Desert</p>
+    <div class="diamonds" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="when">March 26 to 31, 2027 | Marrakech, Morocco</div>
+    <div class="collab">Sarah Lord Photo x Habitat</div>
   </div>
 </header>
-<div class="band" aria-hidden="true"></div>
 
 <main class="wrap">
   <div class="quick">
@@ -218,27 +196,29 @@ footer a{color:var(--paper)}
   <section class="sec" id="welcome">
     <span class="num">01</span>
     <h2 class="st">Hey hey,</h2>
-    <p class="lead">You applied, you're in, you booked it. That's the hardest part, and you already did it. We can't wait to sip Aperol spritzes at sunset with you.</p>
-    <p>This guide has everything you need for the Morocco Wedding Photographers Retreat, in one place:</p>
+    <p class="lead">You applied, you're in, you booked it. That's the hardest part, and you already did it.</p>
+    <p>You're in for the Morocco Retreat! We can't wait to sip Aperol Spritz at sunset with you.</p>
+    <p>This guide has everything you need for the Morocco Wedding Photographers Retreat, in one place. Inside you'll find:</p>
     <ul class="d">
-      <li>Flight info: which airport to fly into, what times work, and how you get to the riad</li>
+      <li>Flight info: which airports to fly into, what times work, transfers</li>
       <li>What's included and what isn't</li>
       <li>The itinerary for the week</li>
-      <li>Frequently asked questions</li>
-      <li>And a few extras</li>
+      <li>Frequently Asked Questions</li>
+      <li>And a few extras!</li>
     </ul>
     <p>We highly recommend reading it through once, then coming back to it as needed.</p>
-    <p>This week is really built for us to have fun and explore a new place together. Absolutely everything is optional. We just want to connect and let loose on a fun vacation.</p>
-    <p>If something isn't clear or you have more questions, please reach out. We can't wait to experience the magic of Morocco with you.</p>
-    <p style="font-family:var(--display);font-style:italic;font-size:28px;line-height:1.2;color:var(--teal-ink);margin-top:20px">xx,<br>Sarah Lord + Habitat</p>
+    <p>This week is really built for us to have fun and explore a new place together! Absolutely everything is optional, we just want to connect and let loose for a fun vacation.</p>
+    <p>If something isn't clear or you have additional questions, please reach out!</p>
+    <p>We can't wait to experience the magic of Morocco with you!</p>
+    <p style="font-family:var(--display);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px">Xx,<br>Sarah Lord + Habitat</p>
 
     <h3>Your retreat at a glance</h3>
     <div class="tw" style="overflow:visible"><table class="kv">
       <tr><td>Retreat</td><td>Morocco Wedding Photographers Retreat</td></tr>
       <tr><td>Dates</td><td>Friday, March 26 to Wednesday, March 31, 2027 (5 nights)</td></tr>
       <tr><td>Where</td><td>Riad BE Marrakech (3 nights) + BE Agafay desert camp (2 nights), Morocco</td></tr>
-      <tr><td>Arrive</td><td>Marrakesh Menara Airport (RAK) on Friday, March 26. Land by 2pm. First group get-together is 5pm on the rooftop</td></tr>
-      <tr><td>Depart</td><td>Check out of camp by 11:30am on Wednesday, March 31. Book the latest flight you can (see Flights + transfers)</td></tr>
+      <tr><td>Arrive</td><td>Marrakesh Menara Airport (RAK) on Friday, March 26. Land whenever works for you. Our first group get-together is at 5pm</td></tr>
+      <tr><td>Depart</td><td>Check out of camp by 11:30am on Wednesday, March 31. Book the latest flight possible, it's about an hour and a half from the desert to the airport</td></tr>
       <tr><td>Hosts</td><td>Sarah Lord (Sarah Lord Photo) + Carrigan Whiteley (Habitat)</td></tr>
       <tr><td>The week</td><td>Medina souks, a sunrise hot air balloon, the YSL gardens, quad bikes and pottery in the desert. Everything optional</td></tr>
       <tr><td>Your room</td><td>Shared, see Where You'll Stay</td></tr>
@@ -248,20 +228,20 @@ footer a{color:var(--paper)}
 
   <!-- 02 -->
   <section class="sec" id="housekeeping">
-    <div class="box sky">
+    <div class="callout">
       <span class="num">02</span>
       <h2 class="st">Housekeeping</h2>
       <p>Here's the real talk on trip info you need right away. We want you on the right trip and having the best week possible.</p>
       <ul class="d">
-        <li><span class="q">This is a retreat, not a workshop.</span> There are no styled shoots, content days or shot lists. Bring your camera if you want it, but nobody is going to make you use it. Everything is optional. If you'd rather skip the hot air balloon and spend the morning by the pool, go for it.</li>
+        <li><span class="q">This is a retreat, not a workshop.</span> There are no styled shoots, content days, etc. Obviously bring your camera if you want it! But no one is forcing you to if you don't want to. Also, everything is optional. If you would rather skip the Hot Air Balloon ride and spend the afternoon by the pool, go for it!</li>
         <li><span class="q">Leave the drone at home.</span> Drones are banned in Morocco. Customs confiscates them at the airport and you won't get it back. Cameras are completely fine.</li>
         <li><span class="q">The medina is a maze.</span> Cars can't get into most of the old city, so the last stretch to the riad is on foot, with a porter and a cart for your bags. Pack a bag you can live with being wheeled down dirt or cobbled streets.</li>
         <li><span class="q">Marrakech is a lot, in the best way.</span> Motorbikes in the alleys, shopkeepers calling you in, the call to prayer five times a day. It's loud and it's alive. Then you walk through the riad door and it's quiet. Day 4, the desert is the reset.</li>
-        <li><span class="q">Dress code.</span> Morocco is a Muslim country and we want to respect local customs. Please bring an outfit that covers your knees and shoulders, especially for market day. A shawl you throw on or a long skirt works. We just ask that you come prepared and respectful.</li>
+        <li><span class="q">Dress code.</span> Morocco is a Muslim country and we want to respect local customs. Please bring an outfit that covers your knees and shoulders, especially for the market day. This can be a shawl you throw on or a long skirt. We just ask that you be prepared and respectful.</li>
         <li><span class="q">Late March is warm by day, cold at night.</span> Around 22°C / 72°F in the afternoon. The desert drops much colder after sunset. Bring layers.</li>
-        <li><span class="q">Wi-Fi.</span> Yes, at both the riad and the desert camp.</li>
+        <li><span class="q">Wi-Fi.</span> Yes, there is wifi available both at the Riad and at the Desert Camp.</li>
         <li><span class="q">You're sharing space with people you may not know.</span> Most people arrive solo, some come with friends. If something is bothering you, tell us early (see the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a> in section 10). We can fix things in real time. Don't wait until the week is over to put it out there. That's a disservice to you and to the people around you.</li>
-        <li><span class="q">Plans can change.</span> Weather decides whether the hot air balloon flies, which may mean rearranging the itinerary. We try our best to stick to the plan, but occasionally we have to adapt. We'll always tell you if that happens, and just ask that you stay flexible while we sort it out.</li>
+        <li><span class="q">Plans can change.</span> Weather will determine our Hot Air Balloon ride, which may require us to rearrange the itinerary. We try our best to stick to the plan, but occasionally we have to adapt. We will always communicate if that needs to happen, and just ask that you remain flexible with the situation while we sort through it.</li>
       </ul>
     </div>
   </section>
@@ -270,18 +250,14 @@ footer a{color:var(--paper)}
   <section class="sec" id="itinerary">
     <span class="num">03</span>
     <h2 class="st">Day-by-day itinerary</h2>
-    <p>Here's our overview of the week. Exact times and meeting points will live in one live link we share on the retreat, so if anything changes, you always check the same place. We'll also share everything in the group message.</p>
-    <div class="strip">
-      <figure class="ph" data-label="Souk photo"><img src="photos/souk.jpg" alt="The souks of Marrakech" onerror="this.remove()"></figure>
-      <figure class="ph" data-label="Balloon photo"><img src="photos/balloon.jpg" alt="Hot air balloons at sunrise" onerror="this.remove()"></figure>
-      <figure class="ph" data-label="Desert photo"><img src="photos/desert.jpg" alt="The Agafay Desert" onerror="this.remove()"></figure>
-    </div>
+    <p>Here's our overview of the week. Exact times and meeting points will live in a live link given on the retreat, so that if changes need to be made, you always refer to the same place to find them. We will also communicate everything via the group message.</p>
 
+    <div class="days">
     <div class="day">
       <div class="when"><b>Day 1</b><span>Fri, March 26</span><em>Touch down in Marrakech</em></div>
       <div>
         <ul class="d">
-          <li>Land at Marrakesh Menara Airport (RAK). A car picks you up at the airport.</li>
+          <li>Land at Marrakesh Menara Airport (RAK). We will have a car to pick you up at the airport.</li>
           <li>Check in and settle into our home for the next three nights, a colorful traditional riad in the heart of the medina.</li>
           <li>5pm | Meet us on the roof for sunset welcome drinks + dinner</li>
         </ul>
@@ -313,7 +289,7 @@ footer a{color:var(--paper)}
           <li>Jardin Majorelle, the YSL gardens</li>
           <li>Dinner out together in the medina</li>
         </ul>
-        <p>An early one, and worth it. A hot air balloon ride with sweeping views of the city and the Atlas Mountains. After a quick rest, we head to the YSL gardens, then dinner out all together.</p>
+        <p>An early one, and worth it. We will take a hot air balloon ride with sweeping views of the city and the Atlas Mountains. After a quick rest, we head to the YSL Gardens, and dinner out all together.</p>
         <p class="meta"><b>Meals:</b> Breakfast, lunch, dinner | <b>Wear:</b> Warm layers for the balloon (it's cold before sunrise), something easy for the gardens</p>
       </div>
     </div>
@@ -327,7 +303,7 @@ footer a{color:var(--paper)}
           <li>Sunset apéro on the hill</li>
           <li>Dinner at camp</li>
         </ul>
-        <p>We head out to Agafay, a stone desert at the foot of the Atlas Mountains. A toast at sunset, then a beautiful dinner. Yes, there's even a pool and a spa in the desert.</p>
+        <p>We head out to the Agafay, which is a stone desert in the Atlas Mountains. We will have a toast at sunset, followed by a beautiful dinner. Yes, there's even a pool and a spa in the desert.</p>
         <p class="meta"><b>Meals:</b> Brunch, dinner | <b>Wear:</b> Swimsuit for the pool, a warm layer for sunset</p>
       </div>
     </div>
@@ -340,7 +316,7 @@ footer a{color:var(--paper)}
           <li>Pottery workshop with a local ceramic artist</li>
           <li>Dinner at camp</li>
         </ul>
-        <p>We wake up to total stillness. Breakfast, then we hop on quads and ride through the desert. In the afternoon, a pottery workshop, followed by a sunset dinner. Then a fire under more stars than you can count.</p>
+        <p>We wake up to total stillness. Eat breakfast, then we hop on ATVs and drive through the dunes. In the afternoon we do a pottery workshop, followed by sunset dinner. Then a fire under more stars than you can count.</p>
         <p class="meta"><b>Meals:</b> Breakfast, dinner | <b>Wear:</b> Closed shoes, sunglasses and a scarf for the quads, whatever you like for dinner</p>
       </div>
     </div>
@@ -350,12 +326,13 @@ footer a{color:var(--paper)}
         <ul class="d">
           <li>Breakfast at camp, one last look at the desert</li>
           <li>Check out by 11:30am</li>
-          <li>Your car to RAK, about 1 to 1.5 hours</li>
+          <li>Your car back to RAK, about an hour and a half</li>
         </ul>
         <p class="meta"><b>Meals:</b> Breakfast</p>
       </div>
     </div>
-    <div class="box ch" style="margin-top:22px">
+    </div>
+    <div class="callout" style="margin-top:22px">
       <p><b>Keeping you up to date.</b> We're always looking for ways to make the week better. If anything changes on the ground, we'll share it in the group message, our main way of communicating during the retreat.</p>
     </div>
   </section>
@@ -404,7 +381,6 @@ footer a{color:var(--paper)}
     <span class="num">05</span>
     <h2 class="st">Where you'll stay</h2>
     <div class="venue">
-      <figure class="ph" data-label="Riad BE photo"><img src="photos/riad.jpg" alt="Riad BE Marrakech" onerror="this.remove()"></figure>
       <div>
         <h3>Riad BE Marrakech | 3 nights</h3>
         <p>A boutique riad in the old medina, close to the souks and Jemaa el-Fnaa. Two connected riads, a hammam and spa, an indoor yoga studio and a rooftop terrace with views over the medina rooftops. Step in from the alley and it goes quiet.</p>
@@ -418,7 +394,6 @@ footer a{color:var(--paper)}
       </div>
     </div>
     <div class="venue">
-      <figure class="ph" data-label="BE Agafay photo"><img src="photos/agafay.jpg" alt="BE Agafay desert camp" onerror="this.remove()"></figure>
       <div>
         <h3>BE Agafay | 2 nights</h3>
         <p>A small desert camp in the Agafay stone desert, with the Atlas Mountains on the horizon. Bungalows with their own terraces, a pool looking out over the desert, a spa and yoga shala, and a sunset hill for apéro.</p>
@@ -445,15 +420,15 @@ footer a{color:var(--paper)}
     <span class="num">06</span>
     <h2 class="st">Getting there + getting home</h2>
     <p>You book your own flights, so you can come from anywhere and add travel on either side. Booking your own doesn't mean you're on your own. Send us any flight before you book if you want our eyes on it.</p>
-    <div class="box sky" style="margin:20px 0 18px">
-      <h3 style="margin-top:0;color:var(--merlot)">The only two times you need</h3>
+    <div class="frame">
+      <h3 style="margin-top:0">The only two times you need</h3>
       <div class="times">
-        <div><b>Arrive</b><p>Land at Marrakesh Menara Airport (RAK) by <b>2pm on Friday, March 26</b>. Our first get-together is at 5pm on the rooftop.</p></div>
-        <div><b>Depart</b><p>Book the <b>latest flight you can on Wednesday, March 31</b>. Check-out at camp is 11:30am and the drive to RAK is about 1 to 1.5 hours.</p></div>
+        <div><b>Arrive</b><p>Land at Marrakesh Menara Airport (RAK) <b>whenever works for you on Friday, March 26</b>. Our first group get-together is at 5pm.</p></div>
+        <div><b>Depart</b><p>Book the <b>latest flight possible on Wednesday, March 31</b>. We have to drive about an hour and a half from the desert to get back to the airport.</p></div>
       </div>
     </div>
     <p>How you get there is up to you. Many people add a few days on the front or back end. Want help planning that part? Tell us.</p>
-    <p><b>Transfers:</b> Everyone has a private car, arranged by BE Agafay, from RAK to the riad on arrival day, from the riad to the desert on Day 4, and from the desert back to RAK on departure day. If a few of you land around the same time, we'll put you in a car together, but there's no transfer window to wait for. The airport is only about 4 km / 2.5 miles from the riad.</p>
+    <p><b>Transfers:</b> All handled by BE Agafay. Everyone has a personal car, from RAK to the riad on arrival day, from the riad to the desert on Day 4, and from the desert back to RAK on departure day. If a few of you land around the same time we'll group you together, but there's no transfer window. The airport is only about 4 km / 2.5 miles from the riad.</p>
     <p>Arriving early or staying on? No problem. Let us know and we'll help you arrange your own transportation.</p>
 
     <h3>Route options</h3>
@@ -593,12 +568,10 @@ footer a{color:var(--paper)}
     <h3 style="margin-top:0">Your hosts</h3>
     <div class="hosts">
       <div class="host">
-        <figure class="ph" data-label="Sarah"><img src="photos/sarah.jpg" alt="Sarah Lord" onerror="this.remove()"></figure>
         <b>Sarah Lord</b><i>Wedding photographer, Sarah Lord Photo</i>
         <p>A Texan living in Washington state. She's had a camera in her hands since 2008 and has been photographing weddings since 2016. She loves traveling as a photographer, and she built this week for the photographers who never get a weekend off.</p>
       </div>
       <div class="host">
-        <figure class="ph" data-label="Carrigan"><img src="photos/carrigan.jpg" alt="Carrigan Whiteley" onerror="this.remove()"></figure>
         <b>Carrigan Whiteley</b><i>Co-founder, Habitat Retreats</i>
         <p>Not a wedding photographer. She's been planning group trips around the world since 2019 and handles every detail before the trip and on the ground, so you don't have to think about any of it.</p>
       </div>
@@ -666,7 +639,7 @@ footer a{color:var(--paper)}
     <span class="num">11</span>
     <h2 class="st">Packing list</h2>
     <p><b>Luggage:</b> completely up to you how much you bring. This is your vacation! If you have tight connections or multiple separate bookings, be mindful of checked baggage. Bags get wheeled through the medina on a cart, so a sturdy suitcase or duffel beats anything fragile. Put your name and number on everything in case it gets lost, and leave room for what you'll buy in the souks.</p>
-    <div class="box line" style="margin:16px 0 8px">
+    <div class="frame">
       <p><b>Pack a carry-on like your checked bag might be late.</b> If you're checking a bag, pack a swimsuit, a change of clothes, a warm layer, meds, chargers and toiletries for 2 days, just in case. Keep camera bodies and lenses in your carry-on.</p>
     </div>
     <div class="two">
@@ -721,6 +694,7 @@ footer a{color:var(--paper)}
     <span class="num">12</span>
     <h2 class="st">Your timeline + to-do list</h2>
     <p>Everything you need to do, in order.</p>
+    <div class="tls">
     <div class="tl"><div>Now</div><ul class="d check">
       <li>Check your passport is valid until September 30, 2027</li>
       <li>Sign + email back your liability waiver (attached to the email with this guide)</li>
@@ -740,7 +714,7 @@ footer a{color:var(--paper)}
       <li>Book pre/post hotel nights</li>
       <li>Talk to your doctor about vaccines and any controlled meds</li>
     </ul></div>
-    <div class="tl"><div>1 month out<br><span style="font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:var(--teal-ink)">late February</span></div><ul class="d check">
+    <div class="tl"><div>1 month out<br><span style="font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:400">late February</span></div><ul class="d check">
       <li>Make sure your liability waiver is signed and returned</li>
       <li>RSVP to the group call</li>
       <li>Balance fully paid by February 24, 2027 (automatic on your plan)</li>
@@ -756,6 +730,7 @@ footer a{color:var(--paper)}
       <li>Passport, phone, charger, cards</li>
       <li>Message the group when you land</li>
     </ul></div>
+    </div>
   </section>
 
   <!-- 13 -->
