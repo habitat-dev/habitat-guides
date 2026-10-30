@@ -116,6 +116,7 @@ a:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
 .photo-wide{margin:4px 0 20px}
 .photo-wide img{aspect-ratio:3/2}
 @media (max-width:520px){.photo-pair{gap:6px}}
+.headshot{display:block;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:45% 40%;margin:0 0 14px}
 @media (max-width:620px){
   .g [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr) !important;gap:8px !important}
   .g .sec{padding-top:44px}
@@ -152,7 +153,7 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <div class="band tile" aria-hidden="true"></div>
 
 <main class="wrap">
-  <figure class="photo photo-hero"><img src="photos/hero-aegialis-bay.jpg" alt="Aegiali bay on Amorgos from Aegialis Hotel &amp; Spa"></figure>
+  <figure class="photo photo-hero"><img src="photos/hero-aegiali-village.jpg" alt="Aegiali village and bay on Amorgos"></figure>
   <div class="quick">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdge0zXwREFwfIdyfeRZv0gb27XzXF15d18PL1EZtjag3X5HQ/viewform" target="_blank" rel="noopener"><b>Flight + Info Form</b><span>Flights, ferries, dietary needs, health notes, emergency contact</span></a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener"><b>Roommate Matching Quiz</b><span>Booked a shared room on your own? Start here</span></a>
@@ -207,7 +208,7 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <span class="eb">03</span>
 <h2>Day-by-day itinerary</h2>
 <p>Here's the week. Exact class times and meeting points will live in one live link, so if anything changes, you always check the same place. If something does change, we'll announce it in the group message. Every class and activity is optional, always.</p>
-<div class="photo-pair"><figure class="photo"><img src="photos/reformer-pilates.jpg" alt="Morning reformer Pilates class" loading="lazy"></figure><figure class="photo"><img src="photos/boat-day.jpg" alt="Boat day off the coast of Amorgos" loading="lazy"></figure></div>
+<div class="photo-pair"><figure class="photo"><img src="photos/reformer-pilates.jpg" alt="Morning reformer Pilates class" loading="lazy"></figure><figure class="photo"><img src="photos/boat-day-group.jpg" alt="The group on the bow during boat day" loading="lazy"></figure></div>
 <div style="display: flex; flex-direction: column; gap: 6px; background: #9CAEBC; padding: 20px 24px; margin: 14px 0 10px; color: #4A281D">
 <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: #4A281D">Every morning, Tue to Sat</div>
 <div style="font-family: 'La Magnifique','Optima', sans-serif; font-size: 20px; color: #4A281D">Coffee at 7:30 | Reformer Pilates 8 to 9 | Breakfast 9 to 10</div>
@@ -342,7 +343,7 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <div class="sec" id="where-you-ll-stay">
 <span class="eb">05</span>
 <h2>Where you'll stay</h2>
-<figure class="photo photo-wide"><img src="photos/studio-terrace.jpg" alt="The reformer studio terrace at Aegialis, looking out to sea" loading="lazy"></figure>
+<div class="photo-pair"><figure class="photo"><img src="photos/sunset-room-view.jpg" alt="Sunset over the mountains from a room on Amorgos" loading="lazy"></figure><figure class="photo"><img src="photos/rooftop.jpg" alt="Two guests waving from a whitewashed rooftop" loading="lazy"></figure></div>
 <h3 style="margin-top: 0">Aegialis Hotel &amp; Spa</h3>
 <p>A five-star spa hotel built into the hillside above Aegiali bay, with sea views from every room. It's a short walk down to the beach and the tavernas, and you'll float between the reformer studio, the pool and the terrace all week.</p>
 <div class="tw"><table class="kv">
@@ -616,17 +617,20 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <h3 style="margin-top: 0">Your hosts</h3>
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-bottom: 12px">
 <div style="border: 1px solid #772012; padding: 20px 22px">
+<img class="headshot" src="photos/host-kennon.jpg" alt="Kennon Goldreyer" loading="lazy">
 <div style="font-family: 'La Magnifique','Optima', sans-serif; font-size: 22px; color: #772012">KENNON GOLDREYER</div>
 <div style="font-family: 'ED Sonar',Georgia, serif; font-style: italic; font-size: 18px; margin-bottom: 8px">Co-founder, Habitat Retreats</div>
 <p style="margin: 0; font-size: 15px">Kennon came into Habitat already believing the best trips are the ones you can't fully explain to people back home. She's your hype girl on the ground, the one who's already scoped the best swimming spot before anyone else wakes up.</p>
 </div>
 <div style="border: 1px solid #772012; padding: 20px 22px">
+<img class="headshot" src="photos/host-carrigan.jpg" alt="Carrigan Whiteley" loading="lazy">
 <div style="font-family: 'La Magnifique','Optima', sans-serif; font-size: 22px; color: #772012">CARRIGAN WHITELEY</div>
 <div style="font-family: 'ED Sonar',Georgia, serif; font-style: italic; font-size: 18px; margin-bottom: 8px">Co-founder, Habitat Retreats</div>
 <p style="margin: 0; font-size: 15px">Carrigan started Habitat because she knew there was a way to take more intentional vacations, and build a community around it at the same time. She's the one who'll talk you into the ridge hike, then hand you a glass of wine at the top.</p>
 </div>
 </div>
 <p>We're with you the whole week, and we teach every class. No handoffs.</p>
+<div class="photo-pair"><figure class="photo"><img src="photos/sunset-dinner.jpg" alt="Two guests hugging at sunset" loading="lazy"></figure><figure class="photo"><img src="photos/swim-stop.jpg" alt="A guest on the rocks at a swim stop" loading="lazy"></figure></div>
 
 <h3>Classes</h3>
 <ul>
