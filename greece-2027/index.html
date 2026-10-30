@@ -116,7 +116,17 @@ a:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
 .photo-wide{margin:4px 0 20px}
 .photo-wide img{aspect-ratio:3/2}
 @media (max-width:520px){.photo-pair{gap:6px}}
-.headshot{display:block;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:45% 40%;margin:0 0 14px}
+.host{border:1px solid #772012;padding:18px 20px;margin-bottom:14px}
+.host-name{font-size:24px;color:#772012;letter-spacing:.02em;text-align:right;border-bottom:1px solid rgba(119,32,18,.3);padding-bottom:6px}
+.host-title{font-style:italic;font-size:18px;text-align:right;margin:6px 0 12px}
+.host-body{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:end}
+.host-body img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.host-body p{margin:0;font-size:15px}
+.host-flip .host-name,.host-flip .host-title{text-align:left}
+.host-flip .host-body{grid-template-columns:1fr 200px}
+.host-flip .host-body img{order:2}
+.host-flip .host-body p{text-align:right}
+@media (max-width:560px){.host-body,.host-flip .host-body{grid-template-columns:1fr}.host-flip .host-body img{order:0}.host-flip .host-body p{text-align:left}}
 @media (max-width:620px){
   .g [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr) !important;gap:8px !important}
   .g .sec{padding-top:44px}
@@ -615,19 +625,15 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <span class="eb">10</span>
 <h2>What to expect on retreat</h2>
 <h3 style="margin-top: 0">Your hosts</h3>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-bottom: 12px">
-<div style="border: 1px solid #772012; padding: 20px 22px">
-<img class="headshot" src="photos/host-kennon.jpg" alt="Kennon Goldreyer" loading="lazy">
-<div style="font-family: 'La Magnifique','Optima', sans-serif; font-size: 22px; color: #772012">KENNON GOLDREYER</div>
-<div style="font-family: 'ED Sonar',Georgia, serif; font-style: italic; font-size: 18px; margin-bottom: 8px">Co-founder, Habitat Retreats</div>
-<p style="margin: 0; font-size: 15px">Kennon came into Habitat already believing the best trips are the ones you can't fully explain to people back home. She's your hype girl on the ground, the one who's already scoped the best swimming spot before anyone else wakes up.</p>
+<div class="host">
+<div class="host-name" style="font-family: 'La Magnifique','Optima', sans-serif">KENNON GOLDREYER</div>
+<div class="host-title" style="font-family: 'ED Sonar',Georgia, serif">Co-founder, Habitat Retreats</div>
+<div class="host-body"><img src="photos/host-kennon.jpg" alt="Kennon Goldreyer on Amorgos" loading="lazy"><p>Kennon came into Habitat already believing the best trips are the ones you can't fully explain to people back home. She's your hype girl on the ground, the one who's already scoped the best swimming spot before anyone else wakes up.</p></div>
 </div>
-<div style="border: 1px solid #772012; padding: 20px 22px">
-<img class="headshot" src="photos/host-carrigan.jpg" alt="Carrigan Whiteley" loading="lazy">
-<div style="font-family: 'La Magnifique','Optima', sans-serif; font-size: 22px; color: #772012">CARRIGAN WHITELEY</div>
-<div style="font-family: 'ED Sonar',Georgia, serif; font-style: italic; font-size: 18px; margin-bottom: 8px">Co-founder, Habitat Retreats</div>
-<p style="margin: 0; font-size: 15px">Carrigan started Habitat because she knew there was a way to take more intentional vacations, and build a community around it at the same time. She's the one who'll talk you into the ridge hike, then hand you a glass of wine at the top.</p>
-</div>
+<div class="host host-flip">
+<div class="host-name" style="font-family: 'La Magnifique','Optima', sans-serif">CARRIGAN WHITELEY</div>
+<div class="host-title" style="font-family: 'ED Sonar',Georgia, serif">Co-founder, Habitat Retreats</div>
+<div class="host-body"><img src="photos/host-carrigan.jpg" alt="Carrigan Whiteley on Amorgos" loading="lazy"><p>Carrigan started Habitat because she knew there was a way to take more intentional vacations, and build a community around it at the same time. She's the one who'll talk you into the ridge hike, then hand you a glass of wine at the top.</p></div>
 </div>
 <p>We're with you the whole week, and we teach every class. No handoffs.</p>
 <div class="photo-pair"><figure class="photo"><img src="photos/sunset-dinner.jpg" alt="Two guests hugging at sunset" loading="lazy"></figure><figure class="photo"><img src="photos/swim-stop.jpg" alt="A guest on the rocks at a swim stop" loading="lazy"></figure></div>
