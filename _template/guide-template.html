@@ -1,8 +1,11 @@
 <!--
   HABITAT RETREAT GUIDE TEMPLATE
-  1. Copy this file to <slug>/index.html in the habitat-guides repo (slug = destination-year, e.g. kenya-2027).
-  2. Swap the THEME block in <style> (Habitat theme is the default; partner retreats use the partner's brand).
-  3. Replace every {{TOKEN}} and every <!-- GUIDE: -->
+  1. Create a new guide with: python3 tools/guide_tool.py new <slug>   (slug = destination-year, e.g. kenya-2027)
+  2. Swap the THEME block in <style> and the fonts link (Habitat theme is the default; co-hosted retreats use the partner's brand).
+  3. Replace every {{TOKEN}} and follow each GUIDE note. Delete the GUIDE notes when done.
+  4. Copy comes ONLY from the approved copy doc for this retreat. Never invent facts.
+  5. Run: python3 tools/guide_tool.py check <slug>   then   python3 tools/guide_tool.py pdf <slug>
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -184,10 +187,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
 }
 .signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
 </style>
-</head> note's instruction. Delete GUIDE comments when done.
-  4. Copy comes ONLY from the approved copy doc for this retreat. Never invent facts.
-  5. Run: python3 tools/guide_tool.py check <slug>   then   python3 tools/guide_tool.py pdf <slug>
--->
+</head>
 <body>
 
 <header class="wrap">

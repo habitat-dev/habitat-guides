@@ -180,6 +180,7 @@ async def shots(path, outdir):
             pg = await b.new_page(viewport={"width": w, "height": h})
             await pg.goto("file://" + path, wait_until="networkidle")
             await pg.evaluate("document.fonts.ready")
+            await pg.add_style_tag(content="html{scroll-behavior:auto!important}")
             await pg.screenshot(path=os.path.join(outdir, f"top-{w}.png"))
             await pg.evaluate("document.getElementById('contents').scrollIntoView()")
             await pg.screenshot(path=os.path.join(outdir, f"contents-{w}.png"))
