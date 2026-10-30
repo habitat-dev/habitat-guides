@@ -134,7 +134,8 @@ def cmd_check(slug):
                 issues.append(f"  [missing photo] {src.group(1)} is not in {slug}/ (remove the photo element or add the file)")
             elif os.path.getsize(p) > 700_000:
                 issues.append(f"  [heavy photo] {src.group(1)} is {os.path.getsize(p)//1000} KB. Run the photos command to shrink it")
-        if not alt or not alt.group(1).strip() or "{{" in alt.group(1):
+        decorative = 'aria-hidden="true"' in tag
+        if not decorative and (not alt or not alt.group(1).strip() or "{{" in alt.group(1)):
             issues.append(f"  [photo alt text] {tag[:90]} needs a short description in alt=\"\"")
     print(f"\nCOPY CHECKS ({slug})")
     print("\n".join(issues) if issues else "  OK")

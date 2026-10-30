@@ -105,6 +105,17 @@ a:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
 .foot .xx{font-family:var(--display);font-size:20px;letter-spacing:.12em}
 .foot .small{font-size:14px}
 
+
+/* photos */
+.photo{margin:0;background:var(--sand)}
+.photo img{display:block;width:100%;height:auto;object-fit:cover}
+.photo-hero{margin:32px 0 4px}
+.photo-hero img{aspect-ratio:16/9}
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0 18px}
+.photo-pair img{aspect-ratio:4/5}
+.photo-wide{margin:4px 0 20px}
+.photo-wide img{aspect-ratio:3/2}
+@media (max-width:520px){.photo-pair{gap:6px}}
 @media (max-width:620px){
   .g [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr) !important;gap:8px !important}
   .g .sec{padding-top:44px}
@@ -141,6 +152,7 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <div class="band tile" aria-hidden="true"></div>
 
 <main class="wrap">
+  <figure class="photo photo-hero"><img src="photos/hero-aegialis-bay.jpg" alt="Aegiali bay on Amorgos from Aegialis Hotel &amp; Spa"></figure>
   <div class="quick">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdge0zXwREFwfIdyfeRZv0gb27XzXF15d18PL1EZtjag3X5HQ/viewform" target="_blank" rel="noopener"><b>Flight + Info Form</b><span>Flights, ferries, dietary needs, health notes, emergency contact</span></a>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener"><b>Roommate Matching Quiz</b><span>Booked a shared room on your own? Start here</span></a>
@@ -195,6 +207,7 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <span class="eb">03</span>
 <h2>Day-by-day itinerary</h2>
 <p>Here's the week. Exact class times and meeting points will live in one live link, so if anything changes, you always check the same place. If something does change, we'll announce it in the group message. Every class and activity is optional, always.</p>
+<div class="photo-pair"><figure class="photo"><img src="photos/reformer-pilates.jpg" alt="Morning reformer Pilates class" loading="lazy"></figure><figure class="photo"><img src="photos/boat-day.jpg" alt="Boat day off the coast of Amorgos" loading="lazy"></figure></div>
 <div style="display: flex; flex-direction: column; gap: 6px; background: #9CAEBC; padding: 20px 24px; margin: 14px 0 10px; color: #4A281D">
 <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: #4A281D">Every morning, Tue to Sat</div>
 <div style="font-family: 'La Magnifique','Optima', sans-serif; font-size: 20px; color: #4A281D">Coffee at 7:30 | Reformer Pilates 8 to 9 | Breakfast 9 to 10</div>
@@ -329,6 +342,7 @@ body{font-family:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif}
 <div class="sec" id="where-you-ll-stay">
 <span class="eb">05</span>
 <h2>Where you'll stay</h2>
+<figure class="photo photo-wide"><img src="photos/studio-terrace.jpg" alt="The reformer studio terrace at Aegialis, looking out to sea" loading="lazy"></figure>
 <h3 style="margin-top: 0">Aegialis Hotel &amp; Spa</h3>
 <p>A five-star spa hotel built into the hillside above Aegiali bay, with sea views from every room. It's a short walk down to the beach and the tavernas, and you'll float between the reformer studio, the pool and the terrace all week.</p>
 <div class="tw"><table class="kv">
