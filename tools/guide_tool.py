@@ -34,7 +34,6 @@ BANNED = [
     (r"Straight Talk", "section is called Housekeeping now"),
     (r"WhatsApp group", "say 'group message', not WhatsApp group"),
     (r"\+1 939 233 5835|939-233-5835", "old inactive Habitat WhatsApp number"),
-    (r"45 days before", "balance is due 30 days before, not 45"),
     (r"lorem|ipsum|TODO", "placeholder text"),
 ]
 

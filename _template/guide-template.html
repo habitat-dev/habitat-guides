@@ -411,7 +411,8 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <span class="num">07</span>
     <h2 class="st">Payments, cancellations + insurance</h2>
     <h3 style="margin-top:0">Deposit + balance</h3>
-    <p>Your $500 deposit is paid and your spot is held. Your full balance is due by {{BALANCE_DUE_DATE}} (30 days before the retreat), following the payment plan you chose at checkout. Payments come out automatically on the card saved at checkout and show on your statement as HABITAT RETREATS.</p>
+    <!-- GUIDE: deposit, prices and balance due date come from the retreat page + retreat spreadsheet. They differ by retreat. Balance is always at least 30 days before. -->
+    <p>Your {{DEPOSIT_AMOUNT}} deposit is paid and your spot is held. Your full balance is due by {{BALANCE_DUE_DATE}} ({{N}} days before the retreat), following the payment plan you chose at checkout. Payments come out automatically on the card saved at checkout and show on your statement as HABITAT RETREATS.</p>
     <h3>If you need to cancel</h3>
     <p>Life happens. Here's how it works (full details in our <a href="https://www.habitatretreats.com/legal/terms-conditions" target="_blank" rel="noopener">Terms + Conditions</a>):</p>
     <div class="tw"><table>
