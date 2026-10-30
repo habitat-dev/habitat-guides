@@ -169,7 +169,18 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
 .photo-pair .photo img{--ratio:4/5}
 .hero-photo{margin:0;position:relative}
 .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover}
-.host .headshot{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin-bottom:12px}
+/* host cards, modeled on the habitatretreats.com hosts section: bordered card, name over a hairline, italic title, square photo beside the bio, every other card mirrored. Never round headshots. */
+.host-card{border:1px solid var(--ink);padding:18px 20px;margin-bottom:14px;break-inside:avoid}
+.host-card .host-name{font-family:var(--display);font-size:24px;color:var(--ink);letter-spacing:.02em;text-align:right;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.host-card .host-title{font-style:italic;font-size:18px;text-align:right;margin:6px 0 12px}
+.host-card .host-body{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:end}
+.host-card .host-body img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.host-card .host-body p{margin:0;font-size:16px}
+.host-card.flip .host-name,.host-card.flip .host-title{text-align:left}
+.host-card.flip .host-body{grid-template-columns:1fr 200px}
+.host-card.flip .host-body img{order:2}
+.host-card.flip .host-body p{text-align:right}
+@media (max-width:560px){.host-card .host-body,.host-card.flip .host-body{grid-template-columns:1fr}.host-card.flip .host-body img{order:0}.host-card.flip .host-body p{text-align:left}}
 @media (max-width:520px){.photo-pair{grid-template-columns:minmax(0,1fr)}.hero-photo img{aspect-ratio:3/2}}
 
 @media print{
@@ -190,7 +201,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
   .toc nav a i{font-size:17px}
   .quick a{padding:10px 14px}
   .sec{break-before:page;padding-top:0}
-  .photo,.photo-pair,.hero-photo,.host .headshot{break-inside:avoid}
+  .photo,.photo-pair,.hero-photo,.host-card{break-inside:avoid}
   .photo img,.hero-photo img{max-height:3.6in}
   h2.st,h3,.num{break-after:avoid}
   li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
@@ -445,9 +456,9 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <h2 class="st">What to expect on retreat</h2>
     <h3 style="margin-top:0">Your hosts</h3>
     <div class="hosts">
-      <!-- PHOTO (optional) | headshot: <img class="headshot" src="photos/host-firstname.jpg" alt="{{HOST_NAME}}"> as the first thing inside .host -->
-      <div class="host"><b>{{HOST_NAME}}</b><i>{{HOST_TITLE}}</i><p>{{HOST_BIO}}</p></div>
-      <div class="host"><b>{{HOST_NAME}}</b><i>{{HOST_TITLE}}</i><p>{{HOST_BIO}}</p></div>
+      <!-- Host cards like the website: photo = square crop of the host's photo from habitatretreats.com (photos/host-firstname.jpg). Second card gets class "flip". All hosts get a photo or none do. -->
+      <div class="host-card"><div class="host-name">{{HOST_NAME_UPPERCASE}}</div><div class="host-title">{{HOST_TITLE}}</div><div class="host-body"><img src="photos/host-{{firstname}}.jpg" alt="{{HOST_NAME}}" loading="lazy"><p>{{HOST_BIO}}</p></div></div>
+      <div class="host-card flip"><div class="host-name">{{HOST_NAME_UPPERCASE}}</div><div class="host-title">{{HOST_TITLE}}</div><div class="host-body"><img src="photos/host-{{firstname}}.jpg" alt="{{HOST_NAME}}" loading="lazy"><p>{{HOST_BIO}}</p></div></div>
     </div>
     <h3>The activities</h3>
     <!-- GUIDE: list EVERY activity on the itinerary, not just the "adventurous" ones. -->
