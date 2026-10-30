@@ -132,18 +132,20 @@ def cmd_check(slug):
         sys.exit(1)
 
 
-async def print_pdf(path, out, paper):
+async def print_pdf(path, out):
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
         b = await p.chromium.launch()
         pg = await b.new_page(viewport={"width": PRINT_VIEWPORT, "height": 900})
         await pg.goto("file://" + path, wait_until="networkidle")
         await pg.evaluate("document.fonts.ready")
+        paper = await pg.evaluate("getComputedStyle(document.body).backgroundColor")
         await pg.pdf(path=out, prefer_css_page_size=True, print_background=True)
         bg = await b.new_page()
         await bg.set_content(f"<style>@page{{size:8.5in 11in;margin:0}}html,body{{margin:0;height:100%;background:{paper}}}</style><body></body>")
         await bg.pdf(path=out + ".bg.pdf", print_background=True, width="8.5in", height="11in")
         await b.close()
+        return paper
 
 
 def cmd_pdf(slug):
@@ -152,7 +154,7 @@ def cmd_pdf(slug):
     name = pdf_name(slug, html)
     out = os.path.join(ROOT, slug, name)
     raw = out + ".raw.pdf"
-    asyncio.run(print_pdf(path, raw, paper_color(html)))
+    paper = asyncio.run(print_pdf(path, raw))
     w = PdfWriter()
     for page in PdfReader(raw).pages:          # full-bleed paper color behind every page
         bgp = PdfReader(raw + ".bg.pdf").pages[0]
@@ -163,7 +165,7 @@ def cmd_pdf(slug):
         os.remove(f)
     r = PdfReader(out)
     links = sum(len(pg.get("/Annots") or []) for pg in r.pages)
-    print(f"Built {out}\n  {len(r.pages)} pages, {links} clickable links, background {paper_color(html)}")
+    print(f"Built {out}\n  {len(r.pages)} pages, {links} clickable links, background {paper}")
     if shutil.which("pdftoppm"):
         prev = os.path.join(ROOT, slug, ".preview")
         os.makedirs(prev, exist_ok=True)

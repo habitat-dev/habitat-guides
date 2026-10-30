@@ -1,7 +1,8 @@
 <!--
   HABITAT RETREAT GUIDE TEMPLATE
   1. Create a new guide with: python3 tools/guide_tool.py new <slug>   (slug = destination-year, e.g. kenya-2027)
-  2. Swap the THEME block in <style> and the fonts link (Habitat theme is the default; co-hosted retreats use the partner's brand).
+  2. Habitat-only retreat: keep the habitat.css link and set --retreat-bg/--retreat-fg for this retreat (see the Habitat brand guide).
+     Co-hosted retreat: delete the habitat.css link, link the partner's Google Fonts, and set the partner tokens in :root.
   3. Replace every {{TOKEN}} and follow each GUIDE note. Delete the GUIDE notes when done.
   4. Copy comes ONLY from the approved copy doc for this retreat. Never invent facts.
   5. Run: python3 tools/guide_tool.py check <slug>   then   python3 tools/guide_tool.py pdf <slug>
@@ -18,32 +19,27 @@
 <meta property="og:description" content="{{PLACE}}. {{DATE_RANGE}}.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- FONTS: Habitat theme. For a partner theme, swap to the partner's Google Fonts (e.g. Cormorant + Cormorant Garamond + Jost for Sarah Lord). -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&family=Tenor+Sans&display=swap">
+<!-- PARTNER THEME ONLY: link the partner's Google Fonts here, e.g. for Sarah Lord:
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap"> -->
 <style>
 /* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. No photo blocks, no colored section backgrounds except .callout. */
 :root{
-  /* ===== THEME: swap this block per retreat. See 05_DESIGN_SYSTEM.md =====
-     --paper  page background (full bleed, every page)
-     --ink    headings, lines, buttons
-     --text   body copy (can equal --ink)
-     --accent bullets, link underline, heading underline, callout background
-     --rule   thin dividers (ink at ~22% opacity)                        */
-
-  /* HABITAT THEME (Habitat-only retreats) */
-  --paper:#F3E9DA; --ink:#772012; --text:#4A281D; --accent:#9CAEBC; --rule:rgba(119,32,18,.22);
-  --display:'Tenor Sans','Optima','Gill Sans',sans-serif;          /* stand-in for La Magnifique */
-  --body:'DM Sans','Helvetica Neue',Arial,sans-serif;
-  --label:'DM Sans','Helvetica Neue',Arial,sans-serif;
-  --script:'Instrument Serif',Georgia,serif;                        /* stand-in for ED Sonar */
-
-  /* PARTNER THEME EXAMPLE (Sarah Lord Photo, MOR27): replace the 6 lines above with
+  /* ===== THEME TOKENS =====
+     Habitat retreats: these are overridden by ../themes/habitat.css (linked after this <style>). Only set --retreat-bg/--retreat-fg below.
+     Partner retreats: delete the habitat.css link and set the partner values here. See 05_DESIGN_SYSTEM.md.
+     The values below are the Sarah Lord Photo (MOR27) partner theme, as a worked example. */
   --paper:#F9F5F1; --ink:#371715; --text:#371715; --accent:#E7DD87; --rule:rgba(55,23,21,.22);
   --display:'Cormorant','Cormorant Garamond',Garamond,serif;
   --body:'Cormorant Garamond','Cormorant',Garamond,Georgia,serif;
   --label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
   --script:'Cormorant',Garamond,serif;
-  */
+  /* roles (partner default: derived from ink + accent) */
+  --line-strong:var(--ink); --link-line:var(--accent); --hover-bg:var(--accent); --h2-bar:var(--accent);
+  --bullet:var(--accent); --bullet-edge:var(--ink); --callout-bg:var(--accent); --callout-fg:var(--ink);
+  --card:transparent; --card-border:var(--ink); --btn-bg:var(--ink); --btn-fg:var(--paper); --btn-hover-fg:var(--accent);
+  --label-color:inherit; --hero-bg:transparent; --hero-fg:inherit; --hero-line:var(--ink);
+  /* per retreat (Habitat brand guide: retreat color is used for the header band only) */
+  --retreat-bg:#9CAEBC; --retreat-fg:#4A281D;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -51,16 +47,18 @@ html{background:var(--paper);scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.55;-webkit-text-size-adjust:100%}
 .wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
-a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:2px}
-a:hover{background:var(--accent)}
+a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--link-line);text-decoration-thickness:3px;text-underline-offset:2px}
+a:hover{background:var(--hover-bg)}
 a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-mark{background:linear-gradient(transparent 58%,var(--accent) 58%);color:inherit;padding:0 .08em}
+mark{background:linear-gradient(transparent 58%,var(--hover-bg) 58%);color:inherit;padding:0 .08em}
 
-/* cover */
-.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
-.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--ink)}
+/* header band */
+.band{background:var(--hero-bg);color:var(--hero-fg)}
+.band a{color:inherit}
+.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;color:var(--label-color);font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--hero-line)}
 .hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
-.hero h1{color:var(--ink);margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1{color:inherit;margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
 .hero h1 em{font-style:italic;font-weight:400}
 .hero .sub{margin:12px 0 0;font-size:21px;font-style:italic}
 .hero .when{margin-top:16px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
@@ -70,7 +68,8 @@ mark{background:linear-gradient(transparent 58%,var(--accent) 58%);color:inherit
 
 /* quick links */
 .quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
-.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;border:1px solid var(--ink);text-decoration:none;font-weight:400;transition:background .15s}
+.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;background:var(--card);border:1px solid var(--card-border);text-decoration:none;font-weight:400;transition:background .15s}
+.quick a:hover{background:var(--hover-bg)}
 .quick a b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.1}
 .quick a span{font-size:16px;line-height:1.35}
 
@@ -79,22 +78,22 @@ mark{background:linear-gradient(transparent 58%,var(--accent) 58%);color:inherit
 .toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
 .toc p{margin:4px 0 16px;font-size:17px}
 .toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
-.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;background:var(--card);border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
 .toc nav a i{font-family:var(--script);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
-.toc nav a:hover,.toc nav a:focus-visible{background:var(--accent);border-color:var(--ink)}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--hover-bg);border-color:var(--ink)}
 
 /* sections */
 .sec{padding-top:76px;scroll-margin-top:12px}
-.num{display:block;font-family:var(--script);font-style:italic;font-size:26px}
+.num{display:block;color:var(--label-color);font-family:var(--script);font-style:italic;font-size:26px}
 h2.st{margin:2px 0 22px;color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;text-wrap:balance}
-h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--accent)}
-h3{margin:30px 0 10px;font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--h2-bar)}
+h3{margin:30px 0 10px;color:var(--label-color);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
 p{margin:0 0 14px;text-wrap:pretty}
 .lead{font-family:var(--display);font-size:25px;line-height:1.35;font-style:italic}
 ul.d{list-style:none;margin:0 0 14px;padding:0}
 ul.d li{position:relative;padding-left:24px;margin:0 0 8px;text-wrap:pretty}
-ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--ink);background:var(--accent);transform:rotate(45deg)}
-ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--ink);background:transparent;transform:none}
+ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--bullet-edge);background:var(--bullet);transform:rotate(45deg)}
+ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--bullet-edge);background:transparent;transform:none}
 .note{font-size:16px}
 b,strong{font-weight:600}
 .q{font-weight:600}
@@ -102,18 +101,18 @@ b,strong{font-weight:600}
 table{width:100%;border-collapse:collapse;font-size:17px;line-height:1.4}
 .tw table{min-width:460px}
 .tw table.kv{min-width:0}
-th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--ink)}
+th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--line-strong)}
 td{border-bottom:1px solid var(--rule);padding:10px 12px;vertical-align:top}
-table.kv{border-top:1.5px solid var(--ink)}
+table.kv{border-top:1.5px solid var(--line-strong)}
 table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:14px}
-.callout{background:var(--accent);padding:28px 30px 16px;margin:6px 0 10px}
-.callout h2.st::after{background:var(--ink)}
+.callout{background:var(--callout-bg);color:var(--callout-fg);padding:28px 30px 16px;margin:6px 0 10px}
+.callout h2.st::after{background:var(--callout-fg)}
 .callout ul.d li::before{background:var(--paper)}
-.frame{border:1px solid var(--ink);padding:22px 24px 10px;margin:18px 0}
+.frame{background:var(--card);border:1px solid var(--card-border);padding:22px 24px 10px;margin:18px 0}
 
 /* itinerary */
 .day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--rule)}
-.days .day:first-child{border-top:1.5px solid var(--ink)}
+.days .day:first-child{border-top:1.5px solid var(--line-strong)}
 .day .when b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.05}
 .day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
 .day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px}
@@ -122,7 +121,7 @@ table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;lett
 /* venues + hosts */
 .venue{margin:10px 0 26px;padding-top:4px}
 .hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:12px}
-.host{border-top:1.5px solid var(--ink);padding-top:14px}
+.host{border-top:1.5px solid var(--line-strong);padding-top:14px}
 .host b{display:block;font-family:var(--display);font-size:25px;font-weight:600;line-height:1.1}
 .host i{display:block;margin-bottom:8px}
 .host p{font-size:17px}
@@ -130,20 +129,20 @@ table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;lett
 .times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .times b{display:block;font-family:var(--display);font-weight:600;font-size:28px}
 .tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--rule)}
-.tls .tl:first-child{border-top:1.5px solid var(--ink)}
+.tls .tl:first-child{border-top:1.5px solid var(--line-strong)}
 .tl > div:first-child{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
 
 /* contacts + footer */
 .ctw{overflow-x:auto}
 .ctw table{min-width:520px}
-.addr{margin-top:14px;padding:14px 18px;border:1px solid var(--ink);display:flex;flex-direction:column;gap:4px;font-size:17px}
+.addr{margin-top:14px;padding:14px 18px;background:var(--card);border:1px solid var(--card-border);display:flex;flex-direction:column;gap:4px;font-size:17px}
 .addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
 footer{margin-top:80px}
-footer .wrap{padding-block:40px 64px;border-top:1px solid var(--ink);text-align:center}
+footer .wrap{padding-block:40px 64px;border-top:1px solid var(--line-strong);text-align:center}
 footer .big{font-family:var(--script);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1}
 footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2}
-.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--ink);color:var(--paper);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
-.totop:hover{background:var(--ink);color:var(--accent)}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--btn-bg);color:var(--btn-fg);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
+.totop:hover{background:var(--btn-bg);color:var(--btn-hover-fg)}
 
 @media (max-width:680px){
   body{font-size:18px}
@@ -187,10 +186,14 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
 }
 .signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
 </style>
+<!-- HABITAT THEME: keep for Habitat-only retreats, delete for partner retreats -->
+<link rel="stylesheet" href="../fonts/habitat-fonts.css">
+<link rel="stylesheet" href="../themes/habitat.css">
 </head>
 <body>
 
-<header class="wrap">
+<header class="band">
+<div class="wrap">
   <div class="top"><span>Habitat Retreats</span><span>{{PARTNER_NAME_OR_DELETE_SPAN}}</span></div>
   <div class="hero">
     <div class="eyebrow">Your retreat guide</div>
@@ -205,6 +208,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
       <li><b>{{HABITAT_HOST}} (Habitat)</b> | <a href="tel:{{HABITAT_HOST_TEL}}">{{HABITAT_HOST_PHONE}}</a></li>
     </ul>
   </div>
+</div>
 </header>
 
 <main class="wrap">

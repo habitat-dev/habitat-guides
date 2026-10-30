@@ -1,0 +1,8 @@
+/* Habitat brand fonts (licensed). Weight/style ranges stop browsers from faking bold or italic. */
+@font-face{font-family:'La Magnifique';src:url('lamagnifique-regular.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'La Magnifique';src:url('lamagnifique-regular.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'ED Sonar';src:url('ed-sonar-regular.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'ED Sonar';src:url('ed-sonar-regular.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'South Pacific';src:url('southpacific-regular.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Alte Haas Grotesk';src:url('altehaasgrotesk-regular.woff2') format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Alte Haas Grotesk';src:url('altehaasgrotesk-bold.woff2') format('woff2');font-weight:600 900;font-style:normal;font-display:swap}

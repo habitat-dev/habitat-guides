@@ -1,0 +1,57 @@
+/* Habitat theme | follows the Habitat Quick Brand Guide.
+   Linked by every Habitat-only guide, after the page's own <style>. Edit here once and every Habitat guide updates.
+   Fonts: ../fonts/habitat-fonts.css (La Magnifique, South Pacific, Alte Haas Grotesk, ED Sonar). */
+:root{
+  --paper:#FEF9F3;      /* Paper: whole page */
+  --stone:#E7DED3;      /* Stone: cards, info boxes */
+  --linen:#F3E9DA;
+  --walnut:#4A281D;     /* all text */
+  --muted:#724F48;      /* secondary text: dates, metadata, captions */
+  --clay:#772012;       /* eyebrows, accents */
+  --moss:#917530;       /* buttons, link underlines */
+  --sand:#D3B494;       /* 1px dividers, borders */
+  --sun:#F7E7B0;        /* callouts, time-sensitive notes */
+
+  --ink:var(--walnut); --text:var(--walnut); --accent:var(--moss); --rule:var(--sand);
+  --line-strong:var(--sand); --link-line:var(--moss); --hover-bg:var(--sun); --h2-bar:var(--clay);
+  --bullet:var(--clay); --bullet-edge:var(--clay); --callout-bg:var(--sun); --callout-fg:var(--walnut);
+  --card:var(--stone); --card-border:transparent; --btn-bg:var(--moss); --btn-fg:var(--paper); --btn-hover-fg:var(--paper);
+  --label-color:var(--clay); --hero-bg:var(--retreat-bg); --hero-fg:var(--retreat-fg); --hero-line:transparent;
+
+  --display:'La Magnifique',Georgia,serif;              /* headings: Regular only, Title Case or CAPS */
+  --label:'South Pacific','Helvetica Neue',sans-serif;   /* eyebrows, labels, tags: always UPPERCASE */
+  --body:'Alte Haas Grotesk','Helvetica Neue',Arial,sans-serif;
+  --script:'ED Sonar',Georgia,serif;                     /* accent: 1 to 4 words, 24px+ */
+}
+
+/* type scale (brand: Display 40 | H1 32 | H2 24 | H3 20 caps | Body 16 | Small 14 | Eyebrow 13) */
+body{font-size:17px;line-height:1.55}
+.hero h1{font-size:clamp(34px,5.4vw,44px);font-weight:400;line-height:1.05;letter-spacing:0}
+.hero h1 em{font-style:normal}
+.hero .sub{font-size:18px;font-style:normal;color:var(--retreat-fg)}
+h2.st,.toc h2{font-size:clamp(28px,4.4vw,34px);font-weight:400;line-height:1.1}
+h3{font-family:var(--display);font-size:20px;letter-spacing:.04em;font-weight:400;color:var(--walnut)}
+.quick a b,.toc nav a,.day .when b,.host b,.times b,.tl > div:first-child{font-weight:400}
+.quick a b{font-size:21px}
+.toc nav a{font-size:19px}
+.day .when em,.lead{font-style:normal}
+.num,.toc nav a i,.hero .collab,footer .big,.signoff{font-style:normal}
+.num{font-size:26px}
+.toc nav a i{font-size:24px;color:var(--clay)}
+
+/* eyebrows + labels: South Pacific, UPPERCASE, +6% tracking or more, never reduced */
+.top,.hero .eyebrow,.hero .when,th,table.kv td:first-child,.day .when span,.addr span,footer .meta2,.totop{font-family:var(--label);letter-spacing:.08em;text-transform:uppercase}
+.top,.hero .eyebrow,.hero .when{color:var(--retreat-fg)}
+.hero .eyebrow,.top{font-size:13px}
+th,table.kv td:first-child,.day .when span,.addr span{font-size:13px;color:var(--clay);font-weight:400}
+.meta,.note,.day .when span{color:var(--muted)}
+
+/* buttons never bold, corners 0 to 4px, no outlined buttons or heavy shadows */
+.totop{font-weight:400;font-size:13px;box-shadow:none;border-radius:2px}
+.quick a,.toc nav a,.frame,.addr,.callout{border-radius:2px}
+.toc nav a{border-color:transparent}
+.toc nav a:hover,.toc nav a:focus-visible{border-color:transparent}
+
+/* header band in the retreat color (brand: retreat color for hero band only) */
+.band .hero{padding-bottom:36px}
+.band a{text-decoration-color:var(--retreat-fg)}
