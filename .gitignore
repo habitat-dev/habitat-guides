@@ -1,0 +1,4 @@
+.preview/
+*.raw.pdf
+*.bg.pdf
+__pycache__/

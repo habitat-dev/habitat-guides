@@ -1,0 +1,499 @@
+<!--
+  HABITAT RETREAT GUIDE TEMPLATE
+  1. Copy this file to <slug>/index.html in the habitat-guides repo (slug = destination-year, e.g. kenya-2027).
+  2. Swap the THEME block in <style> (Habitat theme is the default; partner retreats use the partner's brand).
+  3. Replace every {{TOKEN}} and every <!-- GUIDE: -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>{{DESTINATION}} Retreat Guide {{YEAR}}</title>
+<meta name="description" content="Your guide to {{RETREAT_FULL_NAME}}, {{DATE_RANGE}}.">
+<meta property="og:title" content="{{RETREAT_FULL_NAME}} | Retreat Guide">
+<meta property="og:description" content="{{PLACE}}. {{DATE_RANGE}}.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- FONTS: Habitat theme. For a partner theme, swap to the partner's Google Fonts (e.g. Cormorant + Cormorant Garamond + Jost for Sarah Lord). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&family=Tenor+Sans&display=swap">
+<style>
+/* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. No photo blocks, no colored section backgrounds except .callout. */
+:root{
+  /* ===== THEME: swap this block per retreat. See 05_DESIGN_SYSTEM.md =====
+     --paper  page background (full bleed, every page)
+     --ink    headings, lines, buttons
+     --text   body copy (can equal --ink)
+     --accent bullets, link underline, heading underline, callout background
+     --rule   thin dividers (ink at ~22% opacity)                        */
+
+  /* HABITAT THEME (Habitat-only retreats) */
+  --paper:#F3E9DA; --ink:#772012; --text:#4A281D; --accent:#9CAEBC; --rule:rgba(119,32,18,.22);
+  --display:'Tenor Sans','Optima','Gill Sans',sans-serif;          /* stand-in for La Magnifique */
+  --body:'DM Sans','Helvetica Neue',Arial,sans-serif;
+  --label:'DM Sans','Helvetica Neue',Arial,sans-serif;
+  --script:'Instrument Serif',Georgia,serif;                        /* stand-in for ED Sonar */
+
+  /* PARTNER THEME EXAMPLE (Sarah Lord Photo, MOR27): replace the 6 lines above with
+  --paper:#F9F5F1; --ink:#371715; --text:#371715; --accent:#E7DD87; --rule:rgba(55,23,21,.22);
+  --display:'Cormorant','Cormorant Garamond',Garamond,serif;
+  --body:'Cormorant Garamond','Cormorant',Garamond,Georgia,serif;
+  --label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
+  --script:'Cormorant',Garamond,serif;
+  */
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:2px}
+a:hover{background:var(--accent)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+mark{background:linear-gradient(transparent 58%,var(--accent) 58%);color:inherit;padding:0 .08em}
+
+/* cover */
+.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--ink)}
+.hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{color:var(--ink);margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .sub{margin:12px 0 0;font-size:21px;font-style:italic}
+.hero .when{margin-top:16px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
+.hero .collab{margin-top:14px;font-family:var(--script);font-style:italic;font-size:24px}
+.contacts-top{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:18px}
+.contacts-top b{font-weight:600}
+
+/* quick links */
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
+.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;border:1px solid var(--ink);text-decoration:none;font-weight:400;transition:background .15s}
+.quick a b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.1}
+.quick a span{font-size:16px;line-height:1.35}
+
+/* jump grid */
+.toc{margin-top:40px;scroll-margin-top:16px}
+.toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
+.toc p{margin:4px 0 16px;font-size:17px}
+.toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
+.toc nav a i{font-family:var(--script);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--accent);border-color:var(--ink)}
+
+/* sections */
+.sec{padding-top:76px;scroll-margin-top:12px}
+.num{display:block;font-family:var(--script);font-style:italic;font-size:26px}
+h2.st{margin:2px 0 22px;color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;text-wrap:balance}
+h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--accent)}
+h3{margin:30px 0 10px;font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+p{margin:0 0 14px;text-wrap:pretty}
+.lead{font-family:var(--display);font-size:25px;line-height:1.35;font-style:italic}
+ul.d{list-style:none;margin:0 0 14px;padding:0}
+ul.d li{position:relative;padding-left:24px;margin:0 0 8px;text-wrap:pretty}
+ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--ink);background:var(--accent);transform:rotate(45deg)}
+ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--ink);background:transparent;transform:none}
+.note{font-size:16px}
+b,strong{font-weight:600}
+.q{font-weight:600}
+.tw{overflow-x:auto;margin:6px 0 16px}
+table{width:100%;border-collapse:collapse;font-size:17px;line-height:1.4}
+.tw table{min-width:460px}
+.tw table.kv{min-width:0}
+th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--ink)}
+td{border-bottom:1px solid var(--rule);padding:10px 12px;vertical-align:top}
+table.kv{border-top:1.5px solid var(--ink)}
+table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:14px}
+.callout{background:var(--accent);padding:28px 30px 16px;margin:6px 0 10px}
+.callout h2.st::after{background:var(--ink)}
+.callout ul.d li::before{background:var(--paper)}
+.frame{border:1px solid var(--ink);padding:22px 24px 10px;margin:18px 0}
+
+/* itinerary */
+.day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--rule)}
+.days .day:first-child{border-top:1.5px solid var(--ink)}
+.day .when b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.05}
+.day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+.day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px}
+.meta{font-size:16px}
+
+/* venues + hosts */
+.venue{margin:10px 0 26px;padding-top:4px}
+.hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:12px}
+.host{border-top:1.5px solid var(--ink);padding-top:14px}
+.host b{display:block;font-family:var(--display);font-size:25px;font-weight:600;line-height:1.1}
+.host i{display:block;margin-bottom:8px}
+.host p{font-size:17px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.times b{display:block;font-family:var(--display);font-weight:600;font-size:28px}
+.tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--rule)}
+.tls .tl:first-child{border-top:1.5px solid var(--ink)}
+.tl > div:first-child{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
+
+/* contacts + footer */
+.ctw{overflow-x:auto}
+.ctw table{min-width:520px}
+.addr{margin-top:14px;padding:14px 18px;border:1px solid var(--ink);display:flex;flex-direction:column;gap:4px;font-size:17px}
+.addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+footer{margin-top:80px}
+footer .wrap{padding-block:40px 64px;border-top:1px solid var(--ink);text-align:center}
+footer .big{font-family:var(--script);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1}
+footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--ink);color:var(--paper);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
+.totop:hover{background:var(--ink);color:var(--accent)}
+
+@media (max-width:680px){
+  body{font-size:18px}
+  .hero{padding-block:28px 24px}
+  .contacts-top{flex-direction:column}
+  .day,.tl{grid-template-columns:minmax(0,1fr);gap:8px}
+  .hosts,.two,.times{grid-template-columns:minmax(0,1fr)}
+  .callout{padding:22px 18px 10px}
+  .toc nav a{font-size:18px;padding:8px 12px;gap:10px}
+}
+@media (max-width:520px){
+  .toc nav{grid-template-columns:minmax(0,1fr)}
+  .toc nav a i{font-size:20px;min-width:22px}
+  table.kv td:first-child{width:90px}
+}
+
+@media print{
+  @page{size:8.5in 11in;margin:.6in .65in .65in}
+  html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:15.5px}
+  .wrap{max-width:none;padding:0}
+  .totop{display:none}
+  .top{padding-top:0}
+  .hero{padding-block:8px 18px}
+  .quick{break-before:auto}
+  .quick{padding-top:18px}
+  .toc{margin-top:14px}
+  .toc p{display:none}
+  .toc h2{font-size:26px;margin-bottom:8px}
+  .toc nav{gap:5px 8px}
+  .toc nav a{min-height:30px;padding:3px 12px;font-size:15px}
+  .toc nav a i{font-size:17px}
+  .quick a{padding:10px 14px}
+  .sec{break-before:page;padding-top:0}
+  h2.st,h3,.num{break-after:avoid}
+  li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
+  footer{margin-top:24px;break-inside:avoid;break-before:avoid}
+  footer .wrap{padding:18px 0 0}
+  footer .big{font-size:28px}
+  footer .meta2{display:none}
+}
+.signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
+</style>
+</head> note's instruction. Delete GUIDE comments when done.
+  4. Copy comes ONLY from the approved copy doc for this retreat. Never invent facts.
+  5. Run: python3 tools/guide_tool.py check <slug>   then   python3 tools/guide_tool.py pdf <slug>
+-->
+<body>
+
+<header class="wrap">
+  <div class="top"><span>Habitat Retreats</span><span>{{PARTNER_NAME_OR_DELETE_SPAN}}</span></div>
+  <div class="hero">
+    <div class="eyebrow">Your retreat guide</div>
+    <h1>{{DESTINATION}} <em>{{RETREAT_NAME_REST}}</em></h1>
+    <p class="sub">{{ONE_LINE_DESCRIPTION}}</p>
+    <div class="when">{{DATE_RANGE}} | {{PLACE}}</div>
+    <!-- GUIDE: co-hosted retreats only. Delete .collab + .contacts-top for Habitat-only retreats. -->
+    <div class="collab">{{PARTNER_NAME}} x Habitat</div>
+    <ul class="contacts-top">
+      <li><b>{{PARTNER_CONTACT_NAME}}</b> | <a href="mailto:{{PARTNER_EMAIL}}">{{PARTNER_EMAIL}}</a></li>
+      <li><b>Habitat</b> | <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></li>
+      <li><b>{{HABITAT_HOST}} (Habitat)</b> | <a href="tel:{{HABITAT_HOST_TEL}}">{{HABITAT_HOST_PHONE}}</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="quick">
+    <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener"><b>Flight + Info Form</b><span>Flights, dietary needs, health notes, emergency contact</span></a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener"><b>Roommate Matching Quiz</b><span>Coming on your own? Start here</span></a>
+    <a href="mailto:habitat@habitatretreats.com?subject={{SUBJECT_URLENCODED}}"><b>Questions</b><span>habitat@habitatretreats.com</span></a>
+    <a href="{{PDF_FILENAME}}" download><b>Download PDF</b><span>Save the guide for travel day and offline</span></a>
+  </div>
+
+  <div class="toc" id="contents">
+    <h2>Jump to a section</h2>
+    <p>Tap any section to go straight there. The Contents button in the corner brings you back here.</p>
+    <!-- GUIDE: labels must fit on ONE line in 2 columns. Keep them short. -->
+    <nav>
+      <a href="#welcome"><i>01</i><span>Welcome</span></a>
+      <a href="#housekeeping"><i>02</i><span>Housekeeping</span></a>
+      <a href="#itinerary"><i>03</i><span>Itinerary</span></a>
+      <a href="#included"><i>04</i><span>What's included</span></a>
+      <a href="#stay"><i>05</i><span>Where you'll stay</span></a>
+      <a href="#getting-there"><i>06</i><span>Flights + transfers</span></a>
+      <a href="#payments"><i>07</i><span>Payments + cancellations</span></a>
+      <a href="#passports"><i>08</i><span>Passports + health</span></a>
+      <a href="#know-before"><i>09</i><span>Know before you go</span></a>
+      <a href="#expect"><i>10</i><span>What to expect</span></a>
+      <a href="#packing"><i>11</i><span>Packing list</span></a>
+      <a href="#timeline"><i>12</i><span>Timeline + to&#8209;dos</span></a>
+      <a href="#faq"><i>13</i><span>FAQ</span></a>
+      <a href="#contacts"><i>14</i><span>Contacts + emergencies</span></a>
+    </nav>
+  </div>
+
+  <!-- 01 -->
+  <section class="sec" id="welcome">
+    <span class="num">01</span>
+    <h2 class="st">{{WELCOME_HEADLINE}}</h2>
+    <p>{{WELCOME_PARAGRAPH}}</p>
+    <ul class="d">
+      <li>{{WELCOME_BULLET}}</li>
+    </ul>
+    <p class="signoff">xx,<br>{{SIGNOFF}}</p>
+
+    <h3>Your retreat at a glance</h3>
+    <div class="tw" style="overflow:visible"><table class="kv">
+      <tr><td>Retreat</td><td>{{RETREAT_FULL_NAME}}</td></tr>
+      <tr><td>Dates</td><td>{{WEEKDAY_DATE_RANGE}} ({{N}} nights)</td></tr>
+      <tr><td>Where</td><td>{{VENUE_LINE}}</td></tr>
+      <tr><td>Arrive</td><td>{{ARRIVE_LINE}}</td></tr>
+      <tr><td>Depart</td><td>{{DEPART_LINE}}</td></tr>
+      <tr><td>Hosts</td><td>{{HOSTS_LINE}}</td></tr>
+      <tr><td>The week</td><td>{{WEEK_SUMMARY}}. Everything optional</td></tr>
+      <tr><td>Your room</td><td>{{ROOM_LINE}}, see Where You'll Stay</td></tr>
+      <tr><td>Questions</td><td>Email <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>. Habitat handles all logistics</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 02 Housekeeping: plain section, NO background, straight into bullets. -->
+  <section class="sec" id="housekeeping">
+    <span class="num">02</span>
+    <h2 class="st">Housekeeping</h2>
+    <ul class="d">
+      <li><span class="q">{{BOLD_LEAD}}</span> {{SENTENCES}}</li>
+    </ul>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec" id="itinerary">
+    <span class="num">03</span>
+    <h2 class="st">Day-by-day itinerary</h2>
+    <p>{{ITINERARY_INTRO}}</p>
+    <div class="days">
+      <!-- GUIDE: one .day per day. Times as "5pm |" or "5:30 to 6:30 |". -->
+      <div class="day">
+        <div class="when"><b>Day 1</b><span>{{SHORT_WEEKDAY_DATE}}</span><em>{{DAY_TITLE}}</em></div>
+        <div>
+          <ul class="d">
+            <li>{{ITEM}}</li>
+          </ul>
+          <p>{{OPTIONAL_DAY_DESCRIPTION}}</p>
+          <p class="meta"><b>Meals:</b> {{MEALS}} | <b>Wear:</b> {{WEAR}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- GUIDE: the ONLY colored-background element allowed is .callout. Use sparingly (0 to 2 per guide). -->
+    <div class="callout" style="margin-top:22px">
+      <p><b>Keeping you up to date.</b> We're always looking for ways to make the week better. If anything changes on the ground, we'll share it in the group message, our main way of communicating during the retreat.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec" id="included">
+    <span class="num">04</span>
+    <h2 class="st">What's included (and what isn't)</h2>
+    <p>The short version: once you {{ARRIVAL_MOMENT}}, the week is essentially handled. Here's exactly what that means.</p>
+    <div class="two">
+      <div>
+        <h3>Included</h3>
+        <ul class="d"><li>{{INCLUDED_ITEM}}</li></ul>
+      </div>
+      <div>
+        <h3>Not included</h3>
+        <ul class="d"><li>{{NOT_INCLUDED_ITEM}}</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec" id="stay">
+    <span class="num">05</span>
+    <h2 class="st">Where you'll stay</h2>
+    <div class="venue">
+      <h3>{{VENUE_NAME}} | {{N}} nights</h3>
+      <p>{{VENUE_DESCRIPTION}}</p>
+      <!-- GUIDE: no venue website unless Kennon asks for it. -->
+      <ul class="d">
+        <li><b>Address:</b> {{ADDRESS}}</li>
+        <li><b>Check-in:</b> {{CHECK_IN}} | <b>Check-out:</b> {{CHECK_OUT}}</li>
+        <li><b>On site:</b> {{AMENITIES}}</li>
+        <li><b>In your room:</b> {{ROOM_AMENITIES}}</li>
+        <li><b>Wi-Fi:</b> {{YES_NO}}</li>
+      </ul>
+    </div>
+    <h3>Rooms + roommates</h3>
+    <ul class="d">
+      <li>{{ROOM_TYPES_AND_PRICES}}</li>
+      <li>Coming with a friend? Tell us and we'll room you together.</li>
+      <li>Coming on your own? Name a preferred roommate, or we'll pair you based on your <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a>.</li>
+      <li>Room assignments go out before the retreat.</li>
+    </ul>
+  </section>
+
+  <!-- 06 -->
+  <section class="sec" id="getting-there">
+    <span class="num">06</span>
+    <h2 class="st">Getting there + getting home</h2>
+    <p>You book your own flights, so you can come from anywhere and add travel on either side. Booking your own doesn't mean you're on your own. Send us any flight before you book if you want our eyes on it.</p>
+    <div class="frame">
+      <h3 style="margin-top:0">The only two times you need</h3>
+      <div class="times">
+        <div><b>Arrive</b><p>{{ARRIVE_GUIDANCE}}</p></div>
+        <div><b>Depart</b><p>{{DEPART_GUIDANCE}}</p></div>
+      </div>
+    </div>
+    <p><b>Lots of flight options.</b> We know there are a ton of different ways to get here. If you're looking at flights that don't line up with these times, send them to us and we'll help you coordinate.</p>
+    <p><b>Transfers:</b> {{TRANSFER_DETAILS}}</p>
+    <h3>Our flight advice</h3>
+    <ul class="d">
+      <li><b>Book in the sweet spot.</b> {{BOOKING_WINDOW_FOR_DESTINATION}}</li>
+      <li>Once booked, fill out the <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a>. It also collects dietary needs, health notes and emergency contact.</li>
+    </ul>
+    <h3>Running late or stuck?</h3>
+    <p>Email us at <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> as soon as you know. On travel day you can also text or WhatsApp {{HOST_NAME_AND_NUMBER}}.</p>
+    <h3>Extending your trip?</h3>
+    <p>{{EXTENSION_LINE}}</p>
+  </section>
+
+  <!-- 07 STANDARD: copy from 08_STANDING_FACTS.md, compute the 3 cancellation dates from the start date. -->
+  <section class="sec" id="payments">
+    <span class="num">07</span>
+    <h2 class="st">Payments, cancellations + insurance</h2>
+    <h3 style="margin-top:0">Deposit + balance</h3>
+    <p>Your $500 deposit is paid and your spot is held. Your full balance is due by {{BALANCE_DUE_DATE}} (30 days before the retreat), following the payment plan you chose at checkout. Payments come out automatically on the card saved at checkout and show on your statement as HABITAT RETREATS.</p>
+    <h3>If you need to cancel</h3>
+    <p>Life happens. Here's how it works (full details in our <a href="https://www.habitatretreats.com/legal/terms-conditions" target="_blank" rel="noopener">Terms + Conditions</a>):</p>
+    <div class="tw"><table>
+      <tr><th style="width:40%">If you cancel</th><th>What happens</th></tr>
+      <tr><td><b>On or before {{DATE_140}}</b><br>(140+ days before)</td><td>Your payments (not your deposit) can be refunded, or moved to another Habitat retreat within 12 months</td></tr>
+      <tr><td><b>{{DATE_139}} to {{DATE_91}}</b><br>(139 to 91 days before)</td><td>50% of the retreat total (not counting your deposit) is due and non-refundable. If you've paid less than that, the difference is charged at this time</td></tr>
+      <tr><td><b>{{DATE_90}} or later</b><br>(90 days or less)</td><td>No refunds. 100% of the retreat total is due at this time</td></tr>
+    </table></div>
+    <ul class="d"><li>{{STANDARD_POLICY_BULLETS}}</li></ul>
+    <h3>Travel insurance</h3>
+    <ul class="d"><li>{{STANDARD_INSURANCE_BULLETS}}</li></ul>
+  </section>
+
+  <!-- 08 RESEARCH FRESH every time: entry rules, vaccines, meds, emergency numbers. -->
+  <section class="sec" id="passports">
+    <span class="num">08</span>
+    <h2 class="st">Passports, health + safety</h2>
+    <h3 style="margin-top:0">Passport + entry</h3>
+    <ul class="d"><li>{{ENTRY_RULES}}</li></ul>
+    <h3>Health</h3>
+    <ul class="d"><li>{{HEALTH}}</li></ul>
+    <h3>Safety</h3>
+    <ul class="d"><li>{{SAFETY}}</li></ul>
+  </section>
+
+  <!-- 09 -->
+  <section class="sec" id="know-before">
+    <span class="num">09</span>
+    <h2 class="st">Know before you go: {{COUNTRY}}</h2>
+    <h3 style="margin-top:0">Weather</h3>
+    <div class="tw"><table>
+      <tr><th></th><th>Day</th><th>Night</th><th>Rain</th></tr>
+      <tr><td><b>{{PLACE_MONTH}}</b></td><td>{{C}} / {{F}}</td><td>{{C}} / {{F}}</td><td>{{RAIN}}</td></tr>
+    </table></div>
+    <h3>Money</h3><ul class="d"><li>{{MONEY}}</li></ul>
+    <h3>Tipping</h3><p>Tipping is completely up to you and your experience. It's never required, but it's appreciated by the people who make the week happen. Had an incredible experience? Tip more. Felt more "meh"? That's OK too.</p>
+    <h3>Phone + data</h3><ul class="d"><li>{{PHONE}}</li></ul>
+    <h3>Plugs + power</h3><p>{{PLUGS}}</p>
+    <h3>Local customs</h3><ul class="d"><li>{{CUSTOMS}}</li></ul>
+  </section>
+
+  <!-- 10 -->
+  <section class="sec" id="expect">
+    <span class="num">10</span>
+    <h2 class="st">What to expect on retreat</h2>
+    <h3 style="margin-top:0">Your hosts</h3>
+    <div class="hosts">
+      <div class="host"><b>{{HOST_NAME}}</b><i>{{HOST_TITLE}}</i><p>{{HOST_BIO}}</p></div>
+      <div class="host"><b>{{HOST_NAME}}</b><i>{{HOST_TITLE}}</i><p>{{HOST_BIO}}</p></div>
+    </div>
+    <h3>The activities</h3>
+    <!-- GUIDE: list EVERY activity on the itinerary, not just the "adventurous" ones. -->
+    <ul class="d"><li><b>{{ACTIVITY}}:</b> {{DETAILS}}</li></ul>
+    <h3>Food</h3><ul class="d"><li>{{FOOD}}</li></ul>
+    <h3>Free time</h3><p>{{FREE_TIME}}</p>
+    <h3>Staying in touch</h3><ul class="d"><li>{{STANDARD_STAYING_IN_TOUCH}}</li></ul>
+    <h3>Anonymous feedback</h3>
+    <p>We want your week to be the best one. We also know it's hard to tell the hosts something isn't working. So during the retreat, an anonymous form stays open and we check it every day. Wishing there was more of something? Someone making you uncomfortable? Room issue? Tell us early so we can fix it before you go home. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a></p>
+    <h3>Arrival + check-out day</h3><ul class="d"><li>{{ARRIVAL_CHECKOUT}}</li></ul>
+    <h3>If you get sick or hurt</h3><p>{{SICK_OR_HURT}}</p>
+    <h3>Valuables</h3><p>Keep your passport, cards and cash in the room safe. Habitat isn't responsible for lost or damaged belongings, so bring nothing you'd be heartbroken to lose.</p>
+    <h3>A few house rules</h3>
+    <ul class="d">
+      <li>Be on time for transfers and excursions.</li>
+      <li>Anything you book on your own during free time isn't run by Habitat and is at your own risk.</li>
+      <li>Your liability waiver is attached to the email with this guide. Fill it out, sign it and email it back to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> before you arrive. You can't take part without it.</li>
+    </ul>
+  </section>
+
+  <!-- 11 -->
+  <section class="sec" id="packing">
+    <span class="num">11</span>
+    <h2 class="st">Packing list</h2>
+    <p><b>Luggage:</b> Completely up to you how much you bring. This is your vacation! {{LUGGAGE_SPECIFICS}}</p>
+    <div class="frame"><p><b>Pack a carry-on like your checked bag might be late.</b> {{CARRY_ON_LIST}}</p></div>
+    <div class="two">
+      <div><h3>Travel essentials</h3><ul class="d check"><li>{{ITEM}}</li></ul></div>
+      <div><h3>Days</h3><ul class="d check"><li>{{ITEM}}</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="sec" id="timeline">
+    <span class="num">12</span>
+    <h2 class="st">Your timeline + to-do list</h2>
+    <p>Everything you need to do, in order.</p>
+    <div class="tls">
+      <div class="tl"><div>Now</div><ul class="d check"><li>{{TODO}}</li></ul></div>
+      <div class="tl"><div>{{MONTH_RANGE}}</div><ul class="d check"><li>{{TODO}}</li></ul></div>
+      <div class="tl"><div>1 month out</div><ul class="d check"><li>Balance fully paid by {{BALANCE_DUE_DATE}} (automatic on your plan)</li></ul></div>
+      <div class="tl"><div>1 week out</div><ul class="d check"><li>{{TODO}}</li></ul></div>
+      <div class="tl"><div>Travel day</div><ul class="d check"><li>Passport, phone, charger, cards</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="sec" id="faq">
+    <span class="num">13</span>
+    <h2 class="st">FAQ</h2>
+    <p>The questions we get most. Still wondering something? Ask us.</p>
+    <h3>Before you go</h3>
+    <p><span class="q">{{QUESTION}}</span><br>{{ANSWER}}</p>
+  </section>
+
+  <!-- 14 -->
+  <section class="sec" id="contacts">
+    <span class="num">14</span>
+    <h2 class="st">Contacts + emergencies</h2>
+    <p>Screenshot this one.</p>
+    <div class="ctw"><table>
+      <tr><th>Who</th><th>How to reach</th><th>When</th></tr>
+      <tr><td><b>Habitat</b></td><td><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></td><td>All logistics, anytime. The best way to reach us</td></tr>
+      <tr><td><b>{{HOST}}</b></td><td>{{PHONE}} (call, text, WhatsApp)</td><td>Anytime before the retreat, travel day + on the ground</td></tr>
+      <tr><td><b>{{VENUE}}</b></td><td>{{VENUE_PHONE_EMAIL}}</td><td>If you can't reach us</td></tr>
+      <tr><td><b>Local emergency</b></td><td>{{EMERGENCY_NUMBERS}}</td><td>Police, ambulance, fire</td></tr>
+      <tr><td><b>US Embassy {{CITY}}</b></td><td>{{EMBASSY_PHONE}}</td><td>Lost passport, serious trouble</td></tr>
+    </table></div>
+    <div class="addr"><span>Hotel address</span>{{FULL_ADDRESS}}</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">We can't wait to see you in {{DESTINATION}}.</div>
+    <div class="meta2">xx, {{SIGNOFF}}<br><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></div>
+  </div>
+</footer>
+<a class="totop" href="#contents">&#8593; Contents</a>
+</body>
+</html>
