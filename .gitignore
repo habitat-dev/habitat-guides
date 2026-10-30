@@ -2,3 +2,4 @@
 *.raw.pdf
 *.bg.pdf
 __pycache__/
+.source-photos/

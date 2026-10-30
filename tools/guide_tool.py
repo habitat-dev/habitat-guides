@@ -7,6 +7,10 @@ Usage (run from the root of the habitat-guides repo):
   python3 tools/guide_tool.py pdf <slug>        build <slug>/<PDF named in the Download button>
   python3 tools/guide_tool.py preview <slug>    screenshots at desktop + phone into <slug>/.preview/
   python3 tools/guide_tool.py photos <slug> <folder>   resize + clean photos from <folder> into <slug>/photos/
+  python3 tools/guide_tool.py sitephotos <slug> <url>  download every photo on a habitatretreats.com page into
+                                                       <slug>/.source-photos/ + a numbered contact sheet to pick from
+  python3 tools/guide_tool.py hosts <slug> kennon carrigan   copy ready-made website-style host photos from
+                                                       shared/hosts/ into <slug>/photos/
 
 Needs: playwright (Python) with Chromium, pypdf, and Pillow (for photos).
   pip install playwright pypdf --break-system-packages   (Chromium is usually preinstalled)
@@ -240,9 +244,58 @@ def cmd_new(slug):
     print(f"Created {slug}/index.html from the template. Fill every {{{{TOKEN}}}}, then run check.")
 
 
+def cmd_sitephotos(slug, url):
+    """Pull every image from a habitatretreats.com (Framer) page. These are cleared for use; venue photos are not."""
+    from PIL import Image
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+    seen, urls = set(), []
+    for u in re.findall(r"https://framerusercontent\.com/images/[A-Za-z0-9_-]+\.(?:jpg|jpeg|png|webp)", html):
+        if u not in seen:
+            seen.add(u); urls.append(u)
+    out = os.path.join(ROOT, slug, ".source-photos")
+    os.makedirs(out, exist_ok=True)
+    thumbs = []
+    for i, u in enumerate(urls):
+        dest = os.path.join(out, f"{i:02d}{os.path.splitext(u)[1]}")
+        if not os.path.exists(dest):
+            urllib.request.urlretrieve(u, dest)
+        try:
+            im = Image.open(dest).convert("RGB")
+        except Exception:
+            continue
+        if min(im.size) < 400:      # icons, logos, tiny graphics
+            continue
+        print(f"  {i:02d}  {im.size[0]}x{im.size[1]}  {u}")
+        im.thumbnail((260, 260)); thumbs.append((i, im))
+    if thumbs:
+        from PIL import ImageDraw
+        cols = 6; rows = (len(thumbs) + cols - 1) // cols
+        sheet = Image.new("RGB", (cols * 270, rows * 290), "white"); d = ImageDraw.Draw(sheet)
+        for k, (i, im) in enumerate(thumbs):
+            x, y = (k % cols) * 270 + 5, (k // cols) * 290 + 25
+            sheet.paste(im, (x, y)); d.text((x, y - 18), f"{i:02d}", fill="black")
+        sheet.save(os.path.join(out, "contact-sheet.jpg"), quality=80)
+    print(f"{len(thumbs)} photos in {slug}/.source-photos/ (contact-sheet.jpg). Copy picks into a folder with clear names, then run photos.")
+
+
+def cmd_hosts(slug, names):
+    out = os.path.join(ROOT, slug, "photos"); os.makedirs(out, exist_ok=True)
+    for n in names:
+        src = os.path.join(ROOT, "shared", "hosts", f"host-{n.lower()}.jpg")
+        if not os.path.exists(src):
+            sys.exit(f"No shared/hosts/host-{n.lower()}.jpg. Crop one square from the website photo (see 13_PHOTOS.md).")
+        shutil.copy(src, os.path.join(out, f"host-{n.lower()}.jpg"))
+        print(f"  {slug}/photos/host-{n.lower()}.jpg")
+
+
 if __name__ == "__main__":
     if len(sys.argv) == 4 and sys.argv[1] == "photos":
         cmd_photos(sys.argv[2], sys.argv[3]); sys.exit(0)
+    if len(sys.argv) == 4 and sys.argv[1] == "sitephotos":
+        cmd_sitephotos(sys.argv[2], sys.argv[3]); sys.exit(0)
+    if len(sys.argv) >= 4 and sys.argv[1] == "hosts":
+        cmd_hosts(sys.argv[2], sys.argv[3:]); sys.exit(0)
     if len(sys.argv) != 3 or sys.argv[1] not in ("new", "check", "pdf", "preview"):
         sys.exit(__doc__)
     {"new": cmd_new, "check": cmd_check, "pdf": cmd_pdf, "preview": cmd_preview}[sys.argv[1]](sys.argv[2])

@@ -22,7 +22,7 @@
 <!-- PARTNER THEME ONLY: link the partner's Google Fonts here, e.g. for Sarah Lord:
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500&display=swap"> -->
 <style>
-/* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. No photo blocks, no colored section backgrounds except .callout. */
+/* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. Real photos only (habitatretreats.com or sent by Kennon, never venue photos), no colored section backgrounds except .callout. */
 :root{
   /* ===== THEME TOKENS =====
      Habitat retreats: these are overridden by ../themes/habitat.css (linked after this <style>). Only set --retreat-bg/--retreat-fg below.
@@ -355,8 +355,11 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <span class="num">05</span>
     <h2 class="st">Where you'll stay</h2>
     <div class="venue">
-      <!-- PHOTO (optional) | one photo of this venue. Delete if none.
-      <figure class="photo photo-wide"><img src="photos/venue.jpg" alt="{{VENUE_NAME}}" loading="lazy"></figure>
+      <!-- PHOTO (optional) | a pair from Kennon: room view, rooftop, guests at the hotel. NEVER the venue's own marketing photos. Delete if none.
+      <div class="photo-pair">
+        <figure class="photo"><img src="photos/stay-a.jpg" alt="{{ALT}}" loading="lazy"></figure>
+        <figure class="photo"><img src="photos/stay-b.jpg" alt="{{ALT}}" loading="lazy"></figure>
+      </div>
       -->
       <h3>{{VENUE_NAME}} | {{N}} nights</h3>
       <p>{{VENUE_DESCRIPTION}}</p>
@@ -504,6 +507,13 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
       <div class="tl"><div>Travel day</div><ul class="d check"><li>Passport, phone, charger, cards</li></ul></div>
     </div>
   </section>
+
+  <!-- PHOTO (optional) | closing pair at the END of section 12, right above the FAQ (Kennon's pick for GRE27: sunset hug + swim stop). Move this inside section 12 just before its closing tag. Delete if none.
+  <div class="photo-pair">
+    <figure class="photo"><img src="photos/close-a.jpg" alt="{{ALT}}" loading="lazy"></figure>
+    <figure class="photo"><img src="photos/close-b.jpg" alt="{{ALT}}" loading="lazy"></figure>
+  </div>
+  -->
 
   <!-- 13 -->
   <section class="sec" id="faq">

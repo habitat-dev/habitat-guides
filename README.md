@@ -7,7 +7,9 @@ https://habitat-dev.github.io/habitat-guides/
 |---|---|
 | `<destination>-<year>/index.html` | One guide (web page). Its PDF sits next to it. |
 | `_template/guide-template.html` | Starting point for every new guide. |
-| `tools/guide_tool.py` | `new`, `check`, `pdf`, `preview` commands. |
+| `tools/guide_tool.py` | `new`, `check`, `pdf`, `preview`, `photos`, `sitephotos`, `hosts` commands. |
+| `shared/hosts/` | Ready-made host photos (square crops of the website photos) for the host cards. |
+| `themes/`, `fonts/` | Habitat brand theme + licensed web fonts. |
 | `index.html` | Home page listing every guide. Add a link for each new guide. |
 
 Workflow: `python3 tools/guide_tool.py new kenya-2027` → fill the page from the approved copy →
