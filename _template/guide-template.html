@@ -159,6 +159,19 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
   table.kv td:first-child{width:90px}
 }
 
+/* photos (optional: only add a photo element when a real photo file exists in <slug>/photos/) */
+.photo{margin:0 0 18px;background:var(--card)}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:var(--ratio,3/2);object-fit:cover}
+.photo figcaption{font-size:14px;line-height:1.4;padding-top:8px;color:var(--text);opacity:.8}
+.photo-wide{margin:26px 0}
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0}
+.photo-pair .photo{margin:0}
+.photo-pair .photo img{--ratio:4/5}
+.hero-photo{margin:0;position:relative}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover}
+.host .headshot{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin-bottom:12px}
+@media (max-width:520px){.photo-pair{grid-template-columns:minmax(0,1fr)}.hero-photo img{aspect-ratio:3/2}}
+
 @media print{
   @page{size:8.5in 11in;margin:.6in .65in .65in}
   html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -177,6 +190,8 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
   .toc nav a i{font-size:17px}
   .quick a{padding:10px 14px}
   .sec{break-before:page;padding-top:0}
+  .photo,.photo-pair,.hero-photo,.host .headshot{break-inside:avoid}
+  .photo img,.hero-photo img{max-height:3.6in}
   h2.st,h3,.num{break-after:avoid}
   li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
   footer{margin-top:24px;break-inside:avoid;break-before:avoid}
@@ -210,6 +225,9 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
   </div>
 </div>
 </header>
+<!-- PHOTO (optional) | one wide hero photo right under the header band. Delete if there's no real photo.
+<figure class="hero-photo"><img src="photos/hero.jpg" alt="{{DESCRIBE THE PHOTO}}" width="1600" height="686"></figure>
+-->
 
 <main class="wrap">
   <div class="quick">
@@ -279,6 +297,12 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <span class="num">03</span>
     <h2 class="st">Day-by-day itinerary</h2>
     <p>{{ITINERARY_INTRO}}</p>
+    <!-- PHOTO (optional) | two photos side by side, e.g. the venue + an activity. Delete if none.
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/day-a.jpg" alt="{{ALT}}" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/day-b.jpg" alt="{{ALT}}" loading="lazy"></figure>
+    </div>
+    -->
     <div class="days">
       <!-- GUIDE: one .day per day. Times as "5pm |" or "5:30 to 6:30 |". -->
       <div class="day">
@@ -320,6 +344,9 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <span class="num">05</span>
     <h2 class="st">Where you'll stay</h2>
     <div class="venue">
+      <!-- PHOTO (optional) | one photo of this venue. Delete if none.
+      <figure class="photo photo-wide"><img src="photos/venue.jpg" alt="{{VENUE_NAME}}" loading="lazy"></figure>
+      -->
       <h3>{{VENUE_NAME}} | {{N}} nights</h3>
       <p>{{VENUE_DESCRIPTION}}</p>
       <!-- GUIDE: no venue website unless Kennon asks for it. -->
@@ -418,6 +445,7 @@ footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spa
     <h2 class="st">What to expect on retreat</h2>
     <h3 style="margin-top:0">Your hosts</h3>
     <div class="hosts">
+      <!-- PHOTO (optional) | headshot: <img class="headshot" src="photos/host-firstname.jpg" alt="{{HOST_NAME}}"> as the first thing inside .host -->
       <div class="host"><b>{{HOST_NAME}}</b><i>{{HOST_TITLE}}</i><p>{{HOST_BIO}}</p></div>
       <div class="host"><b>{{HOST_NAME}}</b><i>{{HOST_TITLE}}</i><p>{{HOST_BIO}}</p></div>
     </div>

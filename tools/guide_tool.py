@@ -6,8 +6,9 @@ Usage (run from the root of the habitat-guides repo):
   python3 tools/guide_tool.py check <slug>      copy + layout checks (run before every publish)
   python3 tools/guide_tool.py pdf <slug>        build <slug>/<PDF named in the Download button>
   python3 tools/guide_tool.py preview <slug>    screenshots at desktop + phone into <slug>/.preview/
+  python3 tools/guide_tool.py photos <slug> <folder>   resize + clean photos from <folder> into <slug>/photos/
 
-Needs: playwright (Python) with Chromium, and pypdf.
+Needs: playwright (Python) with Chromium, pypdf, and Pillow (for photos).
   pip install playwright pypdf --break-system-packages   (Chromium is usually preinstalled)
 """
 import asyncio, os, re, shutil, subprocess, sys, urllib.request
@@ -121,6 +122,20 @@ def cmd_check(slug):
         plain = [x for x in plain if x]
         if plain:
             issues.append(f"  [unlinked mention] '{name}' appears {len(plain)}x without a link")
+    # photos: every <img> must exist, have alt text, and be web-sized
+    base = os.path.join(ROOT, slug)
+    for m in re.finditer(r"<img\b[^>]*>", text):
+        tag = m.group(0)
+        src = re.search(r'src="([^"]+)"', tag)
+        alt = re.search(r'alt="([^"]*)"', tag)
+        if src and not src.group(1).startswith(("http", "data:")):
+            p = os.path.join(base, src.group(1))
+            if not os.path.exists(p):
+                issues.append(f"  [missing photo] {src.group(1)} is not in {slug}/ (remove the photo element or add the file)")
+            elif os.path.getsize(p) > 700_000:
+                issues.append(f"  [heavy photo] {src.group(1)} is {os.path.getsize(p)//1000} KB. Run the photos command to shrink it")
+        if not alt or not alt.group(1).strip() or "{{" in alt.group(1):
+            issues.append(f"  [photo alt text] {tag[:90]} needs a short description in alt=\"\"")
     print(f"\nCOPY CHECKS ({slug})")
     print("\n".join(issues) if issues else "  OK")
     print("\nLAYOUT CHECKS")
@@ -196,6 +211,25 @@ def cmd_preview(slug):
     print(f"Screenshots in {outdir}/")
 
 
+def cmd_photos(slug, src_dir):
+    from PIL import Image, ImageOps
+    out_dir = os.path.join(ROOT, slug, "photos")
+    os.makedirs(out_dir, exist_ok=True)
+    exts = (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff")
+    files = sorted(f for f in os.listdir(src_dir) if f.lower().endswith(exts))
+    if not files:
+        sys.exit(f"No JPG/PNG/WEBP photos in {src_dir}. (iPhone HEIC: export as JPG first.)")
+    for f in files:
+        im = ImageOps.exif_transpose(Image.open(os.path.join(src_dir, f))).convert("RGB")
+        name = re.sub(r"[^a-z0-9]+", "-", os.path.splitext(f)[0].lower()).strip("-") + ".jpg"
+        long_edge = 2000 if name.startswith("hero") else 1600
+        im.thumbnail((long_edge, long_edge))
+        dest = os.path.join(out_dir, name)
+        im.save(dest, "JPEG", quality=82, optimize=True, progressive=True)   # saving fresh drops EXIF (GPS, camera data)
+        print(f"  {f} -> {slug}/photos/{name}  {im.size[0]}x{im.size[1]}  {os.path.getsize(dest)//1000} KB")
+    print("Location and camera data removed. Reference them as photos/<name>.jpg and give every one alt text.")
+
+
 def cmd_new(slug):
     d = os.path.join(ROOT, slug)
     if os.path.exists(os.path.join(d, "index.html")):
@@ -206,6 +240,8 @@ def cmd_new(slug):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) == 4 and sys.argv[1] == "photos":
+        cmd_photos(sys.argv[2], sys.argv[3]); sys.exit(0)
     if len(sys.argv) != 3 or sys.argv[1] not in ("new", "check", "pdf", "preview"):
         sys.exit(__doc__)
     {"new": cmd_new, "check": cmd_check, "pdf": cmd_pdf, "preview": cmd_preview}[sys.argv[1]](sys.argv[2])
