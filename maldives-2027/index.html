@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Maldives Retreat Guide 2027</title>
+<meta name="description" content="Your guide to A Private Yacht in the Maldives, June 13 to 19, 2027.">
+<meta property="og:title" content="A Private Yacht in the Maldives | Retreat Guide">
+<meta property="og:description" content="Malé, Ari + Vaavu Atolls, Maldives. June 13 to 19, 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. Real photos only (habitatretreats.com or sent by Kennon, never venue photos), no colored section backgrounds except .callout. */
+:root{
+  /* ===== THEME TOKENS =====
+     Habitat retreats: these are overridden by ../themes/habitat.css (linked after this <style>). Only set --retreat-bg/--retreat-fg below.
+     Partner retreats: delete the habitat.css link and set the partner values here. See 05_DESIGN_SYSTEM.md.
+     The values below are the Sarah Lord Photo (MOR27) partner theme, as a worked example. */
+  --paper:#F9F5F1; --ink:#371715; --text:#371715; --accent:#E7DD87; --rule:rgba(55,23,21,.22);
+  --display:'Cormorant','Cormorant Garamond',Garamond,serif;
+  --body:'Cormorant Garamond','Cormorant',Garamond,Georgia,serif;
+  --label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
+  --script:'Cormorant',Garamond,serif;
+  /* roles (partner default: derived from ink + accent) */
+  --line-strong:var(--ink); --link-line:var(--accent); --hover-bg:var(--accent); --h2-bar:var(--accent);
+  --bullet:var(--accent); --bullet-edge:var(--ink); --callout-bg:var(--accent); --callout-fg:var(--ink);
+  --card:transparent; --card-border:var(--ink); --btn-bg:var(--ink); --btn-fg:var(--paper); --btn-hover-fg:var(--accent);
+  --label-color:inherit; --hero-bg:transparent; --hero-fg:inherit; --hero-line:var(--ink);
+  /* per retreat (Habitat brand guide: retreat color is used for the header band only) */
+  --retreat-bg:#F7E7B0; --retreat-fg:#4A281D;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--link-line);text-decoration-thickness:3px;text-underline-offset:2px}
+a:hover{background:var(--hover-bg)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+mark{background:linear-gradient(transparent 58%,var(--hover-bg) 58%);color:inherit;padding:0 .08em}
+
+/* header band */
+.band{background:var(--hero-bg);color:var(--hero-fg)}
+.band a{color:inherit}
+.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;color:var(--label-color);font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--hero-line)}
+.hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{color:inherit;margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .sub{margin:12px 0 0;font-size:21px;font-style:italic}
+.hero .when{margin-top:16px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
+.hero .collab{margin-top:14px;font-family:var(--script);font-style:italic;font-size:24px}
+.contacts-top{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:18px}
+.contacts-top b{font-weight:600}
+
+/* quick links */
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
+.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;background:var(--card);border:1px solid var(--card-border);text-decoration:none;font-weight:400;transition:background .15s}
+.quick a:hover{background:var(--hover-bg)}
+.quick a b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.1}
+.quick a span{font-size:16px;line-height:1.35}
+
+/* jump grid */
+.toc{margin-top:40px;scroll-margin-top:16px}
+.toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
+.toc p{margin:4px 0 16px;font-size:17px}
+.toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;background:var(--card);border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
+.toc nav a i{font-family:var(--script);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--hover-bg);border-color:var(--ink)}
+
+/* sections */
+.sec{padding-top:76px;scroll-margin-top:12px}
+.num{display:block;color:var(--label-color);font-family:var(--script);font-style:italic;font-size:26px}
+h2.st{margin:2px 0 22px;color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;text-wrap:balance}
+h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--h2-bar)}
+h3{margin:30px 0 10px;color:var(--label-color);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+p{margin:0 0 14px;text-wrap:pretty}
+.lead{font-family:var(--display);font-size:25px;line-height:1.35;font-style:italic}
+ul.d{list-style:none;margin:0 0 14px;padding:0}
+ul.d li{position:relative;padding-left:24px;margin:0 0 8px;text-wrap:pretty}
+ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--bullet-edge);background:var(--bullet);transform:rotate(45deg)}
+ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--bullet-edge);background:transparent;transform:none}
+.note{font-size:16px}
+b,strong{font-weight:600}
+.q{font-weight:600}
+.tw{overflow-x:auto;margin:6px 0 16px}
+table{width:100%;border-collapse:collapse;font-size:17px;line-height:1.4}
+.tw table{min-width:460px}
+.tw table.kv{min-width:0}
+th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--line-strong)}
+td{border-bottom:1px solid var(--rule);padding:10px 12px;vertical-align:top}
+table.kv{border-top:1.5px solid var(--line-strong)}
+table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:14px}
+.callout{background:var(--callout-bg);color:var(--callout-fg);padding:28px 30px 16px;margin:6px 0 10px}
+.callout h2.st::after{background:var(--callout-fg)}
+.callout ul.d li::before{background:var(--paper)}
+.frame{background:var(--card);border:1px solid var(--card-border);padding:22px 24px 10px;margin:18px 0}
+
+/* itinerary */
+.day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--rule)}
+.days .day:first-child{border-top:1.5px solid var(--line-strong)}
+.day .when b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.05}
+.day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+.day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px}
+.meta{font-size:16px}
+
+/* venues + hosts */
+.venue{margin:10px 0 26px;padding-top:4px}
+.hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:12px}
+.host{border-top:1.5px solid var(--line-strong);padding-top:14px}
+.host b{display:block;font-family:var(--display);font-size:25px;font-weight:600;line-height:1.1}
+.host i{display:block;margin-bottom:8px}
+.host p{font-size:17px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.times b{display:block;font-family:var(--display);font-weight:600;font-size:28px}
+.tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--rule)}
+.tls .tl:first-child{border-top:1.5px solid var(--line-strong)}
+.tl > div:first-child{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
+
+/* contacts + footer */
+.ctw{overflow-x:auto}
+.ctw table{min-width:520px}
+.addr{margin-top:14px;padding:14px 18px;background:var(--card);border:1px solid var(--card-border);display:flex;flex-direction:column;gap:4px;font-size:17px}
+.addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+footer{margin-top:80px}
+footer .wrap{padding-block:40px 64px;border-top:1px solid var(--line-strong);text-align:center}
+footer .big{font-family:var(--script);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1}
+footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--btn-bg);color:var(--btn-fg);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
+.totop:hover{background:var(--btn-bg);color:var(--btn-hover-fg)}
+
+@media (max-width:680px){
+  body{font-size:18px}
+  .hero{padding-block:28px 24px}
+  .contacts-top{flex-direction:column}
+  .day,.tl{grid-template-columns:minmax(0,1fr);gap:8px}
+  .hosts,.two,.times{grid-template-columns:minmax(0,1fr)}
+  .callout{padding:22px 18px 10px}
+  .toc nav a{font-size:18px;padding:8px 12px;gap:10px}
+}
+@media (max-width:520px){
+  .toc nav{grid-template-columns:minmax(0,1fr)}
+  .toc nav a i{font-size:20px;min-width:22px}
+  table.kv td:first-child{width:90px}
+}
+
+/* photos (optional: only add a photo element when a real photo file exists in <slug>/photos/) */
+.photo{margin:0 0 18px;background:var(--card)}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:var(--ratio,3/2);object-fit:cover}
+.photo figcaption{font-size:14px;line-height:1.4;padding-top:8px;color:var(--text);opacity:.8}
+.photo-wide{margin:26px 0}
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0}
+.photo-pair .photo{margin:0}
+.photo-pair .photo img{--ratio:4/5}
+.hero-photo{margin:0;position:relative}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover}
+/* host cards, modeled on the habitatretreats.com hosts section: bordered card, name over a hairline, italic title, square photo beside the bio, every other card mirrored. Never round headshots. */
+.host-card{border:1px solid var(--ink);padding:18px 20px;margin-bottom:14px;break-inside:avoid}
+.host-card .host-name{font-family:var(--display);font-size:24px;color:var(--ink);letter-spacing:.02em;text-align:right;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.host-card .host-title{font-style:italic;font-size:18px;text-align:right;margin:6px 0 12px}
+.host-card .host-body{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:end}
+.host-card .host-body img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.host-card .host-body p{margin:0;font-size:16px}
+.host-card.flip .host-name,.host-card.flip .host-title{text-align:left}
+.host-card.flip .host-body{grid-template-columns:1fr 200px}
+.host-card.flip .host-body img{order:2}
+.host-card.flip .host-body p{text-align:right}
+@media (max-width:560px){.host-card .host-body,.host-card.flip .host-body{grid-template-columns:1fr}.host-card.flip .host-body img{order:0}.host-card.flip .host-body p{text-align:left}}
+@media (max-width:520px){.photo-pair{grid-template-columns:minmax(0,1fr)}.hero-photo img{aspect-ratio:3/2}}
+
+@media print{
+  @page{size:8.5in 11in;margin:.6in .65in .65in}
+  html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:15.5px}
+  .wrap{max-width:none;padding:0}
+  .totop{display:none}
+  .top{padding-top:0}
+  .hero{padding-block:8px 18px}
+  .quick{break-before:auto}
+  .quick{padding-top:18px}
+  .toc{margin-top:14px}
+  .toc p{display:none}
+  .toc h2{font-size:26px;margin-bottom:8px}
+  .toc nav{gap:5px 8px}
+  .toc nav a{min-height:30px;padding:3px 12px;font-size:15px}
+  .toc nav a i{font-size:17px}
+  .quick a{padding:10px 14px}
+  .sec{break-before:page;padding-top:0}
+  .photo,.photo-pair,.hero-photo,.host-card{break-inside:avoid}
+  .photo img,.hero-photo img{max-height:3.6in}
+  h2.st,h3,.num{break-after:avoid}
+  li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
+  footer{margin-top:24px;break-inside:avoid;break-before:avoid}
+  footer .wrap{padding:18px 0 0}
+  footer .big{font-size:28px}
+  footer .meta2{display:none}
+}
+table.kv td{overflow-wrap:anywhere}
+@media print{.hero-photo img{max-height:1.9in}.photo-pair .photo img{max-height:2.5in}.photo-pair{margin:12px 0}#itinerary .photo-pair .photo img{max-height:1.9in}#itinerary .day{padding-top:14px}#included,#getting-there{font-size:14.5px}#included ul.d li,#getting-there ul.d li{margin-bottom:5px}}
+.signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../fonts/habitat-fonts.css">
+<link rel="stylesheet" href="../themes/habitat.css">
+</head>
+<body>
+
+<header class="band">
+<div class="wrap">
+  <div class="top"><span>Habitat Retreats</span></div>
+  <div class="hero">
+    <div class="eyebrow">Your retreat guide</div>
+    <h1>Maldives <em>Private Yacht Retreat</em></h1>
+    <p class="sub">Six nights on a private yacht. Pilates and yoga on deck, snorkeling with mantas and turtles, sandbanks with nobody on them.</p>
+    <div class="when">June 13 to 19, 2027 | Malé, Ari + Vaavu Atolls, Maldives</div>
+  </div>
+</div>
+</header>
+<figure class="hero-photo"><img src="photos/hero-sandbank.jpg" alt="A long white sandbank in turquoise water in the Maldives" width="1200" height="1711" style="object-position:50% 45%"></figure>
+
+<main class="wrap">
+  <div class="quick">
+    <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener"><b>Flight + Info Form</b><span>Flights, dietary needs, health notes, emergency contact</span></a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener"><b>Roommate Matching Quiz</b><span>Coming on your own? Start here</span></a>
+    <a href="mailto:habitat@habitatretreats.com?subject=Maldives%202027%20retreat"><b>Questions</b><span>habitat@habitatretreats.com</span></a>
+    <a href="Habitat_Maldives_2027_Retreat_Guide.pdf" download><b>Download PDF</b><span>Save the guide for travel day and offline</span></a>
+  </div>
+
+  <div class="toc" id="contents">
+    <h2>Jump to a section</h2>
+    <p>Tap any section to go straight there. The Contents button in the corner brings you back here.</p>
+    <nav>
+      <a href="#welcome"><i>01</i><span>Welcome</span></a>
+      <a href="#housekeeping"><i>02</i><span>Housekeeping</span></a>
+      <a href="#itinerary"><i>03</i><span>Itinerary</span></a>
+      <a href="#included"><i>04</i><span>What's included</span></a>
+      <a href="#stay"><i>05</i><span>Where you'll stay</span></a>
+      <a href="#getting-there"><i>06</i><span>Flights + transfers</span></a>
+      <a href="#payments"><i>07</i><span>Payments + cancellations</span></a>
+      <a href="#passports"><i>08</i><span>Passports + health</span></a>
+      <a href="#know-before"><i>09</i><span>Know before you go</span></a>
+      <a href="#expect"><i>10</i><span>What to expect</span></a>
+      <a href="#packing"><i>11</i><span>Packing list</span></a>
+      <a href="#timeline"><i>12</i><span>Timeline + to&#8209;dos</span></a>
+      <a href="#faq"><i>13</i><span>FAQ</span></a>
+      <a href="#contacts"><i>14</i><span>Contacts + emergencies</span></a>
+    </nav>
+  </div>
+
+  <!-- 01 -->
+  <section class="sec" id="welcome">
+    <span class="num">01</span>
+    <h2 class="st">You're in for the Maldives! We can't wait to catch the sunset from the jacuzzi with you.</h2>
+    <p>In June, we're living on a private yacht in the Maldives for a week. The whole boat. We wake up anchored off a different reef most mornings, move on the top deck, jump off the back, and spend the day in water that looks fake. Mantas, turtles, sandbanks with nobody on them, and a jacuzzi just because.</p>
+    <p>This guide has everything you need for the Maldives, in one place. Inside you'll find:</p>
+    <ul class="d">
+      <li>Flight info: which airport to fly into, what times work, transfers</li>
+      <li>What's included and what isn't</li>
+      <li>What the week looks like</li>
+      <li>Frequently Asked Questions</li>
+      <li>And a few extras!</li>
+    </ul>
+    <p>We highly recommend reading it through once, then coming back to it as needed.</p>
+    <p>Habitat is for people who suspect their real life is bigger than the one they're living. We're not gurus and we're not here to fix you. We built Habitat to connect extraordinary people in breathtaking places. This week, the place happens to float.</p>
+    <p>If something isn't clear or you have additional questions, please reach out!</p>
+    <p class="signoff">xx,<br>Kennon + Carrigan</p>
+
+    <h3>Your retreat at a glance</h3>
+    <div class="tw" style="overflow:visible"><table class="kv">
+      <tr><td>Retreat</td><td>A Private Yacht in the Maldives</td></tr>
+      <tr><td>Dates</td><td>Sunday, June 13 to Saturday, June 19, 2027 (6 nights)</td></tr>
+      <tr><td>Where</td><td>Ocean Sapphire, a private yacht chartered just for us. Malé, Ari + Vaavu Atolls, Maldives</td></tr>
+      <tr><td>Arrive</td><td>Land at Velana International Airport (MLE) by Saturday, June 12. Group pickup from 11am on Sunday, June 13</td></tr>
+      <tr><td>Depart</td><td>Check out from 8am on Saturday, June 19. Group transfer to MLE</td></tr>
+      <tr><td>Hosts</td><td>Kennon + Carrigan, Habitat founders + your teachers for the week</td></tr>
+      <tr><td>The week</td><td>Mat Pilates or vinyasa yoga most mornings, snorkeling, island stops, slower yoga some afternoons. Everything optional</td></tr>
+      <tr><td>Your room</td><td>Shared or private cabin, see Where You'll Stay</td></tr>
+      <tr><td>Questions</td><td>Email <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>. Habitat handles all logistics</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 02 -->
+  <section class="sec" id="housekeeping">
+    <span class="num">02</span>
+    <h2 class="st">Housekeeping</h2>
+    <ul class="d">
+      <li><span class="q">Every class is optional.</span> This is your vacation. Skip a morning, sleep in, go straight to the water. Nobody's taking attendance.</li>
+      <li><span class="q">First time doing Pilates or yoga?</span> Tell us. Every class is all levels, with options for every body.</li>
+      <li><span class="q">It's a boat.</span> You're living close to a small group for six nights. That's the point, and it's also an adjustment. We mostly cruise inside the atolls where the water is calmer, and anchor at night. Prone to seasickness? Bring what works for you. A lower-deck cabin in the middle of the boat moves the least.</li>
+      <li><span class="q">June is hot and mostly sunny, with some rain.</span> About 30°C / 86°F by day. Showers usually come in short bursts and blow through. Some days are windier and the sea can get choppier. The captain picks sheltered spots and has the final say on the route. If he changes the plan, it's for a good reason.</li>
+      <li><span class="q">Wi-Fi: none.</span> Not on the boat. You'll get phone signal near inhabited islands. The rest of the time, enjoy it.</li>
+      <li><span class="q">Dress code.</span> The Maldives is a conservative Muslim country. On the boat, sandbanks and desert islands, wear what you want. On local islands, shoulders and knees get covered.</li>
+      <li><span class="q">You're sharing space with people you may not know.</span> Many people come solo, some come with friends. By day 3 it won't feel that way. If something or someone is bothering you, tell us early (see the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a> in section 10). We can fix things in real time. Don't wait until the week is over to put it out there. That's a disservice to you and to the people around you.</li>
+      <li><span class="q">Plans can change.</span> Weather, sea conditions and the captain's call sometimes rearrange the itinerary. We'll try to stick to it as laid out. If we need to adapt, we'll swap in something just as good and tell you right away. We ask that you stay flexible and patient with the situation.</li>
+    </ul>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec" id="itinerary">
+    <span class="num">03</span>
+    <h2 class="st">Day-by-day itinerary</h2>
+    <p>There's no fixed day-by-day schedule, on purpose. The captain picks where we anchor based on wind and sea, and we plan each day around the best water. We'll share each day's plan in the group message. Every class and activity is optional, always.</p>
+    <div class="callout" style="margin-top:6px;break-inside:avoid">
+      <p><b>Keeping you up to date.</b> This is what's included and how the week is planned. The captain sets the final route based on wind and sea conditions, so what happens on which day will shift. Nothing included gets dropped. If anything changes on the ground, we'll share it in the group message, our main way of communicating during the retreat.</p>
+    </div>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/itin-deck-yoga.jpg" alt="A yoga class on the top deck of a boat" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/itin-turtle.jpg" alt="A sea turtle on a coral reef" loading="lazy"></figure>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="when"><b>Day 1</b><span>Sun, June 13</span><em>Arrival day</em></div>
+        <div>
+          <ul class="d">
+            <li>11am | Group pickup at Velana International Airport (MLE). You'll have flown in the day before</li>
+            <li>Board the Ocean Sapphire, find your cabin, get in the water</li>
+            <li>Opening circle and welcome dinner on board</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> Dinner | <b>Wear:</b> Swimsuit under your travel clothes. Seriously.</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Days 2 to 6</b><span>Mon, June 14 to Fri, June 18</span><em>A typical day</em></div>
+        <div>
+          <ul class="d">
+            <li>Wake up anchored somewhere new</li>
+            <li>Pilates or yoga on the top deck while the boat is still anchored and the water is flat</li>
+            <li>Class ends, you walk to the edge, you jump in. That's the cooldown</li>
+            <li>Breakfast with salt still in your hair</li>
+            <li>Snorkel, explore, nap, repeat</li>
+            <li>Open afternoons: card games on the sundeck, swim, tan, jump off the back of the boat, or a slower yoga class</li>
+            <li>Sunset in the jacuzzi</li>
+            <li>Dinner on board</li>
+          </ul>
+          <p>Through the week: snorkeling with mantas and turtles, local island visits, sandbanks, fishing at dusk, a beach BBQ on a desert island and the lobster dinner. See The activities in section 10.</p>
+          <p class="meta"><b>Meals:</b> Breakfast, lunch, dinner on board, buffet style | <b>Wear:</b> Swimsuits all day. A cover-up over shoulders and knees for local islands</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 7</b><span>Sat, June 19</span><em>Departure day</em></div>
+        <div>
+          <ul class="d">
+            <li>Last swim and breakfast</li>
+            <li>8am | Check out from the boat</li>
+            <li>Group transfer to MLE</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> Breakfast | <b>Wear:</b> Travel clothes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec" id="included">
+    <span class="num">04</span>
+    <h2 class="st">What's included (and what isn't)</h2>
+    <p>The short version: once you land at MLE, the week is essentially handled. Here's exactly what that means.</p>
+    <div class="two">
+      <div>
+        <h3>Included</h3>
+        <ul class="d">
+          <li>Six nights on a private yacht, just our group, in a shared or private cabin with its own bathroom</li>
+          <li>All meals on board (buffet style, three a day), plus drinking water, coffee and tea</li>
+          <li>Yoga and mat Pilates on the top deck</li>
+          <li>Snorkel gear on board and a local snorkel guide all week</li>
+          <li>Dhoni support boat for reef and island runs</li>
+          <li>Local island and desert island visits, including island fees</li>
+          <li>Maldivian handline fishing at dusk</li>
+          <li>Lobster dinner for the whole boat, plus a beach BBQ on a desert island</li>
+          <li>Your custom Habitat retreat journal</li>
+          <li>Group airport pickup and drop-off on arrival and departure day</li>
+          <li>Crew tips (the crew cleans, cooks, drives us to shore, and makes the whole week happen)</li>
+          <li>Local taxes on the charter</li>
+          <li>Pre-trip support: flights, packing, entry rules, and any question you have</li>
+          <li>On-the-ground support all week. You never have to think about logistics or planning. We've got it covered</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not included</h3>
+        <ul class="d">
+          <li>International flights to the Maldives (we'll help you pick them)</li>
+          <li>Travel insurance (strongly recommended)</li>
+          <li>Alcohol and extra drinks (available on board, on your own tab)</li>
+          <li>Hotel nights in Malé or Hulhumalé before or after the retreat</li>
+          <li>Wi-Fi (there isn't any on board. Use your data or an eSIM)</li>
+          <li>Scuba diving (this is a snorkel trip)</li>
+          <li>Personal spending and souvenirs</li>
+          <li>Transfers outside the group times</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec" id="stay">
+    <span class="num">05</span>
+    <h2 class="st">Where you'll stay</h2>
+    <div class="venue">
+      <div class="photo-pair">
+        <figure class="photo"><img src="photos/stay-sunrise-net.jpg" alt="Two guests wrapped in a blanket on the boat at sunrise" loading="lazy"></figure>
+        <figure class="photo"><img src="photos/stay-snorkel-bow.jpg" alt="Guests in fins and masks on the edge of the boat over turquoise water" loading="lazy"></figure>
+      </div>
+      <h3>The Ocean Sapphire | 6 nights</h3>
+      <p>A 35-meter (115 ft), three-deck yacht that's ours for the week. Up top: a sundeck with loungers and a jacuzzi. Inside: a lounge and dining room with windows all the way around. A crew and chef live on board and handle the cooking, cleaning, driving and where we anchor. A dhoni, a traditional Maldivian support boat, travels with us to run us out to reefs and islands.</p>
+      <ul class="d">
+        <li><b>Where:</b> She moves while you sleep, through Malé, Ari and Vaavu Atolls</li>
+        <li><b>Check-in:</b> from 11am, Sunday, June 13 | <b>Check-out:</b> from 8am, Saturday, June 19</li>
+        <li><b>On board:</b> Sundeck with loungers, jacuzzi, indoor lounge and dining room, snorkel gear for everyone</li>
+        <li><b>In your cabin:</b> Private bathroom, AC, bath and beach towels, toiletries, hair dryer</li>
+        <li><b>Wi-Fi:</b> None</li>
+      </ul>
+    </div>
+    <h3>Cabins + roommates</h3>
+    <ul class="d">
+      <li><b>Lower Deck Shared ($4,650):</b> sleeps two, with either one double + one single bed or two singles, about 12 m² (130 sq ft) with a porthole. The lower deck is the steadiest place on the boat if you get seasick.</li>
+      <li><b>Cabin 4 Private ($5,450):</b> yours alone, mid-deck, with a small double bed and a porthole.</li>
+      <li><b>Upper Deck Shared ($5,050):</b> sleeps two in single beds, about 14 m² (150 sq ft), with a large ocean-view window and a bathtub.</li>
+      <li><b>Private Room ($6,950):</b> yours alone: an upper deck cabin with a double bed, about 14 m² (150 sq ft), a large ocean-view window and a bathtub.</li>
+      <li>Coming with a friend? Tell us and we'll room you together.</li>
+      <li>Coming on your own and booked a shared cabin? Name a preferred roommate, or we'll pair you based on your <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a>.</li>
+      <li>Cabin assignments go out before the retreat.</li>
+      <li>Want to switch to private? Ask. If one's free, we'll make it happen.</li>
+    </ul>
+  </section>
+
+  <!-- 06 -->
+  <section class="sec" id="getting-there">
+    <span class="num">06</span>
+    <h2 class="st">Getting there + getting home</h2>
+    <p>You book your own flights, so you can come from anywhere and add travel on either side. Booking your own doesn't mean you're on your own. Send us any flight before you book if you want our eyes on it.</p>
+    <div class="frame">
+      <h3 style="margin-top:0">The only two times you need</h3>
+      <div class="times">
+        <div><b>Arrive</b><p>Land at Velana International Airport (MLE) by <b>Saturday, June 12</b>, the day before. Group pickup at MLE from 11am on Sunday, June 13.</p></div>
+        <div><b>Depart</b><p>Check out from 8am on <b>Saturday, June 19</b>, then a group transfer to MLE.</p></div>
+      </div>
+    </div>
+    <p>Plan to land on Saturday, June 12 and sleep near the airport. Landing late on Sunday isn't an option: the boat leaves with the group, and long-haul flights run late. Many people also add a few days on the front or back end. Want help planning that part? Tell us. We love this stuff.</p>
+    <p><b>Lots of flight options.</b> We know there are a ton of different ways to get here. If you're looking at flights that don't line up with these times, send them to us and we'll help you coordinate.</p>
+    <p><b>Transfers:</b> The crew meets the group at MLE from 11am on Sunday and takes us to the boat. On Saturday, they bring us back to the airport. We'll put everyone into a small group chat the week before so you can find each other. Arriving or leaving outside these times? Tell us as early as you can and we'll help you plan around the boat.</p>
+    <h3>How people usually get there</h3>
+    <ul class="d">
+      <li>There are no direct flights from the US to the Maldives. Most people connect once through Doha, Dubai, Abu Dhabi or Istanbul, or through a European hub. From the US, plan on roughly a full day of travel door to door.</li>
+      <li>Velana International Airport (MLE) sits on its own island next to Malé. Hulhumalé, the town next door, is about 10 to 15 minutes away and is where most people stay the night before. Our charter partner recommends the Ocean Grand in Hulhumalé for an affordable, comfortable stay.</li>
+    </ul>
+    <h3>Our flight advice</h3>
+    <ul class="d">
+      <li><b>Look at flights first.</b> Find prices and times you like.</li>
+      <li><b>Book in the sweet spot.</b> For US to Maldives flights in June, that's about 4 to 6 months out, so around mid-December 2026 to February 2027. June is low season there, so there's no need to rush, and booking much earlier rarely saves money. If you want to lock yours in early, do it. It's completely up to you.</li>
+      <li><b>Land by Saturday, June 12.</b> Arriving Sunday morning is too risky with long-haul delays, and the boat can't wait.</li>
+      <li><b>Leave at least 2 to 3 hours for any connection.</b> You'll often change terminals, and separate tickets don't protect you if the first flight is late.</li>
+      <li>Send us your flights before you book if you're unsure. We want to help.</li>
+      <li>Once booked, fill out the <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a>. It's also where you tell us your dietary needs, health notes and emergency contact. This is how we plan your pickup.</li>
+    </ul>
+    <p class="note">Flight info was current when we wrote this guide and can change. Always check before you book.</p>
+    <h3>Running late or stuck?</h3>
+    <p>Email us at <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> as soon as you know. On travel day you can also text or WhatsApp Kennon (+1 512 627 2297) or Carrigan (+1 903 515 0061). The boat leaves with the group on Sunday, which is exactly why we ask everyone to land on Saturday.</p>
+    <h3>Extending your trip?</h3>
+    <p>If you're adding days before or after the retreat and want recommendations for Hulhumalé, Malé or a resort stay, email us.</p>
+  </section>
+
+  <!-- 07 -->
+  <section class="sec" id="payments">
+    <span class="num">07</span>
+    <h2 class="st">Payments, cancellations + insurance</h2>
+    <h3 style="margin-top:0">Deposit + balance</h3>
+    <p>Your $500 deposit is paid and your spot is held. Your full balance is due by Friday, May 14, 2027 (30 days before the retreat), following the payment plan you chose at checkout. Payments come out automatically on the card saved at checkout and show on your statement as HABITAT RETREATS.</p>
+    <p><b>Late payments:</b> Because we pay the boat and vendors well in advance, every installment needs to land on time. Each one has a 5-day grace period. After that, a 3% late fee is added to the overdue amount. If you see a problem coming, tell us before the due date. We're always happy to work with you when we hear early.</p>
+    <h3>If you need to cancel</h3>
+    <p>Life happens. Here's how it works (full details in our <a href="https://www.habitatretreats.com/legal/terms-conditions" target="_blank" rel="noopener">Terms + Conditions</a>):</p>
+    <div class="tw"><table>
+      <tr><th style="width:40%">If you cancel</th><th>What happens</th></tr>
+      <tr><td><b>On or before Sunday, January 24, 2027</b><br>(140+ days before)</td><td>Your payments (not your deposit) can be refunded, or moved to another Habitat retreat within 12 months</td></tr>
+      <tr><td><b>Monday, January 25 to Sunday, March 14, 2027</b><br>(139 to 91 days before)</td><td>50% of the retreat total (not counting your deposit) is due and non-refundable. If you've paid less than that, the difference is charged at this time</td></tr>
+      <tr><td><b>Monday, March 15, 2027 or later</b><br>(90 days or less)</td><td>No refunds. 100% of the retreat total is due at this time</td></tr>
+    </table></div>
+    <ul class="d">
+      <li>Your $500 deposit is non-refundable and non-transferable in every case. When someone signs up, we immediately pay vendors to secure their spot, and we can't get that money back.</li>
+      <li>If you cancel and part of your balance is kept under this policy, you can transfer that amount to a friend who takes your spot.</li>
+      <li>The card you booked with is saved on file, and any amount due under this policy is charged to it.</li>
+      <li>Cancel in writing to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>.</li>
+      <li>No refunds if you're denied entry to the Maldives or don't meet passport or entry requirements, so check yours now (see section 8).</li>
+      <li>No refunds for arriving late, leaving early, or skipping activities.</li>
+      <li>Weather, illness and flight problems don't change the policy. That's exactly what travel insurance is for. We wish we could accommodate everything life throws at us, but with the nature of group travel it's impossible.</li>
+    </ul>
+    <h3>Travel insurance</h3>
+    <p>Strongly recommended, especially for this one. We're on a boat, often hours from a hospital, and the charter can't refund anyone for illness. Insurance covers what we can't: missed flights, lost bags, medical care abroad, evacuation, and cancelling for illness or emergencies.</p>
+    <ul class="d">
+      <li><b>Look for:</b> trip cancellation + interruption, medical + evacuation, baggage delay.</li>
+      <li><b>Buy it soon after booking.</b> Many policies only cover pre-existing conditions if you buy within 14 to 21 days of your first payment.</li>
+      <li><b>Check your credit card.</b> Some premium cards already include trip coverage.</li>
+      <li>Bringing a camera or other expensive gear? Check it's covered abroad.</li>
+      <li>We have used <a href="https://www.battleface.com/en-us/" target="_blank" rel="noopener">BattleFace</a> in the past.</li>
+    </ul>
+  </section>
+
+  <!-- 08 -->
+  <section class="sec" id="passports">
+    <span class="num">08</span>
+    <h2 class="st">Passports, health + safety</h2>
+    <p>If you're a US citizen, you need a valid passport, a return ticket, and a free online form. No visa application. The visa is free and stamped on arrival.</p>
+    <h3>Your passport</h3>
+    <ul class="d">
+      <li>It must be valid for at least 6 months after you leave the Maldives, so <b>valid until at least December 19, 2027</b>. Check it today.</li>
+      <li>Have at least one blank page for the entry stamp.</li>
+      <li>Renewing? Do it this winter, not in May. Send us your new passport number when it arrives.</li>
+      <li>The name on your flights must match your passport exactly.</li>
+    </ul>
+    <h3>Visa + IMUGA</h3>
+    <ul class="d">
+      <li>US citizens get a free 30-day tourist visa on arrival. No pre-approval.</li>
+      <li>At immigration you may be asked for your return ticket and proof of where you're staying. Have both saved on your phone. We'll send you a booking letter for the boat.</li>
+      <li><b>IMUGA Traveller Declaration (required):</b> Every visitor fills out this free online form in the 96 hours before arrival at <a href="https://imuga.immigration.gov.mv" target="_blank" rel="noopener">imuga.immigration.gov.mv</a>. Save the confirmation to your phone. Your airline may ask to see it.</li>
+      <li>You also file one before you leave, within 96 hours of your flight home. We'll remind you mid-week when we have signal.</li>
+      <li>The form is always free. Any site charging a fee is not the government.</li>
+    </ul>
+    <h3>Customs: what not to pack</h3>
+    <ul class="d">
+      <li><b>Alcohol.</b> Bringing it in is not allowed, including duty-free bottles bought on your layover. Customs takes it at the airport.</li>
+      <li><b>Pork products, pornography, and religious idols for worship.</b> Personal religious items are generally fine.</li>
+      <li><b>Vapes.</b> Customs holds them and gives them back when you leave.</li>
+      <li><b>Drugs.</b> Penalties are severe.</li>
+      <li><b>Prescription meds</b> are fine with a copy of your doctor's prescription, in original packaging, and only what you need for the trip. Taking an ADHD stimulant, strong painkiller, or sleep or anxiety medication? Bring a doctor's letter too, and check with your doctor or Maldives Customs before you fly.</li>
+    </ul>
+    <h3>Not a US citizen?</h3>
+    <p>Most passports get the same free visa on arrival. Israeli passports are not accepted for entry. If you're flying from or connecting more than 12 hours through a country with yellow fever risk, you'll need a yellow fever certificate. Check your own government's travel advice and tell us your nationality in your <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a> so we can help.</p>
+    <h3>Health</h3>
+    <ul class="d">
+      <li>No vaccines are required if you're flying from the US. Make sure routine vaccines are up to date, and ask your doctor about hepatitis A and typhoid. <a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/maldives" target="_blank" rel="noopener">CDC: Maldives</a></li>
+      <li>Dengue exists in the Maldives. Bring bug spray for local islands.</li>
+      <li>Tell us about allergies, injuries, pregnancy or health conditions in your <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a>. We only share it with who needs to know (the chef, the crew, your hosts). Please be thorough. The more we know, the better we can look after you on a boat.</li>
+      <li>Seasickness: bring tablets or bands even if you've never needed them.</li>
+      <li>The nearest hospitals are in Malé (ADK Hospital, Tree Top Hospital and IGMH). The boat can be hours away from one.</li>
+      <li>Drink the bottled or filtered water on board. Don't drink tap water.</li>
+      <li>The sun is no joke at the equator. Reef-safe SPF, a hat, a long-sleeve swim top, and water.</li>
+    </ul>
+    <h3>Safety</h3>
+    <ul class="d">
+      <li>The Maldives has a low crime rate, and our group is on a private boat. Normal travel sense applies.</li>
+      <li>In the water, follow the snorkel guide. Currents can be strong. Always snorkel with a buddy.</li>
+      <li>Keep your passport in your cabin. Keep a digital copy on your phone.</li>
+      <li>Don't leave bags unattended at the airport or on local islands.</li>
+      <li>Emergency numbers in the Maldives: 119 (police), 102 (ambulance). We're with you all week.</li>
+    </ul>
+  </section>
+
+  <!-- 09 -->
+  <section class="sec" id="know-before">
+    <span class="num">09</span>
+    <h2 class="st">Know before you go: the Maldives</h2>
+    <h3 style="margin-top:0">Weather in June</h3>
+    <p>Hot, humid and mostly sunny, with tropical showers that usually come and go fast. June is the southwest monsoon, so expect some wind, a few rainy spells and the odd choppy day. The water is bathwater warm.</p>
+    <div class="tw"><table>
+      <tr><th></th><th>Day</th><th>Night</th><th>Sea</th><th>Rain</th></tr>
+      <tr><td><b>Maldives, mid-June</b></td><td>About 30°C / 86°F</td><td>About 26°C / 79°F</td><td>About 29°C / 84°F</td><td>Showers likely, usually short</td></tr>
+    </table></div>
+    <h3>Time zone</h3>
+    <p>The Maldives is 10 hours ahead of Austin and 12 hours ahead of Los Angeles in June.</p>
+    <h3>Money</h3>
+    <ul class="d">
+      <li>Currency: Maldivian rufiyaa (MVR). Roughly 15.4 MVR = $1 USD. Check xe.com before you go.</li>
+      <li>US dollars are the working currency of Maldives tourism. On the boat, you won't need rufiyaa.</li>
+      <li>Bring some small US bills for local islands, cafés and any extra tips. ATMs are at the airport and in Malé, not out in the atolls.</li>
+      <li>Rufiyaa is hard to change back, so don't take out more than you need.</li>
+    </ul>
+    <h3>Tipping</h3>
+    <ul class="d">
+      <li>The crew tip is already included in your retreat. You don't need to bring cash for it.</li>
+      <li><b>Crew:</b> If the week blew you away and you want to give extra, it's completely up to you. Small US dollar bills in an envelope at the end of the week is easiest.</li>
+      <li><b>Local islands:</b> Tipping isn't expected at cafés. Rounding up is a nice touch.</li>
+    </ul>
+    <h3>Phone + data</h3>
+    <ul class="d">
+      <li>There's no Wi-Fi on the boat. Check your carrier's international plan, or get an eSIM (Airalo or Holafly). Install at home, switch on when you land.</li>
+      <li>Signal is good near inhabited islands and drops out on open water.</li>
+      <li>Our group message is how we'll all talk.</li>
+    </ul>
+    <h3>Plugs + power</h3>
+    <p>The Maldives mostly uses Type G plugs (three rectangular pins, like the UK), sometimes Type D, at 230V. Bring a universal adapter. Phone and laptop chargers are fine. US hair tools usually aren't, so bring dual-voltage or skip them.</p>
+    <h3>Local customs</h3>
+    <ul class="d">
+      <li>The Maldives is a Muslim country. On local islands, cover shoulders and knees, keep swimwear for the boat and designated beaches, and skip the PDA.</li>
+      <li>Alcohol is only served on boats and resorts. None on local islands.</li>
+      <li>Friday is the weekend, and midday Friday prayers mean things close for a while.</li>
+      <li>Ask before photographing people.</li>
+      <li>Two words: <i>Assalaamu alaikum</i> (hello), <i>Shukuriyyaa</i> (thank you).</li>
+    </ul>
+    <h3>Travel lightly</h3>
+    <ul class="d">
+      <li>Bring a reusable water bottle. Drinking water is on board.</li>
+      <li>Use reef-safe sunscreen.</li>
+      <li>Never touch or stand on coral. Fins up, feet off the reef.</li>
+      <li>Give mantas, turtles and whale sharks space. No touching, no chasing, no flash.</li>
+      <li>Shells, coral and sand stay in the Maldives. Taking them out isn't allowed.</li>
+    </ul>
+  </section>
+
+  <!-- 10 -->
+  <section class="sec" id="expect">
+    <span class="num">10</span>
+    <h2 class="st">What to expect on retreat</h2>
+    <h3 style="margin-top:0">Your hosts</h3>
+    <div class="hosts" style="display:block">
+      <div class="host-card"><div class="host-name">KENNON GOLDREYER</div><div class="host-title">Co-founder, Habitat Retreats</div><div class="host-body"><img src="photos/host-kennon.jpg" alt="Kennon Goldreyer" loading="lazy"><p>Kennon came into Habitat already believing the best trips are the ones you can't fully explain to people back home. She's your hype girl on the ground, the one who's already scoped the best swimming spot before anyone else wakes up.</p></div></div>
+      <div class="host-card flip"><div class="host-name">CARRIGAN WHITELEY</div><div class="host-title">Co-founder, Habitat Retreats</div><div class="host-body"><img src="photos/host-carrigan.jpg" alt="Carrigan Whiteley" loading="lazy"><p>Carrigan started Habitat because she knew there was a way to take more intentional vacations, and build a community around it at the same time. She's the one who'll talk you into a sunrise ocean dip, then hand you a cup of coffee after.</p></div></div>
+    </div>
+    <p>We're with you the whole week. No handoffs.</p>
+    <h3>The activities</h3>
+    <ul class="d">
+      <li><b>Pilates + yoga:</b> Mat Pilates or vinyasa yoga on the top deck most mornings, while the boat is still anchored and the water is flat. Slower yoga on some afternoons. All levels, with options for first-timers and challenges for regulars. Mats and props are on board, and Kennon + Carrigan teach every class. Injured, pregnant, or recovering? Tell us in your <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a> and before class.</li>
+      <li><b>Snorkeling with mantas and turtles:</b> A local snorkel guide is on board all week. Ari Atoll is known for manta rays, and South Ari is one of the few places whale sharks hang around year-round. Vaavu has turtles and the occasional reef shark. Nothing is guaranteed. Most days deliver anyway. It's the most active part of the week, sometimes in open water with a current. There's no minimum swimming level, and life jackets are on board for anyone who wants one. Nervous in the water? Tell us and we'll keep you close.</li>
+      <li><b>Local island visits:</b> Some days the dhoni drops us on an island where people actually live. We walk the sand streets and order sweet tea and hedhikaa (Maldivian short eats). Shoulders and knees covered.</li>
+      <li><b>Sandbanks:</b> Other days it's a strip of sand with nobody on it but us.</li>
+      <li><b>Fishing at dusk:</b> Maldivian handline fishing off the dhoni at golden hour, with the crew as your coaches. Whatever gets caught might end up on the grill.</li>
+      <li><b>Beach BBQ on a desert island:</b> One night, dinner is on a deserted island.</li>
+      <li><b>The lobster dinner:</b> For the whole boat. We're living on the ocean for a week, so why not.</li>
+      <li><b>The jacuzzi:</b> On the sundeck, all week. Sunsets in it are a strong move.</li>
+    </ul>
+    <h3>Food</h3>
+    <ul class="d">
+      <li>Three meals a day, buffet style, cooked on board: fresh fish, Maldivian curries, and plenty of the familiar.</li>
+      <li>Vegan, vegetarian, gluten-free and allergies all covered. List them in your <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a> and the chef will plan around them.</li>
+      <li>If something doesn't look right for you, tell us or the crew. We'll fix it.</li>
+      <li>Drinking water, coffee and tea all week.</li>
+      <li>Alcohol is available on board, on your own tab.</li>
+    </ul>
+    <h3>Free time</h3>
+    <p>The in-between hours are the best part. Card games on the sundeck. Swim, tan, nap, jump off the back of the boat, repeat. Sunsets in the jacuzzi. The most demanding thing on the schedule is deciding between the water and the nap.</p>
+    <h3>Staying in touch</h3>
+    <ul class="d">
+      <li><b>Email:</b> the best way to reach us about anything before the retreat starts, plus payments, forms and this guide.</li>
+      <li><b>Group message:</b> there will be a retreat group chat for communication right before and during the retreat. It's where we post daily updates. Heads up: your name and number will be visible to everyone in it.</li>
+      <li><b>Arrival group chat:</b> About a week out, we group everyone landing around the same time so you can find each other at the airport.</li>
+      <li><b>Group call:</b> About a month before the retreat, 30 min. We'll send the date and time closer to it. Meet everyone and ask anything. Notes sent after if you can't make it.</li>
+    </ul>
+    <h3>Anonymous feedback</h3>
+    <p>We want your week to be the best one. We also know it's hard to tell the hosts something isn't working. So during the retreat, an anonymous form stays open and we check it every day we have signal. Wishing there was more of something? Cabin issue? Someone making you uncomfortable? Tell us early so we can fix it before you go home. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a></p>
+    <h3>Arrival + check-out day</h3>
+    <ul class="d">
+      <li><b>Arrival:</b> Have your passport, IMUGA confirmation, return flight and boat booking saved on your phone for immigration.</li>
+      <li><b>Sunday morning:</b> Head over from your Hulhumalé hotel for the 11am pickup at the airport.</li>
+      <li><b>Check-out day:</b> We're off the boat from 8am, with a group transfer to MLE.</li>
+    </ul>
+    <h3>If you get sick or hurt</h3>
+    <p>Tell us right away, day or night. The crew carries first aid, and we'll get you to the nearest clinic or back to a hospital in Malé if needed, and contact your insurer with you. This is why travel insurance with medical evacuation matters.</p>
+    <h3>Valuables</h3>
+    <p>Leave expensive jewelry at home. It's a boat, and things go overboard. Habitat isn't responsible for lost or damaged belongings, so bring nothing you'd be heartbroken to lose.</p>
+    <h3>After the retreat</h3>
+    <ul class="d">
+      <li><b>Photos:</b> We'll share a group album with photos from the week.</li>
+      <li><b>Feedback survey:</b> You'll get a short, fully anonymous survey after the trip. We rely on it heavily to make every retreat better, so please be honest.</li>
+      <li><b>Left something behind?</b> Tell us right away and we'll check with the crew.</li>
+    </ul>
+    <h3>Extras</h3>
+    <ul class="d">
+      <li><b>Bar tab:</b> Drinks go on your own tab.</li>
+      <li><b>Laundry:</b> Available on board.</li>
+    </ul>
+    <h3>A few house rules</h3>
+    <ul class="d">
+      <li>Be on time for dhoni runs and excursions. The boat runs on the tide and the light.</li>
+      <li>Anything you book on your own outside the retreat isn't run by Habitat and is at your own risk.</li>
+      <li>Your liability waiver is attached to the email with this guide. Fill it out, sign it and email it back to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> before June 13. You can't take part without it.</li>
+    </ul>
+  </section>
+
+  <!-- 11 -->
+  <section class="sec" id="packing">
+    <span class="num">11</span>
+    <h2 class="st">Packing list</h2>
+    <p><b>Luggage:</b> Completely up to you how much you bring. This is your vacation! There's no luggage limit or bag rule for the boat, and plenty of storage in the cabins. If you have tight connections or separate bookings, carry-on may be best. Put your name and number on everything in case it gets lost.</p>
+    <div class="frame"><p><b>Pack a carry-on like your checked bag might be late.</b> If you're checking a bag, pack a swimsuit, one workout set, a change of clothes, meds, chargers and toiletries for 2 days, just in case. On a boat, there's no shop to fix it.</p></div>
+    <div class="two">
+      <div>
+        <h3>Travel essentials</h3>
+        <ul class="d check">
+          <li>Passport (valid until Dec 19, 2027) + a photo of it</li>
+          <li>IMUGA confirmation, return flight and boat booking saved offline</li>
+          <li>Phone, charger, power bank</li>
+          <li>Universal plug adapter (Type G)</li>
+          <li>Card with no foreign fees + some small US dollar bills</li>
+          <li>Travel insurance details</li>
+          <li>Prescription meds in original packaging + prescription copy (and a doctor's letter for controlled meds)</li>
+          <li>Motion sickness tablets or bands</li>
+          <li>Headphones, eye mask, earplugs</li>
+          <li>Reusable water bottle</li>
+        </ul>
+        <h3>Movement (most mornings)</h3>
+        <ul class="d check">
+          <li>Workout clothes (re-wearing is totally fine, no need for one set per class)</li>
+          <li>Grip socks if you like them on a moving deck</li>
+        </ul>
+        <h3>In the water</h3>
+        <ul class="d check">
+          <li>Swimsuits, more than you think (nothing fully dries on a boat)</li>
+          <li>Rash guard or long-sleeve swim top</li>
+          <li>Reef-safe sunscreen (SPF 30+)</li>
+          <li>Your own snorkel mask, if you're picky about fit (gear is on board)</li>
+          <li>Waterproof phone case or small dry bag</li>
+          <li>Underwater camera or GoPro, if you have one</li>
+          <li>Your own towel only if you love it (beach towels are on board)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Days</h3>
+        <ul class="d check">
+          <li>Cover-up that covers shoulders and knees, for local islands</li>
+          <li>Sandals or slides (shoes mostly stay off on board)</li>
+          <li>Hat + polarized sunglasses</li>
+          <li>Small tote for dhoni runs</li>
+        </ul>
+        <h3>Evenings</h3>
+        <ul class="d check">
+          <li>Easy dinner outfits. Whatever you want to wear on vacation, this is your week</li>
+          <li>Something you love for the lobster dinner</li>
+          <li>Light layer for wind on deck</li>
+        </ul>
+        <h3>Toiletries + health</h3>
+        <ul class="d check">
+          <li>Any toiletries you're picky about (the boat provides the basics and a hair dryer)</li>
+          <li>After-sun or aloe</li>
+          <li>Bug spray</li>
+          <li>Basic meds: pain reliever, antihistamine, stomach settler, blister plasters, reef-cut ointment</li>
+          <li>Period products</li>
+        </ul>
+        <h3>Nice to have</h3>
+        <ul class="d check">
+          <li>A good book for the sundeck</li>
+          <li>A deck of cards</li>
+        </ul>
+        <h3>Leave at home</h3>
+        <ul class="d">
+          <li>Alcohol (customs takes it)</li>
+          <li>Towels (they're on board)</li>
+          <li>Hair tools that aren't dual-voltage</li>
+          <li>Expensive jewelry</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="sec" id="timeline">
+    <span class="num">12</span>
+    <h2 class="st">Your timeline + to-do list</h2>
+    <p>Everything you need to do, in order.</p>
+    <div class="tls">
+      <div class="tl"><div>Now</div><ul class="d check">
+        <li>Check your passport is valid until Dec 19, 2027 (renew now if not)</li>
+        <li>Sign + email back your liability waiver (attached to the email with this guide)</li>
+        <li>Buy travel insurance (strongly recommended)</li>
+        <li>Put June 13 to 19, 2027 in your calendar</li>
+        <li>Booked a shared cabin on your own? Take the <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a>. Have a preferred roommate? Send their name our way and we'll pair you.</li>
+      </ul></div>
+      <div class="tl"><div>November 2026</div><ul class="d check">
+        <li>Start browsing flights. Mid-December to February is the sweet spot to book (about 4 to 6 months out)</li>
+        <li>Send us any flights you're considering. We're happy to check them</li>
+      </ul></div>
+      <div class="tl"><div>December 2026 to February 2027</div><ul class="d check">
+        <li>Book flights (send them to us first if you're unsure)</li>
+        <li>Book your night of June 12 near the airport (and June 19, if staying on)</li>
+        <li>Fill out the <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a>: flights, dietary needs, health notes, emergency contact</li>
+        <li>Cancellation dates to know: Jan 24, 2027 is the last day for a refund or transfer. From Jan 25, 50% of the retreat total is due. From Mar 15, 2027, 100% is due and nothing is refundable.</li>
+      </ul></div>
+      <div class="tl"><div>March to May 2027</div><ul class="d check">
+        <li>Ask your doctor about routine vaccines, hepatitis A and typhoid</li>
+        <li>Balance fully paid by Friday, May 14 (30 days before, automatic on your plan)</li>
+        <li>RSVP to the group call (about a month out; we'll email you)</li>
+        <li>Make sure your waiver is signed and returned</li>
+        <li>Order adapter, eSIM, reef-safe sunscreen, motion sickness tablets</li>
+      </ul></div>
+      <div class="tl"><div>Week of June 6</div><ul class="d check">
+        <li>Look for your arrival group chat</li>
+        <li>File your IMUGA Traveller Declaration (within 96 hours of landing)</li>
+        <li>Check in for flights, download boarding passes</li>
+        <li>Download offline maps and your eSIM</li>
+        <li>Pack</li>
+      </ul></div>
+      <div class="tl"><div>Travel day</div><ul class="d check">
+        <li>Passport, phone, charger, cards, IMUGA confirmation</li>
+        <li>Message the group when you land</li>
+      </ul></div>
+    </div>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/close-beach-group.jpg" alt="A group of women on a white sand beach framed by palm leaves" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/close-swim-sharks.jpg" alt="Two guests floating in clear shallow water with nurse sharks nearby" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="sec" id="faq">
+    <span class="num">13</span>
+    <h2 class="st">FAQ</h2>
+    <p>The questions we get most. Still wondering something? Ask us.</p>
+    <h3>Before you go</h3>
+    <p><span class="q">I'm coming alone. Will that be weird?</span><br>Not even a little. Most people do.</p>
+    <p><span class="q">I've never done Pilates or yoga. Is that OK?</span><br>Yes. Every class is all levels and optional, and you'll get options for your body. Let us know if you want some extra instruction outside of class.</p>
+    <p><span class="q">Can I bring a friend?</span><br>Absolutely. This retreat is women-only, so tell her to book the same way you did and we'll room you together.</p>
+    <p><span class="q">How old are people who come?</span><br>Every age is welcome. The common thread is curiosity, not age.</p>
+    <p><span class="q">Can I change my cabin type?</span><br>If a cabin is available, of course. Ask and we'll make it happen.</p>
+    <p><span class="q">Can I give my spot to a friend?</span><br>If you need to cancel, any balance we keep under the cancellation policy can go toward a friend who takes your spot. Your deposit can't be transferred. Email us and we'll set it up.</p>
+    <p><span class="q">What's the pace like?</span><br>Slow, on purpose. Mornings are unhurried. Afternoons are open. It's a boat trip with Pilates on it, and the ocean is the main event.</p>
+    <h3>Travel</h3>
+    <p><span class="q">How do I get to the boat?</span><br>Fly into Velana International Airport (MLE). The crew picks up the group there from 11am on Sunday, June 13.</p>
+    <p><span class="q">Should I fly in the day before?</span><br>Yes. Landing late on Sunday isn't an option, so plan on arriving Saturday, June 12. Sleep in Hulhumalé, 10 to 15 minutes from the airport. Our charter partner recommends the Ocean Grand.</p>
+    <p><span class="q">What if my flight is delayed?</span><br>Email us right away. On travel day, text Kennon or Carrigan. We'll help you as best we can and work out how to get you to the boat.</p>
+    <p><span class="q">Do I need a visa?</span><br>Not in advance if you're a US citizen. It's free on arrival. You do need to file the free IMUGA form within 96 hours of landing.</p>
+    <h3>On retreat</h3>
+    <p><span class="q">I get seasick. Should I worry?</span><br>We mostly cruise inside the atolls, where the water is calmer, and anchor at night. Bring whatever works for you, and pick a lower-deck cabin in the middle of the boat, where there's the least movement.</p>
+    <p><span class="q">Is there Wi-Fi?</span><br>No. Get an eSIM or an international plan. You'll have signal near inhabited islands.</p>
+    <p><span class="q">Do I have to be a strong swimmer?</span><br>No. There's no minimum, and life jackets are on board for anyone who wants one. Nervous in the water? Tell us and we'll keep you close.</p>
+    <p><span class="q">Will we see whale sharks?</span><br>Maybe. Ari Atoll is known for mantas, and South Ari is one of the few places whale sharks stay year-round. Nothing is guaranteed. Most days deliver anyway.</p>
+    <p><span class="q">Can I scuba dive?</span><br>No diving on this trip. It's all snorkeling, and lots of it.</p>
+    <p><span class="q">Do I have to do everything?</span><br>No. Every class and activity is optional.</p>
+    <p><span class="q">How much free time is there?</span><br>Plenty. Afternoons are mostly open. Swim, nap, sundeck, jacuzzi.</p>
+    <p><span class="q">I have a food allergy. Will I be OK?</span><br>Yes. Put it in your <a href="{{FLIGHT_FORM_VIEWFORM_URL}}" target="_blank" rel="noopener">Flight + Info Form</a>. The chef will know your name and your allergy. Tell us or the crew if anything looks off.</p>
+    <p><span class="q">Is alcohol included?</span><br>No, but it's available on board. Drinks go on your own tab. Just don't bring any into the country.</p>
+    <p><span class="q">Will there be laundry?</span><br>Yes, it's available on board.</p>
+    <p><span class="q">What should I wear to dinner?</span><br>Whatever you want. It's a boat. Bare feet are normal.</p>
+    <p><span class="q">What if I don't click with my roommate?</span><br>Tell us, privately or through the anonymous form. We'll handle it quietly.</p>
+    <h3>Money</h3>
+    <p><span class="q">Do I need cash?</span><br>A little. Small US dollar bills for local islands and anything extra. Everything on the boat is covered except your bar tab.</p>
+    <p><span class="q">Should I tip?</span><br>Crew tips are already included. Anything extra is up to you. See Tipping in section 9.</p>
+  </section>
+
+  <!-- 14 -->
+  <section class="sec" id="contacts">
+    <span class="num">14</span>
+    <h2 class="st">Contacts + emergencies</h2>
+    <p>Screenshot this one.</p>
+    <div class="ctw"><table>
+      <tr><th>Who</th><th>How to reach</th><th>When</th></tr>
+      <tr><td><b>Habitat</b></td><td><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></td><td>All logistics, anytime. The best way to reach us</td></tr>
+      <tr><td><b>Kennon</b></td><td>+1 512 627 2297 (call, text, WhatsApp)</td><td>Anytime before the retreat, travel day + on the ground</td></tr>
+      <tr><td><b>Carrigan</b></td><td>+1 903 515 0061 (call, text, WhatsApp)</td><td>Anytime before the retreat, travel day + on the ground</td></tr>
+      <tr><td><b>Ocean Sapphire (Glance At Maldives)</b></td><td>+960 333 9994</td><td>If you can't reach us</td></tr>
+      <tr><td><b>Local emergency</b></td><td>119 police, 102 ambulance</td><td>Emergencies</td></tr>
+      <tr><td><b>US Embassy Colombo (covers the Maldives)</b></td><td>+94 11 202 8500</td><td>Lost passport, serious trouble</td></tr>
+      <tr><td><b>Your insurer</b></td><td>Save it in your phone</td><td>Medical, delays, lost bags</td></tr>
+    </table></div>
+    <div class="addr"><span>Pickup point</span>Velana International Airport (MLE), Hulhulé, Maldives</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">We can't wait to see you in the Maldives.</div>
+    <div class="meta2">xx, Kennon + Carrigan<br><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></div>
+  </div>
+</footer>
+<a class="totop" href="#contents">&#8593; Contents</a>
+</body>
+</html>
