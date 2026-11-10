@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sri Lanka Retreat Guide 2027</title>
+<meta name="description" content="Your guide to the Sri Lanka Yoga + Pilates Retreat, September 26 to October 2, 2027.">
+<meta property="og:title" content="Sri Lanka Yoga + Pilates Retreat | Retreat Guide">
+<meta property="og:description" content="Ahangama, Sri Lanka. September 26 to October 2, 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. Real photos only (habitatretreats.com or sent by Kennon, never venue photos), no colored section backgrounds except .callout. */
+:root{
+  /* ===== THEME TOKENS =====
+     Habitat retreats: these are overridden by ../themes/habitat.css (linked after this <style>). Only set --retreat-bg/--retreat-fg below.
+     Partner retreats: delete the habitat.css link and set the partner values here. See 05_DESIGN_SYSTEM.md.
+     The values below are the Sarah Lord Photo (MOR27) partner theme, as a worked example. */
+  --paper:#F9F5F1; --ink:#371715; --text:#371715; --accent:#E7DD87; --rule:rgba(55,23,21,.22);
+  --display:'Cormorant','Cormorant Garamond',Garamond,serif;
+  --body:'Cormorant Garamond','Cormorant',Garamond,Georgia,serif;
+  --label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
+  --script:'Cormorant',Garamond,serif;
+  /* roles (partner default: derived from ink + accent) */
+  --line-strong:var(--ink); --link-line:var(--accent); --hover-bg:var(--accent); --h2-bar:var(--accent);
+  --bullet:var(--accent); --bullet-edge:var(--ink); --callout-bg:var(--accent); --callout-fg:var(--ink);
+  --card:transparent; --card-border:var(--ink); --btn-bg:var(--ink); --btn-fg:var(--paper); --btn-hover-fg:var(--accent);
+  --label-color:inherit; --hero-bg:transparent; --hero-fg:inherit; --hero-line:var(--ink);
+  /* per retreat (Habitat brand guide: retreat color is used for the header band only) */
+  --retreat-bg:#4C6971; --retreat-fg:#F3E9DA;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--link-line);text-decoration-thickness:3px;text-underline-offset:2px}
+a:hover{background:var(--hover-bg)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+mark{background:linear-gradient(transparent 58%,var(--hover-bg) 58%);color:inherit;padding:0 .08em}
+
+/* header band */
+.band{background:var(--hero-bg);color:var(--hero-fg)}
+.band a{color:inherit}
+.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;color:var(--label-color);font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--hero-line)}
+.hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{color:inherit;margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .sub{margin:12px 0 0;font-size:21px;font-style:italic}
+.hero .when{margin-top:16px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
+.hero .collab{margin-top:14px;font-family:var(--script);font-style:italic;font-size:24px}
+.contacts-top{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:18px}
+.contacts-top b{font-weight:600}
+
+/* quick links */
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
+.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;background:var(--card);border:1px solid var(--card-border);text-decoration:none;font-weight:400;transition:background .15s}
+.quick a:hover{background:var(--hover-bg)}
+.quick a b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.1}
+.quick a span{font-size:16px;line-height:1.35}
+
+/* jump grid */
+.toc{margin-top:40px;scroll-margin-top:16px}
+.toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
+.toc p{margin:4px 0 16px;font-size:17px}
+.toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;background:var(--card);border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
+.toc nav a i{font-family:var(--script);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--hover-bg);border-color:var(--ink)}
+
+/* sections */
+.sec{padding-top:76px;scroll-margin-top:12px}
+.num{display:block;color:var(--label-color);font-family:var(--script);font-style:italic;font-size:26px}
+h2.st{margin:2px 0 22px;color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;text-wrap:balance}
+h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--h2-bar)}
+h3{margin:30px 0 10px;color:var(--label-color);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+p{margin:0 0 14px;text-wrap:pretty}
+.lead{font-family:var(--display);font-size:25px;line-height:1.35;font-style:italic}
+ul.d{list-style:none;margin:0 0 14px;padding:0}
+ul.d li{position:relative;padding-left:24px;margin:0 0 8px;text-wrap:pretty}
+ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--bullet-edge);background:var(--bullet);transform:rotate(45deg)}
+ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--bullet-edge);background:transparent;transform:none}
+.note{font-size:16px}
+b,strong{font-weight:600}
+.q{font-weight:600}
+.tw{overflow-x:auto;margin:6px 0 16px}
+table{width:100%;border-collapse:collapse;font-size:17px;line-height:1.4}
+.tw table{min-width:460px}
+.tw table.kv{min-width:0}
+th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--line-strong)}
+td{border-bottom:1px solid var(--rule);padding:10px 12px;vertical-align:top}
+table.kv{border-top:1.5px solid var(--line-strong)}
+table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:14px}
+.callout{background:var(--callout-bg);color:var(--callout-fg);padding:28px 30px 16px;margin:6px 0 10px}
+.callout h2.st::after{background:var(--callout-fg)}
+.callout ul.d li::before{background:var(--paper)}
+.frame{background:var(--card);border:1px solid var(--card-border);padding:22px 24px 10px;margin:18px 0}
+
+/* itinerary */
+.day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--rule)}
+.days .day:first-child{border-top:1.5px solid var(--line-strong)}
+.day .when b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.05}
+.day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+.day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px}
+.meta{font-size:16px}
+
+/* venues + hosts */
+.venue{margin:10px 0 26px;padding-top:4px}
+.hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:12px}
+.host{border-top:1.5px solid var(--line-strong);padding-top:14px}
+.host b{display:block;font-family:var(--display);font-size:25px;font-weight:600;line-height:1.1}
+.host i{display:block;margin-bottom:8px}
+.host p{font-size:17px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.times b{display:block;font-family:var(--display);font-weight:600;font-size:28px}
+.tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--rule)}
+.tls .tl:first-child{border-top:1.5px solid var(--line-strong)}
+.tl > div:first-child{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
+
+/* contacts + footer */
+.ctw{overflow-x:auto}
+.ctw table{min-width:520px}
+.addr{margin-top:14px;padding:14px 18px;background:var(--card);border:1px solid var(--card-border);display:flex;flex-direction:column;gap:4px;font-size:17px}
+.addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+footer{margin-top:80px}
+footer .wrap{padding-block:40px 64px;border-top:1px solid var(--line-strong);text-align:center}
+footer .big{font-family:var(--script);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1}
+footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--btn-bg);color:var(--btn-fg);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
+.totop:hover{background:var(--btn-bg);color:var(--btn-hover-fg)}
+
+@media (max-width:680px){
+  body{font-size:18px}
+  .hero{padding-block:28px 24px}
+  .contacts-top{flex-direction:column}
+  .day,.tl{grid-template-columns:minmax(0,1fr);gap:8px}
+  .hosts,.two,.times{grid-template-columns:minmax(0,1fr)}
+  .callout{padding:22px 18px 10px}
+  .toc nav a{font-size:18px;padding:8px 12px;gap:10px}
+}
+@media (max-width:520px){
+  .toc nav{grid-template-columns:minmax(0,1fr)}
+  .toc nav a i{font-size:20px;min-width:22px}
+  table.kv td:first-child{width:90px}
+}
+
+/* photos (optional: only add a photo element when a real photo file exists in <slug>/photos/) */
+.photo{margin:0 0 18px;background:var(--card)}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:var(--ratio,3/2);object-fit:cover}
+.photo figcaption{font-size:14px;line-height:1.4;padding-top:8px;color:var(--text);opacity:.8}
+.photo-wide{margin:26px 0}
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0}
+.photo-pair .photo{margin:0}
+.photo-pair .photo img{--ratio:4/5}
+.hero-photo{margin:0;position:relative}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover}
+/* host cards, modeled on the habitatretreats.com hosts section: bordered card, name over a hairline, italic title, square photo beside the bio, every other card mirrored. Never round headshots. */
+.host-card{border:1px solid var(--ink);padding:18px 20px;margin-bottom:14px;break-inside:avoid}
+.host-card .host-name{font-family:var(--display);font-size:24px;color:var(--ink);letter-spacing:.02em;text-align:right;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.host-card .host-title{font-style:italic;font-size:18px;text-align:right;margin:6px 0 12px}
+.host-card .host-body{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:end}
+.host-card .host-body img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.host-card .host-body p{margin:0;font-size:16px}
+.host-card.flip .host-name,.host-card.flip .host-title{text-align:left}
+.host-card.flip .host-body{grid-template-columns:1fr 200px}
+.host-card.flip .host-body img{order:2}
+.host-card.flip .host-body p{text-align:right}
+@media (max-width:560px){.host-card .host-body,.host-card.flip .host-body{grid-template-columns:1fr}.host-card.flip .host-body img{order:0}.host-card.flip .host-body p{text-align:left}}
+@media (max-width:520px){.photo-pair{grid-template-columns:minmax(0,1fr)}.hero-photo img{aspect-ratio:3/2}}
+
+@media print{
+  @page{size:8.5in 11in;margin:.6in .65in .65in}
+  html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:15.5px}
+  .wrap{max-width:none;padding:0}
+  .totop{display:none}
+  .top{padding-top:0}
+  .hero{padding-block:8px 18px}
+  .quick{break-before:auto}
+  .quick{padding-top:18px}
+  .toc{margin-top:14px}
+  .toc p{display:none}
+  .toc h2{font-size:26px;margin-bottom:8px}
+  .toc nav{gap:5px 8px}
+  .toc nav a{min-height:30px;padding:3px 12px;font-size:15px}
+  .toc nav a i{font-size:17px}
+  .quick a{padding:10px 14px}
+  .sec{break-before:page;padding-top:0}
+  .photo,.photo-pair,.hero-photo,.host-card{break-inside:avoid}
+  .photo img,.hero-photo img{max-height:3.6in}
+  h2.st,h3,.num{break-after:avoid}
+  li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
+  footer{margin-top:24px;break-inside:avoid;break-before:avoid}
+  footer .wrap{padding:18px 0 0}
+  footer .big{font-size:28px}
+  footer .meta2{display:none}
+}
+table.kv td{overflow-wrap:anywhere}
+.hero-col{margin-top:28px}.hero-col img{aspect-ratio:3/2!important}@media print{.hero-col{margin-top:10px}.hero-col img{max-height:1.45in!important;object-position:50% 60%}}
+@media print{.hero-photo img{max-height:1.9in}.photo-pair .photo img{max-height:2.5in}.photo-pair{margin:12px 0}#itinerary .photo-pair .photo img{max-height:1.9in}#itinerary .day{padding-top:14px}#included,#getting-there,#stay,#timeline{font-size:14.5px}#included ul.d li,#getting-there ul.d li{margin-bottom:5px}#stay .photo-pair .photo img,#timeline .photo-pair .photo img{max-height:1.6in}#timeline .tl{padding-top:10px}}
+@media print{#welcome{font-size:14.5px}#welcome h2.st{font-size:26px}#welcome .signoff{margin-top:8px}#welcome table.kv td{padding-top:7px;padding-bottom:7px}#contacts{font-size:14px}#contacts table td{padding:7px 10px}#faq p{margin-bottom:10px}}
+.signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
+</style>
+<link rel="stylesheet" href="../fonts/habitat-fonts.css">
+<link rel="stylesheet" href="../themes/habitat.css">
+</head>
+<body>
+
+<header class="band">
+<div class="wrap">
+  <div class="top"><span>Habitat Retreats</span></div>
+  <div class="hero">
+    <div class="eyebrow">Your retreat guide</div>
+    <h1>Sri Lanka <em>Yoga + Pilates Retreat</em></h1>
+    <p class="sub">A week in the rice paddies on the south coast. Movement every morning, Galle Fort, white tea, a lake safari and the people you'll meet along the way.</p>
+    <div class="when">September 26 to October 2, 2027 | Ahangama, Sri Lanka</div>
+  </div>
+</div>
+</header>
+<div class="wrap"><figure class="hero-photo hero-col"><img src="photos/hero-flowground-paddies.jpg" alt="A house with a pool tucked into palm trees and green paddies" width="1333" height="750"></figure></div>
+
+<main class="wrap">
+  <div class="quick">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener"><b>Flight + Info Form</b><span>Flights, dietary needs, health notes, emergency contact</span></a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener"><b>Roommate Matching Quiz</b><span>Coming on your own? Start here</span></a>
+    <a href="mailto:habitat@habitatretreats.com?subject=Sri%20Lanka%202027%20retreat"><b>Questions</b><span>habitat@habitatretreats.com</span></a>
+    <a href="Habitat_Sri_Lanka_2027_Retreat_Guide.pdf" download><b>Download PDF</b><span>Save the guide for travel day and offline</span></a>
+  </div>
+
+  <div class="toc" id="contents">
+    <h2>Jump to a section</h2>
+    <p>Tap any section to go straight there. The Contents button in the corner brings you back here.</p>
+    <nav>
+      <a href="#welcome"><i>01</i><span>Welcome</span></a>
+      <a href="#housekeeping"><i>02</i><span>Housekeeping</span></a>
+      <a href="#itinerary"><i>03</i><span>Itinerary</span></a>
+      <a href="#included"><i>04</i><span>What's included</span></a>
+      <a href="#stay"><i>05</i><span>Where you'll stay</span></a>
+      <a href="#getting-there"><i>06</i><span>Flights + transfers</span></a>
+      <a href="#payments"><i>07</i><span>Payments + cancellations</span></a>
+      <a href="#passports"><i>08</i><span>Passports + health</span></a>
+      <a href="#know-before"><i>09</i><span>Know before you go</span></a>
+      <a href="#expect"><i>10</i><span>What to expect</span></a>
+      <a href="#packing"><i>11</i><span>Packing list</span></a>
+      <a href="#timeline"><i>12</i><span>Timeline + to&#8209;dos</span></a>
+      <a href="#faq"><i>13</i><span>FAQ</span></a>
+      <a href="#contacts"><i>14</i><span>Contacts + emergencies</span></a>
+    </nav>
+  </div>
+
+  <!-- 01 -->
+  <section class="sec" id="welcome">
+    <span class="num">01</span>
+    <h2 class="st">Hey hey, we are so excited for this retreat and that you are a part of it!</h2>
+    <p>This guide is everything you need for Sri Lanka, in one place. Flights, what to pack, what's included, what isn't, what the week actually looks like, and the questions people usually have. It's a great document to refer back to as the retreat gets closer.</p>
+    <p>Habitat is for the ones who feel a quiet pull toward a bigger, truer version of their life. This isn't about escaping your life. It's about building one you don't need to escape from. We built Habitat so you'd have people to figure it out with. You don't need to arrive as anyone other than exactly who you are.</p>
+    <p>If something in here isn't clear, that's on us. Ask. There are no dumb questions.</p>
+    <p>See you in Sri Lanka.</p>
+    <p class="signoff">xx,<br>Kennon + Carrigan</p>
+
+    <h3>Your retreat at a glance</h3>
+    <div class="tw" style="overflow:visible"><table class="kv">
+      <tr><td>Retreat</td><td>Sri Lanka Yoga + Pilates Retreat</td></tr>
+      <tr><td>Dates</td><td>Sunday, September 26 to Saturday, October 2, 2027 (6 nights)</td></tr>
+      <tr><td>Where</td><td>flowground home, Ahangama, south coast of Sri Lanka</td></tr>
+      <tr><td>Arrive</td><td>Bandaranaike International Airport (CMB), Colombo, by 12:00 PM (noon) on Sunday, September 26 for the group transfer</td></tr>
+      <tr><td>Depart</td><td>Check out Saturday, October 2. Book flights out of CMB for no earlier than 4:00 PM for the group transfer</td></tr>
+      <tr><td>Hosts</td><td>Kennon + Carrigan (Habitat)</td></tr>
+      <tr><td>Movement</td><td>Daily yoga + mat Pilates, plus workshops. All levels, always optional</td></tr>
+      <tr><td>Your room</td><td>Shared, see Where You'll Stay</td></tr>
+      <tr><td>Questions</td><td>Email <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> (the fastest way to reach us)</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 02 -->
+  <section class="sec" id="housekeeping">
+    <span class="num">02</span>
+    <h2 class="st">Housekeeping</h2>
+    <p>We want you on the right trip and having the best week possible. Here are some things to note going into the retreat.</p>
+    <ul class="d">
+      <li><span class="q">Every class is optional.</span> This is your vacation. Skip a morning, sleep in, go to the pool.</li>
+      <li><span class="q">First time doing yoga or Pilates?</span> Let us know. Before or after class or during free time is a great time to ask questions.</li>
+      <li><span class="q">It's green season on the south coast.</span> Late September is hot and humid, around 29°C / 84°F, with sporadic showers. They're often short, then the sun comes back. Everything is lush and we will spend our time moving our bodies, exploring cobblestone streets, enjoying tea, and all the in between moments.</li>
+      <li><span class="q">Sri Lanka runs on its own clock.</span> Tuk-tuks, traffic and rain showers all bend the schedule. Come with a loose grip and you'll have a better time.</li>
+      <li><span class="q">You're in the paddies, not a hotel.</span> Geckos, birds, frogs at night and the odd mosquito come with the view. There are no mosquito nets. Fans, AC and repellent do the job.</li>
+      <li><span class="q">Wi-Fi: yes.</span></li>
+      <li><span class="q">You're sharing space with people you may not know.</span> Many people come solo, some come with friends. If something or someone is bothering you, tell us early (see our <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a> in section 10). We can fix things in real time. Don't wait until the week is over to put it out there. That's a disservice to you and to the people around you.</li>
+      <li><span class="q">Plans can change.</span> Weather, boats and local life sometimes rearrange the itinerary. We'll stick to the plan where we can. If we need to adapt, we'll swap in something just as good and tell you right away. We ask that you stay flexible and patient with the situation.</li>
+    </ul>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec" id="itinerary">
+    <span class="num">03</span>
+    <h2 class="st">Day-by-day itinerary</h2>
+    <p>Here's the shape of the week. This is a tentative plan. Activities may land on different days or in a different order, and we'll share the precise week schedule as the retreat gets closer. If any changes need to be made, we will send out an announcement in the group message.</p>
+    <p>Most mornings look the same: yoga or mat Pilates in the shala, a group circle with journaling, then breakfast. Afternoons are for going out or doing nothing. Evenings are yin, dinner, or both.</p>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/itin-tuktuk.jpg" alt="Three women hanging off a green tuk-tuk on a palm-lined street" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/itin-galle-lighthouse.jpg" alt="The Galle Fort lighthouse on the sea at sunset" loading="lazy"></figure>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="when"><b>Day 1</b><span>Sun, September 26</span><em>Arrive + settle in</em></div>
+        <div>
+          <ul class="d">
+            <li>Land at CMB by 12:00 PM (noon). Your group transfer to flowground is included, about 2.5 hours by road</li>
+            <li>4:00 PM | Arrive at flowground. Unpack, shower, pool</li>
+            <li>5:30 PM | Opening ceremony</li>
+            <li>7:00 PM | Welcome dinner at the house</li>
+          </ul>
+          <p>The first evening is about landing. We'll meet as a group, set the tone for the week, and eat very well.</p>
+          <p class="meta"><b>Wear:</b> Whatever you traveled in, then something comfy for the evening</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 2</b><span>Mon, September 27</span><em>Galle Fort + Turtle Beach</em></div>
+        <div>
+          <ul class="d">
+            <li>7:00 AM | Movement</li>
+            <li>8:00 AM | Circle + journaling</li>
+            <li>9:00 AM | Breakfast</li>
+            <li>10:00 AM | Day trip to Galle Fort</li>
+            <li>12:00 PM | Lunch inside the fort walls</li>
+            <li>12:30 PM | Turtle Beach</li>
+            <li>2:30 PM | Back at flowground. Free time</li>
+            <li>5:30 PM | Movement</li>
+            <li>6:30 PM | Dinner at the house</li>
+          </ul>
+          <p>Galle Fort is a walled old town on the sea, full of cafes, little shops and colonial buildings. We'll wander, eat lunch inside the walls, then head to the beach to look for sea turtles if the sea lets us. Wear your swimsuit. No need to bring goggles.</p>
+          <p class="meta"><b>Wear:</b> Light clothes, comfy walking sandals, a swimsuit underneath</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 3</b><span>Tue, September 28</span><em>Beach town day</em></div>
+        <div>
+          <ul class="d">
+            <li>7:30 AM | Movement</li>
+            <li>8:30 AM | Circle + journaling</li>
+            <li>9:30 AM | Breakfast</li>
+            <li>10:30 AM | Tuk-tuks into Ahangama</li>
+            <li>12:30 PM | Group brunch at Marshmallow</li>
+            <li>1:30 PM | Explore town, shop, beach</li>
+            <li>3:00 PM | Free time</li>
+            <li>5:30 PM | Movement</li>
+            <li>6:30 PM | Dinner at the house</li>
+          </ul>
+          <p>A slow one. Iced coffee, sarong hunting, a swim if the water is calm, then back to the house before sunset.</p>
+          <p class="meta"><b>Wear:</b> Beach clothes, sandals, a tote for whatever you buy</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 4</b><span>Wed, September 29</span><em>Free day</em></div>
+        <div>
+          <ul class="d">
+            <li>7:30 AM | Movement</li>
+            <li>8:30 AM | Circle + journaling</li>
+            <li>9:30 AM | Breakfast</li>
+            <li>10:30 AM | Free time. Massage, book, pool, beach</li>
+            <li>3:00 PM | Movement</li>
+            <li>5:30 PM | Tuk-tuks to town</li>
+            <li>6:00 PM | Dinner out</li>
+          </ul>
+          <p>The day is yours until afternoon yin. Then we ride into town for dinner.</p>
+          <p class="meta"><b>Wear:</b> Whatever's comfortable, then something for dinner in town</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 5</b><span>Thu, September 30</span><em>White tea + lake safari</em></div>
+        <div>
+          <ul class="d">
+            <li>7:30 AM | Movement</li>
+            <li>8:30 AM | Circle + journaling</li>
+            <li>9:30 AM | Breakfast</li>
+            <li>10:30 AM | White tea tasting</li>
+            <li>11:30 AM | Free time</li>
+            <li>4:00 PM | Koggala Lake boat safari</li>
+            <li>6:00 PM | Dinner out</li>
+          </ul>
+          <p>We taste a rare white tea grown near the coast. In the late afternoon we take boats out on Koggala Lake, past mangroves, monkeys and the odd crocodile, to a small island where cinnamon is grown and peeled by hand.</p>
+          <p class="meta"><b>Wear:</b> Light layers, hat, bug spray for the boat</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 6</b><span>Fri, October 1</span><em>Botanical workshop + farewell</em></div>
+        <div>
+          <ul class="d">
+            <li>7:30 AM | Movement</li>
+            <li>8:30 AM | Circle + journaling</li>
+            <li>9:30 AM | Breakfast</li>
+            <li>10:30 AM | Botanical workshop: make your own herbal hair oil and body butter</li>
+            <li>11:30 AM | Free time</li>
+            <li>4:00 PM | Closing ceremony</li>
+            <li>6:00 PM | Farewell dinner at Kai</li>
+          </ul>
+          <p>The last full day. You'll make something to take home, have the afternoon free, then we close the week together and go out for one last dinner.</p>
+          <p class="meta"><b>Wear:</b> Your favorite dinner outfit for the farewell</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 7</b><span>Sat, October 2</span><em>Goodbye (for now)</em></div>
+        <div>
+          <ul class="d">
+            <li>Breakfast, final swim</li>
+            <li>Check out</li>
+            <li>Group transfers to CMB, grouped by flight times</li>
+          </ul>
+          <p class="meta"><b>Wear:</b> Whatever you want</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:22px;break-inside:avoid">
+      <p><b>Keeping you up to date.</b> We're always looking for ways to make the week better. If anything changes on the ground, we'll share it in the group message, our main form of communication during the retreat.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec" id="included">
+    <span class="num">04</span>
+    <h2 class="st">What's included (and what isn't)</h2>
+    <p>The short version: once you land at CMB, the week is essentially handled. Here's exactly what that means.</p>
+    <div class="two">
+      <div>
+        <h3>Included</h3>
+        <ul class="d">
+          <li>Accommodation: 6 nights at flowground home in a shared room</li>
+          <li>Daily meals, a mix of at our venue and out and about</li>
+          <li>Daily movement: a blend of mat Pilates and yoga</li>
+          <li>Opening ceremony, daily circle + journaling, closing ceremony</li>
+          <li>Galle Fort day trip</li>
+          <li>Turtle Beach visit</li>
+          <li>White tea tasting</li>
+          <li>Koggala Lake boat safari + cinnamon island</li>
+          <li>Botanical workshop: herbal hair oil + body butter</li>
+          <li>Sauna + cold plunge at a social wellness club nearby</li>
+          <li>Group airport transfers from CMB on Sunday, September 26 and back on Saturday, October 2, at the group times</li>
+          <li>All transport during the retreat, by van and tuk-tuk</li>
+          <li>Pre-trip support (flights, packing, the ETA, any question) and on-the-ground support all week</li>
+          <li>Your custom Habitat retreat journal, plus a few surprises we won't spoil</li>
+          <li>Two months free in the Habitat Blue Sky Collective</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not included</h3>
+        <ul class="d">
+          <li>Flights and any travel to CMB</li>
+          <li>Travel insurance (recommended, not required, see section 7)</li>
+          <li>Hotel nights before or after the retreat</li>
+          <li>Anything you want to eat or drink in free time</li>
+          <li>Alcohol</li>
+          <li>Massages and other treatments, paid directly</li>
+          <li>Tips for venue staff, drivers and guides (see section 9)</li>
+          <li>Your ETA if your passport isn't on Sri Lanka's free list (free for US citizens, see section 8), vaccines, and anything personal</li>
+          <li>Transfers outside the group times</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec" id="stay">
+    <span class="num">05</span>
+    <h2 class="st">Where you'll stay</h2>
+    <div class="venue">
+      <div class="photo-pair">
+        <figure class="photo"><img src="photos/stay-shala.jpg" alt="An open-air yoga shala with mats laid out, looking onto green paddies" loading="lazy"></figure>
+        <figure class="photo"><img src="photos/stay-twin-room.jpg" alt="A bright bedroom with two single beds and doors open to the garden" loading="lazy"></figure>
+      </div>
+      <h3>flowground home | 6 nights</h3>
+      <p>A two-story house built into the rice paddies just inland from Ahangama, with an infinity pool that looks straight out over the fields. The yoga shala is part of the house, so class is a few steps from your room. Kabalana Beach is about a 20-minute walk, and Ahangama's cafes and shops are a few minutes by tuk-tuk. The house is ours for the week.</p>
+      <ul class="d">
+        <li><b>Address:</b> No. 46A1, Keraminiyawatta, Karandugoda, 80650, Ahangama, Sri Lanka</li>
+        <li><b>Website:</b> <a href="https://flowground.com/our-home/" target="_blank" rel="noopener">flowground.com</a></li>
+        <li><b>Check-in:</b> from 3:00 PM on Sunday, September 26 | <b>Check-out:</b> Saturday, October 2. We'll share the time closer to the retreat</li>
+        <li><b>On site:</b> infinity pool over the paddies, 80 m² / 860 sq ft yoga shala, garden, living areas, outdoor dining, kitchen</li>
+        <li><b>In your room:</b> AC and ceiling fan, a daylight bathroom, locally made toiletries, pool towels, drinking water and tea</li>
+        <li><b>Wi-Fi:</b> yes</li>
+      </ul>
+    </div>
+    <h3>Rooms + roommates</h3>
+    <ul class="d">
+      <li><b>Shared rooms</b> have two single beds. Two guests per room.</li>
+      <li>Want a room to yourself? Ask. We'll tell you what's possible and the price.</li>
+      <li>Coming with a friend? Tell us and we'll room you together.</li>
+      <li>Coming on your own? We pair roommates based on your <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a>.</li>
+      <li>Room assignments go out before the retreat.</li>
+    </ul>
+  </section>
+
+  <!-- 06 -->
+  <section class="sec" id="getting-there">
+    <span class="num">06</span>
+    <h2 class="st">Getting there + getting home</h2>
+    <p>You book your own flights, so you can come from anywhere and add travel on either side. Booking your own doesn't mean you're on your own. Send us any flight before you book if you want our eyes on it.</p>
+    <div class="frame">
+      <h3 style="margin-top:0">The only two times you need</h3>
+      <div class="times">
+        <div><b>Arrive</b><p>Land at Bandaranaike International Airport (CMB), Colombo, by <b>12:00 PM (noon) on Sunday, September 26</b>.</p></div>
+        <div><b>Depart</b><p>Book your flight out of CMB for <b>no earlier than 4:00 PM on Saturday, October 2</b>.</p></div>
+      </div>
+    </div>
+    <p>How you get there is up to you. Many people add a few days on the front or back end. Want help planning that part? Tell us.</p>
+    <p><b>Group transfers:</b> We arrange group transfers from CMB to flowground on Sunday, and back to CMB on Saturday. Cars are grouped by similar arrival and departure times, so you may wait a little for the rest of your crew. We'll put you in a small group chat with them the week before so you can find each other. We'll share the transfer company and exact meeting spot as the retreat gets closer. The drive is about 2.5 hours down the Southern Expressway.</p>
+    <p><b>Arriving or leaving outside these times?</b> That's okay. Let us know and we'll help you set up a private transfer.</p>
+    <h3>Our flight advice</h3>
+    <ul class="d">
+      <li>Look at flights first. Find prices and times that work for you. From the US, most routes connect once through the Middle East, Europe or Asia.</li>
+      <li><b>Book in the sweet spot.</b> For Sri Lanka that's usually 4 to 8 months out, so February to May 2027 for this trip. Booking much earlier rarely saves money, and fares tend to climb in the last couple of months, but please do what makes you feel the most comfortable.</li>
+      <li>Send your flights to us before you book if you're unsure. We are happy to take a look at them with you.</li>
+      <li>Once booked, fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>. It also collects dietary needs, health notes and emergency contact. This is how we plan your transfer.</li>
+    </ul>
+    <h3>Running late or stuck?</h3>
+    <p>Email us at <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> as soon as you know. On travel day you can also text or WhatsApp Kennon (+1 512 627 2297) or Carrigan (+1 903 515 0061). We'll rework your transfer. If you can't reach us, call flowground at +94 71 417 3294.</p>
+    <h3>Extending your trip?</h3>
+    <p>If you're adding days before or after the retreat and want recommendations, or you're curious whether we have hotel picks for Colombo or other parts of Sri Lanka, give us a holler.</p>
+  </section>
+
+  <!-- 07 -->
+  <section class="sec" id="payments">
+    <span class="num">07</span>
+    <h2 class="st">Payments, cancellations + insurance</h2>
+    <h3 style="margin-top:0">Deposit + balance</h3>
+    <p>Your $400 deposit is paid and your spot is held. <b>Your full balance is due by August 27, 2027 (30 days before the retreat)</b>, following the payment plan you chose at checkout. Payments come out automatically on the card saved at checkout and show on your statement as HABITAT RETREATS.</p>
+    <p>Late payments get a 5-day grace period per installment, then a 3% late fee on the overdue amount. If something comes up, reach out before the due date and we'll work with you.</p>
+    <p>Questions about your payments? Email <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>.</p>
+    <h3>If you need to cancel</h3>
+    <p>Life happens. Here's how it works (full details in our <a href="https://www.habitatretreats.com/legal/terms-conditions" target="_blank" rel="noopener">Terms + Conditions</a>):</p>
+    <div class="tw"><table>
+      <tr><th style="width:40%">If you cancel</th><th>What happens</th></tr>
+      <tr><td><b>On or before May 9, 2027</b><br>(140+ days before)</td><td>Your payments (not your deposit) can be refunded, or moved to another Habitat retreat within 12 months</td></tr>
+      <tr><td><b>May 10 to June 27, 2027</b><br>(139 to 91 days before)</td><td>50% of the retreat total (not counting your deposit) is due and non-refundable. If you've paid less than that, the difference is charged at this time</td></tr>
+      <tr><td><b>June 28, 2027 or later</b><br>(90 days or less)</td><td>No refunds. 100% of the retreat total is due at this time</td></tr>
+    </table></div>
+    <ul class="d">
+      <li>Your deposit is non-refundable and non-transferable in every case. When someone signs up, we pay vendors right away to secure their spot, and we can't get that back. If you cancel and part of your balance is kept under this policy, you can transfer that amount to a friend who takes your spot.</li>
+      <li>The card you booked with is saved on file, and any amount due under this policy is charged to it.</li>
+      <li>Cancel in writing to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>.</li>
+      <li>No refunds if you're denied entry or don't meet passport, ETA or entry requirements.</li>
+      <li>No refunds for arriving late, leaving early, or skipping activities.</li>
+      <li>Weather, illness and flight problems don't change the policy. That's what travel insurance is for. We wish we could accommodate everything life throws at us, but with group travel it's impossible.</li>
+    </ul>
+    <h3>Shared rooms + roommates</h3>
+    <p>Booked a shared room on your own and we haven't found you a roommate 60 days before the retreat (by July 28, 2027)? You'll get a private room, and we'll charge 50% of the difference between shared and private. We'll always confirm with you before any charge. If this causes financial stress, tell us and we'll work with you.</p>
+    <h3>Travel insurance</h3>
+    <p>Completely up to you. It covers the things we can't: missed flights, lost bags, medical bills abroad, and cancelling for illness or emergencies.</p>
+    <ul class="d">
+      <li>Look for: trip cancellation + interruption, medical + evacuation, baggage delay.</li>
+      <li>Buy it soon after booking. Many policies only cover pre-existing conditions if you buy within 14 to 21 days of your first payment.</li>
+      <li>Check your credit card first. Some premium cards already include coverage.</li>
+    </ul>
+    <p>In the past we have used <a href="https://www.battleface.com/en-us/" target="_blank" rel="noopener">BattleFace</a>.</p>
+  </section>
+
+  <!-- 08 -->
+  <section class="sec" id="passports">
+    <span class="num">08</span>
+    <h2 class="st">Passports, health + safety</h2>
+    <h3 style="margin-top:0">Passport + entry</h3>
+    <ul class="d">
+      <li>Your passport must be valid until at least <b>April 2, 2028</b> (6 months after the retreat ends), with at least 2 blank pages. Check it today.</li>
+      <li><b>ETA (required).</b> Every visitor needs an Electronic Travel Authorization before boarding a flight to Sri Lanka. Since May 25, 2026, the tourist ETA is free for US citizens and passport holders from about 40 other countries. It covers a stay of up to 30 days. Approval usually takes 1 to 3 days. Apply about a month before you fly.</li>
+      <li><b>Apply only at <a href="https://www.eta.gov.lk" target="_blank" rel="noopener">eta.gov.lk</a>.</b> Lots of look-alike sites charge a fee for the same thing. Save the approval email and a screenshot. Some airlines check it at check-in.</li>
+      <li><b>Arrival card.</b> Fill out Sri Lanka's free online arrival card in the 3 days before you land, through the Department of Immigration's official site. Don't pay a third party to do it.</li>
+      <li>Not a US citizen? Check your own country's rules. You're responsible for your own entry and exit.</li>
+      <li>Renewing your passport before the trip? Do it before you apply for the ETA, then send us the new details. The ETA is linked to your passport number.</li>
+      <li>Save a photo of your passport to your phone and email it to yourself.</li>
+    </ul>
+    <p>Entry rules in Sri Lanka have changed several times in the last few years. We'll recheck them before the retreat and tell you if anything changes.</p>
+    <h3>Health</h3>
+    <ul class="d">
+      <li>Vaccines: none are required unless you're arriving from a yellow fever country. The CDC recommends hepatitis A and typhoid for most travelers, and some people also get hepatitis B, rabies or Japanese encephalitis. Check the <a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/sri-lanka" target="_blank" rel="noopener">CDC travel page for Sri Lanka</a> and talk to your doctor 4 to 6 weeks before if you want to consult someone on your upcoming travels and safety precautions.</li>
+      <li>Tell us about allergies, injuries, pregnancy, or health conditions in your <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>. It stays between us and the people who need to know (the kitchen, your hosts). Please be thorough. The more we know, the better we can look after you.</li>
+      <li>Bring any prescriptions in original packaging with a copy of the prescription and a doctor's letter, plus a few extra days' supply.</li>
+      <li><b>Controlled meds:</b> medicines with codeine and ADHD meds (Adderall, Ritalin, Vyvanse) are controlled in Sri Lanka and can need approval from the National Medicines Regulatory Authority (NMRA) before you bring them in. If you take either, check with your doctor and the <a href="https://www.nmra.gov.lk/announcements/bringing-personal-medicines-into-sri-lanka" target="_blank" rel="noopener">NMRA</a> well before you fly. Vapes and e-cigarettes are banned and will be confiscated.</li>
+      <li>Nearest hospital: Asiri Hospital Galle, a private hospital with 24-hour emergency care, about 40 minutes by road. Pharmacies are in Ahangama.</li>
+      <li>Tap water: don't drink it. flowground provides drinking water, so bring a bottle to refill.</li>
+      <li>Sun: Sri Lanka sun is strong, even on cloudy days. SPF, hat, and water are musts.</li>
+    </ul>
+    <h3>Safety</h3>
+    <p>Sri Lanka is a popular, generally safe place for traveling. Normal travel sense applies.</p>
+    <ul class="d">
+      <li>Keep your passport somewhere secure. Carry a copy.</li>
+      <li>Don't leave bags unattended at the airport.</li>
+      <li>Emergency numbers in Sri Lanka: police 119, ambulance 1990, tourist police 1912. We'll also be with you all week.</li>
+    </ul>
+  </section>
+
+  <!-- 09 -->
+  <section class="sec" id="know-before">
+    <span class="num">09</span>
+    <h2 class="st">Know before you go: Sri Lanka</h2>
+    <h3 style="margin-top:0">Weather</h3>
+    <p>Late September on the south coast can be sticky and green. Expect sun most days with showers sporadically, often heavy and short.</p>
+    <div class="tw"><table>
+      <tr><th></th><th>Day</th><th>Night</th><th>Sea</th><th>Rain</th></tr>
+      <tr><td><b>Late September</b></td><td>29°C / 84°F</td><td>24°C / 75°F</td><td>28°C / 82°F</td><td>Heavy short downfalls</td></tr>
+    </table></div>
+    <h3>Time zone</h3>
+    <p>Sri Lanka is UTC+5:30, 10.5 hours ahead of Austin (Central) and 12.5 ahead of LA (Pacific) in late September.</p>
+    <h3>Money</h3>
+    <ul class="d">
+      <li>Currency: Sri Lankan rupee (LKR). Roughly 330 LKR = $1 USD. <a href="https://www.xe.com" target="_blank" rel="noopener">Exchange rates may change over time</a>.</li>
+      <li>Cards: fine at bigger cafes, restaurants and shops. Cash for tuk-tuks, markets and small places.</li>
+      <li>ATMs are in Ahangama and Galle.</li>
+      <li>Always choose to be charged in local currency.</li>
+      <li>Tell your bank you're traveling.</li>
+    </ul>
+    <h3>Tipping</h3>
+    <p>Tipping is completely up to you and your experience. It's never required, but it's appreciated by the people who make the week happen. Had an incredible experience? Tip more. Felt more "meh"? That's OK too.</p>
+    <ul class="d">
+      <li><b>Venue team:</b> Near the end of the week we'll pass around an envelope. Tip what you'd like, and it's shared among the staff who looked after us.</li>
+      <li><b>Drivers and guides:</b> Tip them directly at the end of the activity, if you'd like.</li>
+      <li><b>Restaurants on your own:</b> many add a 10% service charge, so check the bill. If it's not there, about 10% is normal.</li>
+      <li><b>Tuk-tuks:</b> rounding up is plenty.</li>
+    </ul>
+    <h3>Phone + data</h3>
+    <ul class="d">
+      <li>Check your carrier's international plan before you go (many major carriers have international day passes).</li>
+      <li>An eSIM is usually easiest. Airalo or Holafly work well. Install before you fly, turn on when you land. Or grab a Dialog or Mobitel SIM at the airport after baggage claim.</li>
+      <li>Our group message is how we'll all talk.</li>
+      <li>Wi-Fi at flowground: yes.</li>
+    </ul>
+    <h3>Plugs + power</h3>
+    <p>Sri Lanka runs on 230V, with mostly Type D and Type G sockets. flowground has universal sockets and USB charging, but bring 1 adapter for days out. Most phone and laptop chargers are fine. Hair tools often aren't, so bring dual-voltage.</p>
+    <h3>Local customs</h3>
+    <ul class="d">
+      <li>At temples, cover your shoulders and knees, and take off your shoes and hat.</li>
+      <li>A few words go a long way: Hello = Ayubowan | Thank you = Bohoma sthuthi.</li>
+    </ul>
+  </section>
+
+  <!-- 10 -->
+  <section class="sec" id="expect">
+    <span class="num">10</span>
+    <h2 class="st">What to expect on retreat</h2>
+    <h3 style="margin-top:0">Your hosts</h3>
+    <div class="hosts">
+      <div class="host-card"><div class="host-name">KENNON GOLDREYER</div><div class="host-title">Co-founder, Habitat Retreats</div><div class="host-body"><img src="photos/host-kennon.jpg" alt="Kennon Goldreyer" loading="lazy"><p>Your hype girl on the ground, and the one who'll find the best swimming spot.</p></div></div>
+      <div class="host-card flip"><div class="host-name">CARRIGAN WHITELEY</div><div class="host-title">Co-founder, Habitat Retreats</div><div class="host-body"><img src="photos/host-carrigan.jpg" alt="Carrigan Whiteley" loading="lazy"><p>Started Habitat to put intentional travel and community in the same place. Most likely to talk you into a sunrise ocean dip.</p></div></div>
+    </div>
+    <p>We teach every class and we're with you the whole week. No handoffs.</p>
+    <h3>Classes + movement</h3>
+    <ul class="d">
+      <li>One morning class every day (yoga or mat Pilates), plus classes in some evenings as well.</li>
+      <li>All levels. We'll give options for beginners and challenges for regulars.</li>
+      <li>Always optional. Sometimes the moments you follow your intuition on a retreat become the most memorable.</li>
+      <li>Injured, pregnant, or recovering? Tell us in your <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener">Flight + Info Form</a> and at the start of class.</li>
+      <li>Mats, bolsters, blocks and straps are provided, so no need to bring anything for class.</li>
+    </ul>
+    <h3>Food</h3>
+    <ul class="d">
+      <li>Breakfast and dinner at the house are cooked fresh.</li>
+      <li>If you're hungry for lunch on Wednesday, Thursday and Friday, it's on your own. Ahangama has great cafes a short tuk-tuk ride away, and we'll share our favorites.</li>
+      <li>Allergies will all be cared for. List them in your <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener">Flight + Info Form</a> and the kitchen will know your name and your needs.</li>
+      <li>If something doesn't look right for you, tell us. We'll fix it on the spot.</li>
+      <li>Alcohol: not included.</li>
+    </ul>
+    <h3>Free time</h3>
+    <p>There's real free time built in, on purpose. Pool, nap, book, a massage, sauna and cold plunge at the wellness club, wander into town, or join whatever little crew forms that day. We'll share our favorite spots and suggestions in the group message.</p>
+    <h3>Staying in touch</h3>
+    <ul class="d">
+      <li><b>Email</b> is the best way to reach us about anything before the retreat starts, plus payments, forms and this guide.</li>
+      <li><b>Group message</b> will be the primary form of communication during the week and shortly before. There will be a retreat group chat made for communication right before and during the retreat. It's where people swap flights, plan pre-trip meetups, and where we post daily updates during the retreat. Heads up: your name and number will be visible to everyone in it.</li>
+      <li><b>Travel-day group chats</b> go out about a week before, grouped by arrival time, so you can find each other and ride to the house together.</li>
+      <li><b>Pre-retreat group call</b> happens about a month before (30 min, notes sent after if you can't make it). Meet the group and ask anything. We'll send the date and time closer to it.</li>
+    </ul>
+    <h3>Anonymous feedback</h3>
+    <p>We want your week to be the best one. We also know it's hard to tell the hosts something isn't working. So during the retreat, an anonymous form stays open and we check it every day. Wishing there was more of something? Someone making you uncomfortable? Room issue? Tell us early so we can fix it before you go home. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a></p>
+    <h3>Arrival + check-out day</h3>
+    <ul class="d">
+      <li><b>Check-in:</b> from 3:00 PM. Our group gets there around 4:00 PM.</li>
+      <li><b>Check-out day:</b> We'll share the check-out time closer to the retreat. Breakfast and a last swim first.</li>
+    </ul>
+    <h3>If you get sick or hurt</h3>
+    <p>Tell us right away, day or night. We'll help you get to a pharmacy or clinic if needed. Serious cases go to Asiri Hospital Galle, about 40 minutes away. We will take good care of you!</p>
+    <h3>Valuables</h3>
+    <p>Keep your passport, cards and cash somewhere secure in your room. Habitat isn't responsible for lost or damaged belongings, so bring nothing you'd be heartbroken to lose.</p>
+    <h3>After the retreat</h3>
+    <ul class="d">
+      <li><b>Photos:</b> We'll share a group album with photos from the week.</li>
+      <li><b>Feedback survey:</b> You'll get a short, fully anonymous survey after the trip. We rely on it heavily to make every retreat better, so please be honest.</li>
+      <li><b>Left something behind?</b> Contact flowground directly and we'll help where we can.</li>
+    </ul>
+    <h3>Extras</h3>
+    <ul class="d">
+      <li><b>Massages + treatments:</b> can be arranged during free time. Paid directly.</li>
+      <li><b>Extra goodies on site:</b> settled before you leave.</li>
+    </ul>
+    <h3>A few house rules</h3>
+    <ul class="d">
+      <li>Be on time for transfers and excursions.</li>
+      <li>Look out for each other.</li>
+      <li>What's shared in circle stays in circle.</li>
+      <li>Anything you book on your own during free time (scooter rentals, surf lessons, extra tours) isn't run by Habitat and is at your own risk.</li>
+      <li>Your liability waiver is attached to the email with this guide. Fill it out, sign it and email it back to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> before you arrive. You can't take part without it.</li>
+    </ul>
+  </section>
+
+  <!-- 11 -->
+  <section class="sec" id="packing">
+    <span class="num">11</span>
+    <h2 class="st">Packing list</h2>
+    <p><b>Luggage:</b> Completely up to you on how much luggage you want to bring. This is your vacation! If you have tight connections or multiple separate bookings, be mindful of checked baggage. Put your name and number on everything in case it gets lost. We travel by van and tuk-tuk, so bring a small day bag for outings.</p>
+    <div class="frame"><p><b>Pack a carry-on like your checked bag might be late.</b> If you're checking a bag, pack a swimsuit, one workout set, a change of clothes, meds, chargers and toiletries for 2 days just in case.</p></div>
+    <div class="two">
+      <div><h3>Travel essentials</h3><ul class="d check">
+        <li>Passport (valid until April 2, 2028) + a copy</li>
+        <li>ETA approval email, saved offline</li>
+        <li>Phone, charger, power bank</li>
+        <li>Plug adapter (1, Type D/G)</li>
+        <li>Credit/debit cards</li>
+        <li>Travel insurance details</li>
+        <li>Prescription meds in original packaging, with prescription</li>
+        <li>Headphones, eye mask, earplugs</li>
+        <li>Reusable water bottle</li>
+      </ul></div>
+      <div><h3>Movement</h3>
+        <p class="note">You'll have 1 to 2 classes a day. You're welcome to re-wear workout clothes, so you don't need one set per class.</p>
+        <ul class="d check">
+        <li>Athletic/workout clothes (breathable, it's humid)</li>
+        <li>Sports bras</li>
+        <li>A light layer for crispy times of day</li>
+      </ul></div>
+      <div><h3>Days + excursions</h3><ul class="d check">
+        <li>Swimsuit(s) + cover-up</li>
+        <li>Sandals + one pair of comfortable walking shoes</li>
+        <li>Hat + sunglasses</li>
+        <li>Sunscreen</li>
+        <li>Day bag or tote</li>
+        <li>Light rain jacket or packable umbrella</li>
+        <li>Quick-dry towel for the beach and boat</li>
+        <li>One outfit that covers shoulders and knees for temples</li>
+      </ul></div>
+      <div><h3>Evenings</h3><ul class="d check">
+        <li>Dinner outfits. Whatever you want to wear on vacation, this is your week.</li>
+        <li>A light wrap. AC and evening boats can feel cool.</li>
+      </ul>
+      <h3>Toiletries + health</h3><ul class="d check">
+        <li>Toiletries</li>
+        <li>Insect repellent</li>
+        <li>After-sun or aloe</li>
+        <li>Basic meds: pain reliever, antihistamine, stomach settler, blister plasters</li>
+        <li>Period products</li>
+      </ul></div>
+      <div><h3>Nice to have</h3><ul class="d check">
+        <li>A good book</li>
+        <li>Your fav game</li>
+      </ul></div>
+      <div><h3>Leave at home</h3><ul class="d">
+        <li>Hair tools that aren't dual-voltage</li>
+        <li>Your yoga mat (we have them)</li>
+        <li>Vapes and e-cigarettes (banned in Sri Lanka)</li>
+        <li>Anything you'd cry about losing</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="sec" id="timeline">
+    <span class="num">12</span>
+    <h2 class="st">Your timeline + to-do list</h2>
+    <p>Everything you need to do, in order. Tick as you go.</p>
+    <div class="tls">
+      <div class="tl"><div>Now</div><ul class="d check">
+        <li>Check your passport is valid until April 2, 2028</li>
+        <li>Sign + email back your liability waiver (attached to the email with this guide)</li>
+        <li>Buy travel insurance (not required, strongly recommended if your credit card doesn't already cover you)</li>
+        <li>Save "Habitat Sri Lanka" in your calendar, September 26 to October 2, 2027</li>
+        <li>Booked a shared room on your own? Take the <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a></li>
+      </ul></div>
+      <div class="tl"><div>February to May 2027<br><span class="note">4 to 8 months out</span></div><ul class="d check">
+        <li>Start looking at flights. Send us any you're considering if you want our eyes on them</li>
+        <li>Book flights in this window (send to us first if unsure)</li>
+        <li>Fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>: flights, dietary needs, health notes, emergency contact</li>
+        <li>Book any pre/post hotel nights</li>
+      </ul></div>
+      <div class="tl"><div>Mid-August 2027<br><span class="note">About 6 weeks out</span></div><ul class="d check">
+        <li>See your doctor or a travel clinic about vaccines</li>
+        <li>Taking codeine or ADHD meds? Check the NMRA rules now</li>
+      </ul></div>
+      <div class="tl"><div>Late August 2027<br><span class="note">1 month out</span></div><ul class="d check">
+        <li>Apply for your free ETA at <a href="https://www.eta.gov.lk" target="_blank" rel="noopener">eta.gov.lk</a></li>
+        <li>Make sure your liability waiver is signed and returned</li>
+        <li>Join the group call (about a month out)</li>
+        <li>Balance fully paid by August 27, 2027 (automatic on your plan)</li>
+        <li>Order adapter, repellent, eSIM</li>
+      </ul></div>
+      <div class="tl"><div>1 week out</div><ul class="d check">
+        <li>Look for your travel-day group chat</li>
+        <li>Check in for flights, download boarding passes</li>
+        <li>Download offline maps and your eSIM</li>
+        <li>Pack (see section 11)</li>
+        <li>Screenshot this guide's key times and your ETA approval</li>
+      </ul></div>
+      <div class="tl"><div>3 days out</div><ul class="d check">
+        <li>Fill out Sri Lanka's free online arrival card</li>
+      </ul></div>
+      <div class="tl"><div>Travel day</div><ul class="d check">
+        <li>Passport, ETA, phone, charger, cards</li>
+        <li>Message the group when you land</li>
+        <li>Find your driver at the meeting spot we share before the retreat</li>
+      </ul></div>
+    </div>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/close-group-dinner.jpg" alt="A group of women sharing dinner around a long wooden table" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/close-beach-sunset.jpg" alt="A palm tree over a quiet beach at sunset" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="sec" id="faq">
+    <span class="num">13</span>
+    <h2 class="st">FAQ</h2>
+    <p>The questions we get most. Still wondering something? Ask us, and we'll add it here.</p>
+    <h3>Before you go</h3>
+    <p><span class="q">I'm coming alone. Will that be weird?</span><br>Not even a little. Most people sign up solo.</p>
+    <p><span class="q">I'm not very fit / flexible / experienced. Is that OK?</span><br>Yes. Every class is all levels and optional. You'll get options for your body. Let us know if you want extra instruction outside of classes.</p>
+    <p><span class="q">Can I bring a friend?</span><br>Absolutely! Tell them to book the same way you did and we'll room you together.</p>
+    <p><span class="q">How old are people who come?</span><br>Every age is welcome, however most women are between 25 and 38.</p>
+    <p><span class="q">Can I get my own room?</span><br>We're only offering shared rooms on this retreat, but ask. If we can make it work, we'll send you the price.</p>
+    <p><span class="q">Can I give my spot to a friend?</span><br>If you need to cancel, any balance we keep under the cancellation policy can go toward a friend who takes your spot. Your deposit can't be transferred. Email us and we'll set it up.</p>
+    <p><span class="q">What's the pace like?</span><br>Easy. One morning class, a slow breakfast, then an outing or free time most days. Nothing is a hard physical day.</p>
+    <h3>Travel</h3>
+    <p><span class="q">Do I need a visa?</span><br>You need an ETA before you fly. It's free for US citizens. Apply at <a href="https://www.eta.gov.lk" target="_blank" rel="noopener">eta.gov.lk</a> about a month out. See section 8.</p>
+    <p><span class="q">Do you book flights for me?</span><br>No, but we'll help you pick them. Send us options any time.</p>
+    <p><span class="q">What if my flight is delayed?</span><br>Email us right away. On travel day, text Kennon or Carrigan. We'll help you as best we can!</p>
+    <p><span class="q">Can I arrive a day late or leave early?</span><br>You can, but we don't refund missed nights and you'll need to arrange your own transfer. Tell us in advance.</p>
+    <p><span class="q">Can I stay at flowground before or after?</span><br>The house is booked for our group only. Ask us for recommendations nearby.</p>
+    <p><span class="q">Is it safe for women?</span><br>Sri Lanka is a popular, generally safe place for women traveling. Use normal travel sense, agree tuk-tuk fares up front, and you'll be with the group for almost everything.</p>
+    <h3>On retreat</h3>
+    <p><span class="q">Do I have to do everything?</span><br>No. Every class, circle, and activity is optional.</p>
+    <p><span class="q">Will it rain the whole time?</span><br>Probably not. Late September brings showers on a lot of days, often short. We have a covered shala and swap plans around the weather when we need to.</p>
+    <p><span class="q">Can I surf?</span><br>Surfing isn't part of this retreat, and the sea is rough this time of year. Book a lesson on your own in free time at your own risk.</p>
+    <p><span class="q">How much free time is there?</span><br>Most afternoons have some, plus most of Wednesday.</p>
+    <p><span class="q">I have a food allergy. Will I be OK?</span><br>Yes. Put it in your <a href="https://docs.google.com/forms/d/e/1FAIpQLScwnCtknRAohdAcb-hAIRNbxmBARCWC2p2sS5pljeIL_b2UoA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>. The kitchen will know your name and your allergy. Tell us if anything looks off.</p>
+    <p><span class="q">Is alcohol included?</span><br>No. Drinks at dinners out or in free time are on you.</p>
+    <p><span class="q">Can I get a massage?</span><br>Yes, in free time. It's paid directly. We can help you set that up with the venue.</p>
+    <p><span class="q">What should I wear to dinner?</span><br>Whatever you'd wear on vacation. Nothing formal.</p>
+    <p><span class="q">What if I don't click with my roommate?</span><br>Tell us, privately or through the anonymous form. We'll handle it quietly.</p>
+    <h3>Money</h3>
+    <p><span class="q">Do I need cash?</span><br>Some. Rupees for tuk-tuks, small shops, lunches on your own and tips. ATMs are in town.</p>
+    <p><span class="q">Should I tip?</span><br>See Tipping in section 9.</p>
+  </section>
+
+  <!-- 14 -->
+  <section class="sec" id="contacts">
+    <span class="num">14</span>
+    <h2 class="st">Contacts + emergencies</h2>
+    <p>Screenshot this one.</p>
+    <div class="ctw"><table>
+      <tr><th>Who</th><th>How to reach</th><th>When</th></tr>
+      <tr><td><b>Habitat</b></td><td><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></td><td>Anything, anytime. The best way to reach us</td></tr>
+      <tr><td><b>Kennon</b></td><td>+1 512 627 2297 (call, text, WhatsApp)</td><td>On the ground</td></tr>
+      <tr><td><b>Carrigan</b></td><td>+1 903 515 0061 (call, text, WhatsApp)</td><td>On the ground</td></tr>
+      <tr><td><b>flowground</b></td><td>+94 71 417 3294 or +94 71 697 4994 | <a href="mailto:hello@flowground.com">hello@flowground.com</a></td><td>If you can't reach us</td></tr>
+      <tr><td><b>Transfer company</b></td><td>Shared closer to the retreat</td><td>Arrival/departure day</td></tr>
+      <tr><td><b>Local emergency</b></td><td>Police 119 | Ambulance 1990 | Tourist police 1912</td><td>Police, ambulance</td></tr>
+      <tr><td><b>Asiri Hospital Galle</b></td><td>+94 91 464 0640</td><td>24-hour emergency care</td></tr>
+      <tr><td><b>US Embassy Colombo</b></td><td>+94 11 202 8500 | 210 Galle Road, Colombo 03</td><td>Lost passport, serious trouble</td></tr>
+      <tr><td><b>Your insurer</b></td><td>Save it in your phone</td><td>Medical, delays, lost bags</td></tr>
+    </table></div>
+    <div class="addr"><span>Venue address</span>flowground, No. 46A1, Keraminiyawatta, Karandugoda, 80650, Ahangama, Sri Lanka</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">We can't wait to see you in Sri Lanka.</div>
+    <div class="meta2">xx, Habitat<br><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></div>
+  </div>
+</footer>
+<a class="totop" href="#contents">&#8593; Contents</a>
+</body>
+</html>
