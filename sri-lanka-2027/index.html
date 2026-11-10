@@ -28,7 +28,7 @@
   --card:transparent; --card-border:var(--ink); --btn-bg:var(--ink); --btn-fg:var(--paper); --btn-hover-fg:var(--accent);
   --label-color:inherit; --hero-bg:transparent; --hero-fg:inherit; --hero-line:var(--ink);
   /* per retreat (Habitat brand guide: retreat color is used for the header band only) */
-  --retreat-bg:#4C6971; --retreat-fg:#F3E9DA;
+  --retreat-bg:#917530; --retreat-fg:#F3E9DA;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -204,6 +204,13 @@ table.kv td{overflow-wrap:anywhere}
 @media print{.hero-photo img{max-height:1.9in}.photo-pair .photo img{max-height:2.5in}.photo-pair{margin:12px 0}#itinerary .photo-pair .photo img{max-height:1.9in}#itinerary .day{padding-top:14px}#included,#getting-there,#stay,#timeline{font-size:14.5px}#included ul.d li,#getting-there ul.d li{margin-bottom:5px}#stay .photo-pair .photo img,#timeline .photo-pair .photo img{max-height:1.6in}#timeline .tl{padding-top:10px}}
 @media print{#welcome{font-size:14.5px}#welcome h2.st{font-size:26px}#welcome .signoff{margin-top:8px}#welcome table.kv td{padding-top:7px;padding-bottom:7px}#contacts{font-size:14px}#contacts table td{padding:7px 10px}#faq p{margin-bottom:10px}}
 .signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
+/* Sri Lanka = Moss band. Brand guide: Linen text on Moss at 24px+ only, so the band holds the title alone and the small header text sits on Paper below it. */
+.band .hero{padding-block:44px 40px}
+.hero-meta{padding-top:24px}
+.hero-meta .eyebrow,.hero-meta .when{font-family:var(--label);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+.hero-meta .sub{font-size:18px;margin:10px 0 8px;color:var(--walnut)}
+.hero-meta + .wrap .hero-col{margin-top:20px}
+@media print{.band .hero{padding-block:18px 16px}.hero-meta{padding-top:12px}}
 </style>
 <link rel="stylesheet" href="../fonts/habitat-fonts.css">
 <link rel="stylesheet" href="../themes/habitat.css">
@@ -212,15 +219,16 @@ table.kv td{overflow-wrap:anywhere}
 
 <header class="band">
 <div class="wrap">
-  <div class="top"><span>Habitat Retreats</span></div>
   <div class="hero">
-    <div class="eyebrow">Your retreat guide</div>
     <h1>Sri Lanka <em>Yoga + Pilates Retreat</em></h1>
-    <p class="sub">A week in the rice paddies on the south coast. Movement every morning, Galle Fort, white tea, a lake safari and the people you'll meet along the way.</p>
-    <div class="when">September 26 to October 2, 2027 | Ahangama, Sri Lanka</div>
   </div>
 </div>
 </header>
+<div class="wrap hero-meta">
+  <div class="eyebrow">Habitat Retreats | Your retreat guide</div>
+  <p class="sub">A week in the rice paddies on the south coast. Movement every morning, Galle Fort, white tea, a lake safari and the people you'll meet along the way.</p>
+  <div class="when">September 26 to October 2, 2027 | Ahangama, Sri Lanka</div>
+</div>
 <div class="wrap"><figure class="hero-photo hero-col"><img src="photos/hero-flowground-paddies.jpg" alt="A house with a pool tucked into palm trees and green paddies" width="1333" height="750"></figure></div>
 
 <main class="wrap">
