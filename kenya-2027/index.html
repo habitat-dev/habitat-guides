@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Kenya Retreat Guide 2027</title>
+<meta name="description" content="Your guide to the Kenya Safari Retreat, November 22 to 28, 2027.">
+<meta property="og:title" content="Kenya Safari Retreat | Retreat Guide">
+<meta property="og:description" content="Maasai Mara, Kenya. November 22 to 28, 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* Habitat retreat guide template. One reading column, full-bleed paper, ink type + hairlines, one accent. Real photos only (habitatretreats.com or sent by Kennon, never venue photos), no colored section backgrounds except .callout. */
+:root{
+  /* ===== THEME TOKENS =====
+     Habitat retreats: these are overridden by ../themes/habitat.css (linked after this <style>). Only set --retreat-bg/--retreat-fg below.
+     Partner retreats: delete the habitat.css link and set the partner values here. See 05_DESIGN_SYSTEM.md.
+     The values below are the Sarah Lord Photo (MOR27) partner theme, as a worked example. */
+  --paper:#F9F5F1; --ink:#371715; --text:#371715; --accent:#E7DD87; --rule:rgba(55,23,21,.22);
+  --display:'Cormorant','Cormorant Garamond',Garamond,serif;
+  --body:'Cormorant Garamond','Cormorant',Garamond,Georgia,serif;
+  --label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
+  --script:'Cormorant',Garamond,serif;
+  /* roles (partner default: derived from ink + accent) */
+  --line-strong:var(--ink); --link-line:var(--accent); --hover-bg:var(--accent); --h2-bar:var(--accent);
+  --bullet:var(--accent); --bullet-edge:var(--ink); --callout-bg:var(--accent); --callout-fg:var(--ink);
+  --card:transparent; --card-border:var(--ink); --btn-bg:var(--ink); --btn-fg:var(--paper); --btn-hover-fg:var(--accent);
+  --label-color:inherit; --hero-bg:transparent; --hero-fg:inherit; --hero-line:var(--ink);
+  /* per retreat (Habitat brand guide: retreat color is used for the header band only) */
+  --retreat-bg:#42380D; --retreat-fg:#F3E9DA;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.55;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+a{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--link-line);text-decoration-thickness:3px;text-underline-offset:2px}
+a:hover{background:var(--hover-bg)}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+mark{background:linear-gradient(transparent 58%,var(--hover-bg) 58%);color:inherit;padding:0 .08em}
+
+/* header band */
+.band{background:var(--hero-bg);color:var(--hero-fg)}
+.band a{color:inherit}
+.top{display:flex;justify-content:space-between;gap:12px;padding-block:26px 0;color:var(--label-color);font-family:var(--label);font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.hero{text-align:left;padding-block:40px 32px;border-bottom:1px solid var(--hero-line)}
+.hero .eyebrow{font-family:var(--label);font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{color:inherit;margin:10px 0 0;font-family:var(--display);font-weight:500;font-size:clamp(38px,6.5vw,58px);line-height:.98;letter-spacing:-.005em;text-wrap:balance}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .sub{margin:12px 0 0;font-size:21px;font-style:italic}
+.hero .when{margin-top:16px;font-family:var(--label);font-size:12px;line-height:1.9;letter-spacing:.18em;text-transform:uppercase}
+.hero .collab{margin-top:14px;font-family:var(--script);font-style:italic;font-size:24px}
+.contacts-top{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:18px}
+.contacts-top b{font-weight:600}
+
+/* quick links */
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px;padding-block:32px 8px}
+.quick a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;min-height:44px;background:var(--card);border:1px solid var(--card-border);text-decoration:none;font-weight:400;transition:background .15s}
+.quick a:hover{background:var(--hover-bg)}
+.quick a b{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.1}
+.quick a span{font-size:16px;line-height:1.35}
+
+/* jump grid */
+.toc{margin-top:40px;scroll-margin-top:16px}
+.toc h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,5vw,38px)}
+.toc p{margin:4px 0 16px;font-size:17px}
+.toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+.toc nav a{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;background:var(--card);border:1px solid var(--rule);text-decoration:none;font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2;white-space:nowrap;transition:background .15s,border-color .15s}
+.toc nav a i{font-family:var(--script);font-style:italic;font-weight:500;font-size:24px;line-height:1;min-width:26px}
+.toc nav a:hover,.toc nav a:focus-visible{background:var(--hover-bg);border-color:var(--ink)}
+
+/* sections */
+.sec{padding-top:76px;scroll-margin-top:12px}
+.num{display:block;color:var(--label-color);font-family:var(--script);font-style:italic;font-size:26px}
+h2.st{margin:2px 0 22px;color:var(--ink);font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,46px);line-height:1.05;text-wrap:balance}
+h2.st::after{content:'';display:block;width:56px;height:4px;margin-top:14px;background:var(--h2-bar)}
+h3{margin:30px 0 10px;color:var(--label-color);font-family:var(--label);font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+p{margin:0 0 14px;text-wrap:pretty}
+.lead{font-family:var(--display);font-size:25px;line-height:1.35;font-style:italic}
+ul.d{list-style:none;margin:0 0 14px;padding:0}
+ul.d li{position:relative;padding-left:24px;margin:0 0 8px;text-wrap:pretty}
+ul.d li::before{content:'';position:absolute;left:4px;top:.66em;width:7px;height:7px;border:1px solid var(--bullet-edge);background:var(--bullet);transform:rotate(45deg)}
+ul.check li::before{width:12px;height:12px;top:.42em;left:0;border:1.5px solid var(--bullet-edge);background:transparent;transform:none}
+.note{font-size:16px}
+b,strong{font-weight:600}
+.q{font-weight:600}
+.tw{overflow-x:auto;margin:6px 0 16px}
+table{width:100%;border-collapse:collapse;font-size:17px;line-height:1.4}
+.tw table{min-width:460px}
+.tw table.kv{min-width:0}
+th{text-align:left;padding:10px 12px;font-family:var(--label);font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--line-strong)}
+td{border-bottom:1px solid var(--rule);padding:10px 12px;vertical-align:top}
+table.kv{border-top:1.5px solid var(--line-strong)}
+table.kv td:first-child{width:118px;font-family:var(--label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding-top:14px}
+.callout{background:var(--callout-bg);color:var(--callout-fg);padding:28px 30px 16px;margin:6px 0 10px}
+.callout h2.st::after{background:var(--callout-fg)}
+.callout ul.d li::before{background:var(--paper)}
+.frame{background:var(--card);border:1px solid var(--card-border);padding:22px 24px 10px;margin:18px 0}
+
+/* itinerary */
+.day{display:grid;grid-template-columns:170px minmax(0,1fr);gap:26px;padding:22px 0 8px;border-top:1px solid var(--rule)}
+.days .day:first-child{border-top:1.5px solid var(--line-strong)}
+.day .when b{display:block;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.05}
+.day .when span{display:block;font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+.day .when em{display:block;font-family:var(--display);font-size:21px;margin-top:6px}
+.meta{font-size:16px}
+
+/* venues + hosts */
+.venue{margin:10px 0 26px;padding-top:4px}
+.hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:12px}
+.host{border-top:1.5px solid var(--line-strong);padding-top:14px}
+.host b{display:block;font-family:var(--display);font-size:25px;font-weight:600;line-height:1.1}
+.host i{display:block;margin-bottom:8px}
+.host p{font-size:17px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.times b{display:block;font-family:var(--display);font-weight:600;font-size:28px}
+.tl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:18px 0 4px;border-top:1px solid var(--rule)}
+.tls .tl:first-child{border-top:1.5px solid var(--line-strong)}
+.tl > div:first-child{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
+
+/* contacts + footer */
+.ctw{overflow-x:auto}
+.ctw table{min-width:520px}
+.addr{margin-top:14px;padding:14px 18px;background:var(--card);border:1px solid var(--card-border);display:flex;flex-direction:column;gap:4px;font-size:17px}
+.addr span{font-family:var(--label);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+footer{margin-top:80px}
+footer .wrap{padding-block:40px 64px;border-top:1px solid var(--line-strong);text-align:center}
+footer .big{font-family:var(--script);font-style:italic;font-size:clamp(32px,5vw,42px);line-height:1.1}
+footer .meta2{margin-top:12px;font-family:var(--label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:2}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--btn-bg);color:var(--btn-fg);font:500 12px/1 var(--label);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 14px rgba(55,23,21,.22)}
+.totop:hover{background:var(--btn-bg);color:var(--btn-hover-fg)}
+
+@media (max-width:680px){
+  body{font-size:18px}
+  .hero{padding-block:28px 24px}
+  .contacts-top{flex-direction:column}
+  .day,.tl{grid-template-columns:minmax(0,1fr);gap:8px}
+  .hosts,.two,.times{grid-template-columns:minmax(0,1fr)}
+  .callout{padding:22px 18px 10px}
+  .toc nav a{font-size:18px;padding:8px 12px;gap:10px}
+}
+@media (max-width:520px){
+  .toc nav{grid-template-columns:minmax(0,1fr)}
+  .toc nav a i{font-size:20px;min-width:22px}
+  table.kv td:first-child{width:90px}
+}
+
+/* photos (optional: only add a photo element when a real photo file exists in <slug>/photos/) */
+.photo{margin:0 0 18px;background:var(--card)}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:var(--ratio,3/2);object-fit:cover}
+.photo figcaption{font-size:14px;line-height:1.4;padding-top:8px;color:var(--text);opacity:.8}
+.photo-wide{margin:26px 0}
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0}
+.photo-pair .photo{margin:0}
+.photo-pair .photo img{--ratio:4/5}
+.hero-photo{margin:0;position:relative}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:21/9;object-fit:cover}
+/* host cards, modeled on the habitatretreats.com hosts section: bordered card, name over a hairline, italic title, square photo beside the bio, every other card mirrored. Never round headshots. */
+.host-card{border:1px solid var(--ink);padding:18px 20px;margin-bottom:14px;break-inside:avoid}
+.host-card .host-name{font-family:var(--display);font-size:24px;color:var(--ink);letter-spacing:.02em;text-align:right;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.host-card .host-title{font-style:italic;font-size:18px;text-align:right;margin:6px 0 12px}
+.host-card .host-body{display:grid;grid-template-columns:200px 1fr;gap:18px;align-items:end}
+.host-card .host-body img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.host-card .host-body p{margin:0;font-size:16px}
+.host-card.flip .host-name,.host-card.flip .host-title{text-align:left}
+.host-card.flip .host-body{grid-template-columns:1fr 200px}
+.host-card.flip .host-body img{order:2}
+.host-card.flip .host-body p{text-align:right}
+@media (max-width:560px){.host-card .host-body,.host-card.flip .host-body{grid-template-columns:1fr}.host-card.flip .host-body img{order:0}.host-card.flip .host-body p{text-align:left}}
+@media (max-width:520px){.photo-pair{grid-template-columns:minmax(0,1fr)}.hero-photo img{aspect-ratio:3/2}}
+
+@media print{
+  @page{size:8.5in 11in;margin:.6in .65in .65in}
+  html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:15.5px}
+  .wrap{max-width:none;padding:0}
+  .totop{display:none}
+  .top{padding-top:0}
+  .hero{padding-block:8px 18px}
+  .quick{break-before:auto}
+  .quick{padding-top:18px}
+  .toc{margin-top:14px}
+  .toc p{display:none}
+  .toc h2{font-size:26px;margin-bottom:8px}
+  .toc nav{gap:5px 8px}
+  .toc nav a{min-height:30px;padding:3px 12px;font-size:15px}
+  .toc nav a i{font-size:17px}
+  .quick a{padding:10px 14px}
+  .sec{break-before:page;padding-top:0}
+  .photo,.photo-pair,.hero-photo,.host-card{break-inside:avoid}
+  .photo img,.hero-photo img{max-height:3.6in}
+  h2.st,h3,.num{break-after:avoid}
+  li,tr,.day,.tl,.host,.times,.addr,.frame{break-inside:avoid}
+  footer{margin-top:24px;break-inside:avoid;break-before:avoid}
+  footer .wrap{padding:18px 0 0}
+  footer .big{font-size:28px}
+  footer .meta2{display:none}
+}
+table.kv td{overflow-wrap:anywhere}
+.hero-col{margin-top:28px}.hero-col img{aspect-ratio:3/2!important}@media print{.hero-col{margin-top:10px}.hero-col img{max-height:1.45in!important;object-position:50% 60%}}
+@media print{.hero-photo img{max-height:1.9in}.photo-pair .photo img{max-height:2.5in}.photo-pair{margin:12px 0}#itinerary .photo-pair .photo img{max-height:1.9in}#itinerary .day{padding-top:14px}#included,#getting-there,#stay,#timeline{font-size:14.5px}#included ul.d li,#getting-there ul.d li{margin-bottom:5px}#stay .photo-pair .photo img,#timeline .photo-pair .photo img{max-height:1.6in}#timeline .tl{padding-top:10px}}
+@media print{#welcome{font-size:14.5px}#welcome h2.st{font-size:26px}#welcome .signoff{margin-top:8px}#welcome table.kv td{padding-top:7px;padding-bottom:7px}#contacts{font-size:14px}#contacts table td{padding:7px 10px}#faq p{margin-bottom:10px}}
+.signoff{font-family:var(--script);font-style:italic;font-size:28px;line-height:1.2;margin-top:20px;color:var(--ink)}
+/* Kenya = Jungle band with Linen text (brand guide). Jungle is dark enough for Linen at every size, so the whole header sits in the band. */
+.band .hero{padding-block:40px 40px}
+.host-together{max-width:420px;margin:4px auto 18px}
+.host-together img{aspect-ratio:4/5}
+@media print{.band .hero{padding-block:14px 16px}.host-together img{max-height:3in;width:auto;margin:0 auto}#expect .photo-pair .photo img{max-height:2.4in}}
+@media print{#itinerary,#getting-there,#stay,#passports,#know-before,#expect,#timeline,#faq,#packing{font-size:13.5px}ul.d li{margin-bottom:4px}#itinerary .day{padding:8px 0 0;gap:18px}.day .when b{font-size:21px}.day .when em{font-size:17px}#itinerary .callout{padding:14px 18px 4px;margin-top:10px!important}#timeline .photo-pair .photo img{max-height:1.6in}.host-together img{max-height:2.2in}.host-card .host-body{grid-template-columns:150px 1fr}.host-card.flip .host-body{grid-template-columns:1fr 150px}#expect .photo-pair .photo img{max-height:2in}#contacts{font-size:13px}#contacts table td{padding:6px 8px}footer{margin-top:12px}h3{margin-top:18px}}
+@media print{#included,#stay{font-size:13px}#included ul.d li,#stay ul.d li{margin-bottom:2px}#itinerary .photo-pair .photo img{max-height:1.5in}#stay .photo-pair .photo img{max-height:1.4in}#itinerary p{margin-bottom:8px}#itinerary .meta{margin-bottom:4px}}
+@media print{#itinerary{font-size:12.8px}#itinerary .day{grid-template-columns:130px minmax(0,1fr)}#itinerary ul.d li{margin-bottom:2px}#itinerary ul.d{margin-bottom:6px}#contacts .addr{margin-top:8px;padding:8px 12px;font-size:13px}#contacts p{margin-bottom:6px}footer .wrap{padding-top:10px}}
+</style>
+<link rel="stylesheet" href="../fonts/habitat-fonts.css">
+<link rel="stylesheet" href="../themes/habitat.css">
+</head>
+<body>
+
+<header class="band">
+<div class="wrap">
+  <div class="top"><span>Habitat Retreats</span></div>
+  <div class="hero">
+    <div class="eyebrow">Your retreat guide</div>
+    <h1>Kenya <em>Safari Retreat</em></h1>
+    <p class="sub">Six nights, two camps in the Maasai Mara.</p>
+    <div class="when">November 22 to 28, 2027 | Maasai Mara, Kenya</div>
+  </div>
+</div>
+</header>
+<div class="wrap"><figure class="hero-photo hero-col"><img src="photos/hero-zebra-balloon.jpg" alt="A zebra grazing on the Mara plains with a hot air balloon in the sky behind it" width="2000" height="1487"></figure></div>
+
+<main class="wrap">
+  <div class="quick">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener"><b>Flight + Info Form</b><span>Flights, hotel, dietary needs, health notes, emergency contact</span></a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener"><b>Roommate Matching Quiz</b><span>Coming on your own? Start here</span></a>
+    <a href="mailto:habitat@habitatretreats.com?subject=Kenya%202027%20retreat"><b>Questions</b><span>habitat@habitatretreats.com</span></a>
+    <a href="Habitat_Kenya_2027_Retreat_Guide.pdf" download><b>Download PDF</b><span>Save the guide for travel day and offline</span></a>
+  </div>
+
+  <div class="toc" id="contents">
+    <h2>Jump to a section</h2>
+    <p>Tap any section to go straight there. The Contents button in the corner brings you back here.</p>
+    <nav>
+      <a href="#welcome"><i>01</i><span>Welcome</span></a>
+      <a href="#housekeeping"><i>02</i><span>Housekeeping</span></a>
+      <a href="#itinerary"><i>03</i><span>Itinerary</span></a>
+      <a href="#included"><i>04</i><span>What's included</span></a>
+      <a href="#stay"><i>05</i><span>Where you'll stay</span></a>
+      <a href="#getting-there"><i>06</i><span>Flights + transfers</span></a>
+      <a href="#payments"><i>07</i><span>Payments + cancellations</span></a>
+      <a href="#passports"><i>08</i><span>Passports + health</span></a>
+      <a href="#know-before"><i>09</i><span>Know before you go</span></a>
+      <a href="#expect"><i>10</i><span>What to expect</span></a>
+      <a href="#packing"><i>11</i><span>Packing list</span></a>
+      <a href="#timeline"><i>12</i><span>Timeline + to&#8209;dos</span></a>
+      <a href="#faq"><i>13</i><span>FAQ</span></a>
+      <a href="#contacts"><i>14</i><span>Contacts + emergencies</span></a>
+    </nav>
+  </div>
+
+  <!-- 01 -->
+  <section class="sec" id="welcome">
+    <span class="num">01</span>
+    <h2 class="st">You're in for the Kenya Safari Retreat! We can't wait to watch the sun come up over the Mara with you.</h2>
+    <p>This guide has everything you need for Kenya, in one place. Inside you'll find:</p>
+    <ul class="d">
+      <li>Flight info: which airport to fly into, what times work, the bush flight</li>
+      <li>What's included and what isn't</li>
+      <li>The itinerary for the week</li>
+      <li>Frequently Asked Questions</li>
+      <li>And a few extras!</li>
+    </ul>
+    <p>We highly recommend reading it through once, then coming back to it as needed.</p>
+    <p>Habitat is for the ones who suspect their real life is bigger than the one they're currently living. In Kenya, adventure is the engine, not the backdrop. Dawn drives, a balloon over the plains, a morning on foot in the bush and nights around the fire with meaningful conversation. Safari will make you question the world around you and possibly open your mind to new ideas and thoughts. We can't wait for you to experience it.</p>
+    <p>If something isn't clear or you have additional questions, please reach out!</p>
+    <p class="signoff">xx,<br>Kennon + Carrigan</p>
+
+    <h3>Your retreat at a glance</h3>
+    <div class="tw" style="overflow:visible"><table class="kv">
+      <tr><td>Retreat</td><td>Kenya Safari Retreat</td></tr>
+      <tr><td>Dates</td><td>Monday, November 22 to Sunday, November 28, 2027 (6 nights)</td></tr>
+      <tr><td>Where</td><td>Two camps in the Maasai Mara, Kenya. Saruni Basecamp (nights 1 to 3), then Saruni Eagle View (nights 4 to 6)</td></tr>
+      <tr><td>Arrive</td><td>Land in Nairobi (NBO) by Sunday, November 21 and sleep near the airport. Transport to the 10am bush flight on Monday morning</td></tr>
+      <tr><td>Depart</td><td>Afternoon bush flight back to Nairobi on Sunday, November 28. Book flights home for 6:45pm at the earliest, ideally later</td></tr>
+      <tr><td>Hosts</td><td>Kennon + Carrigan, Habitat founders</td></tr>
+      <tr><td>The week</td><td>Game drives at dawn and dusk, a hot air balloon, a walking safari, bush breakfasts, a night drive. Everything optional</td></tr>
+      <tr><td>Your room</td><td>Shared tent, see Where You'll Stay</td></tr>
+      <tr><td>Questions</td><td>Email <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>. Habitat handles all logistics</td></tr>
+    </table></div>
+  </section>
+
+  <!-- 02 -->
+  <section class="sec" id="housekeeping">
+    <span class="num">02</span>
+    <h2 class="st">Housekeeping</h2>
+    <ul class="d">
+      <li><span class="q">Everything is optional.</span> This is your vacation. Skip a drive, sleep in, sit by the pool.</li>
+      <li><span class="q">This is not a yoga retreat.</span> Instead: group discussion, opening and closing circles, and a custom journal. Stretching and mindfulness are offered and optional.</li>
+      <li><span class="q">Small planes, small bags.</span> We fly into the Mara on a bush flight (small plane). The official limit is 15 kg (33 lb) in a soft bag. Last time nobody checked or enforced weight and size limits, but worth noting. See section 6.</li>
+      <li><span class="q">Safari runs on animal time.</span> We drive at dawn and dusk because that's when the animals are active. We promise the early mornings are so worth it.</li>
+      <li><span class="q">November is green season.</span> Warm days around 24 to 27°C / 75 to 81°F, chilly mornings and nights around 13 to 16°C / 55 to 61°F. Short afternoon showers are possible. You will want layers for drives as when we start it will be chilly and end it will be comfortably warm.</li>
+      <li><span class="q">Wi-Fi.</span> Yes, at both camps.</li>
+      <li><span class="q">You're sharing space with people you may not know.</span> Many people come solo, some come with friends. By day 3 we will just be one meshed group. If something or someone is bothering you, tell us early (see the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a> in section 10). We can fix things in real time. Don't wait until the week is over to put it out there. That's a disservice to you and to the people around you.</li>
+      <li><span class="q">Plans can change.</span> Weather, wildlife and the guides' calls sometimes rearrange the itinerary. We try our best to stick to the plan. If we need to adapt, we'll swap in something just as good and tell you right away. We ask that you stay flexible and patient with the situation.</li>
+    </ul>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec" id="itinerary">
+    <span class="num">03</span>
+    <h2 class="st">Day-by-day itinerary</h2>
+    <p>Here's our overview of the week. Exact times and meeting points will live in a live link given on the retreat, so if anything changes, you always check the same place. We will also communicate everything via the group message.</p>
+    <p><b>Most days:</b> coffee with first light, blankets in the vehicle, out for the dawn game drive. Back mid-morning for a long breakfast, then the middle of the day is yours: journal, rest, lunch. Golden hour, we head out again. Dinner together every night.</p>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/itin-cheetah-vehicle.jpg" alt="A safari vehicle full of guests watching a cheetah in the grass" loading="lazy" style="object-position:62% 50%"></figure>
+      <figure class="photo"><img src="photos/itin-balloon-basket.jpg" alt="A striped hot air balloon seen from inside another balloon basket" loading="lazy"></figure>
+    </div>
+    <div class="days">
+      <div class="day">
+        <div class="when"><b>Day 1</b><span>Mon, Nov 22</span><em>Bush flight in</em></div>
+        <div>
+          <ul class="d">
+            <li>Morning transport from your hotel to Wilson Airport, the small airport for the bush flight. Exact time shared closer to the date</li>
+            <li>10am | Private bush flight to the Maasai Mara, about 1 hour</li>
+            <li>First game drive on the way in to Saruni Basecamp</li>
+            <li>Lunch, opening circle, settle in</li>
+            <li>Evening game drive</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> lunch + dinner at camp | <b>Wear:</b> travel layers in neutral colors</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 2</b><span>Tue, Nov 23</span><em>Into the Mara</em></div>
+        <div>
+          <ul class="d">
+            <li>Dawn game drive</li>
+            <li>Back to camp for breakfast and rest</li>
+            <li>Discussion</li>
+            <li>Evening game drive</li>
+            <li>Bonfire and stargazing</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> breakfast, lunch, dinner at camp | <b>Wear:</b> layers for the morning, neutral colors</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 3</b><span>Wed, Nov 24</span><em>Life on the Talek River</em></div>
+        <div>
+          <ul class="d">
+            <li>Dawn game drive</li>
+            <li>Breakfast back at camp, then the middle of the day is yours</li>
+            <li>Visit Saruni's community projects: the Enjoolata Centre and the Basecamp Maasai Brand women's beadwork shop</li>
+            <li>Evening game drive</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> breakfast, lunch, dinner at camp | <b>Wear:</b> layers, neutral colors</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 4</b><span>Thu, Nov 25</span><em>On to our next camp | Happy Thanksgiving!</em></div>
+        <div>
+          <ul class="d">
+            <li>A game drive carries us across to Saruni Eagle View</li>
+            <li>Arrive in time for lunch, slower afternoon to settle in</li>
+            <li>Afternoon discussion</li>
+            <li>Sundowners out in the bush</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> breakfast at Basecamp, lunch + dinner at Eagle View | <b>Wear:</b> whatever you want, swimsuit for the pool</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 5</b><span>Fri, Nov 26</span><em>On foot</em></div>
+        <div>
+          <ul class="d">
+            <li>Walking safari with a Maasai guide</li>
+            <li>Private breakfast in the bush</li>
+            <li>Middle of the day is yours</li>
+            <li>Evening game drive, dinner, then a night game drive</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> bush breakfast, lunch, dinner | <b>Wear:</b> closed walking shoes for the walk, neutral colors</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 6</b><span>Sat, Nov 27</span><em>Hot air balloon over the plains</em></div>
+        <div>
+          <ul class="d">
+            <li>Very early pickup for the balloon. It lifts off at first light</li>
+            <li>Breakfast out in the bush after landing (buffet + mimosas, for real)</li>
+            <li>Back to camp for rest: the pool, the spa, or a nap</li>
+            <li>One last evening drive</li>
+            <li>Closing circle, then dinner in the bush under the stars</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> bush breakfast, lunch, dinner | <b>Wear:</b> warm layers for the balloon, it's cold at dawn</p>
+        </div>
+      </div>
+      <div class="day">
+        <div class="when"><b>Day 7</b><span>Sun, Nov 28</span><em>Say goodbye</em></div>
+        <div>
+          <ul class="d">
+            <li>Last morning game drive</li>
+            <li>Lunch at camp</li>
+            <li>Final final game drive to the airstrip</li>
+            <li>Private bush flight back to Nairobi (Wilson Airport), then transfer to JKIA for flights home</li>
+          </ul>
+          <p class="meta"><b>Meals:</b> breakfast + lunch at camp | <b>Wear:</b> travel clothes</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:22px;break-inside:avoid">
+      <p><b>Keeping you up to date.</b> Exact days may shift slightly depending on the weather and the camp guides' recommendations the week of. Wildlife doesn't keep a schedule. If anything changes on the ground, we'll share it in the group message, our main way of communicating during the retreat.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec" id="included">
+    <span class="num">04</span>
+    <h2 class="st">What's included (and what isn't)</h2>
+    <p>The short version: once you meet us in Nairobi, the week is essentially handled. Here's exactly what that means.</p>
+    <div class="two">
+      <div>
+        <h3>Included</h3>
+        <ul class="d">
+          <li>Three nights at Saruni Basecamp</li>
+          <li>Three nights at Saruni Eagle View</li>
+          <li>Meet + assist at Jomo Kenyatta Airport (JKIA) when you land</li>
+          <li>Transfers to and from Wilson Airport (bush flight airstrip)</li>
+          <li>Round-trip bush flights (if you don't want to take the small plane it is possible to drive into the Mara, just let us know. It is a long drive though.)</li>
+          <li>Game drives twice a day, plus one night game drive</li>
+          <li>Hot air balloon over the plains, with breakfast in the bush</li>
+          <li>Walking safari with a Maasai guide</li>
+          <li>Sundowners, a bird walk on the Talek Trail and a visit to Saruni's community projects</li>
+          <li>All meals at camp, three a day, plus lunch on departure day</li>
+          <li>Local beer and wine</li>
+          <li>Tea + coffee in your tent</li>
+          <li>Laundry at Eagle View</li>
+          <li>Wi-Fi</li>
+          <li>All vehicles, park and conservancy fees</li>
+          <li>Flying Doctors (AMREF) evacuation cover</li>
+          <li>Your custom Habitat retreat journal</li>
+          <li>Pre-trip support: flights, packing, entry rules, and any question you have</li>
+          <li>On-the-ground support all week. You never have to think about logistics or planning. We've got it covered</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not included</h3>
+        <ul class="d">
+          <li>International flights to Nairobi (we'll help you pick them)</li>
+          <li>Kenya eTA + the required Kenyan travel health insurance (see section 8)</li>
+          <li>Travel insurance (not required, strongly recommended)</li>
+          <li>Hotel nights in Nairobi before or after the retreat</li>
+          <li>Imported and specialty drinks</li>
+          <li>Massages and spa treatments</li>
+          <li>Personal spending and souvenirs (the Basecamp shop sells Maasai beadwork)</li>
+          <li>Tips for camp staff and guides</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec" id="stay">
+    <span class="num">05</span>
+    <h2 class="st">Where you'll stay</h2>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/stay-basecamp-tent.jpg" alt="Inside a canvas tent at Saruni Basecamp" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/stay-eagleview-tent.jpg" alt="Inside a tent at Saruni Eagle View, open to the view" loading="lazy" style="object-position:40% 50%"></figure>
+    </div>
+    <p>Two camps, two different experiences. Both are inside private conservancies, so there's a strict cap on vehicles and beds and your sightings aren't shared with a queue of other trucks.</p>
+    <div class="venue">
+      <h3>Saruni Basecamp | 3 nights (Mon Nov 22 to Thu Nov 25)</h3>
+      <p>A rustic eco-camp. Canvas tents along the Talek River, solar power, and the sound of the bush a few inches from your head. Simple, clean, deeply atmospheric, and genuinely rustic. A great safari camp, not a hotel. What it is not: a luxury lodge. That's the trade for being this close to the wildlife.</p>
+      <ul class="d">
+        <li><b>Where:</b> on the Talek River, at the edge of the Maasai Mara National Reserve, run with the local Maasai community</li>
+        <li><b>In your tent:</b> mosquito net, repellent, bottled water, tea + coffee</li>
+        <li><b>Wi-Fi:</b> yes, in the tents</li>
+        <li><b>Also here:</b> the Enjoolata Centre, the Basecamp Maasai Brand beadwork shop, and a bird walk along the Talek Trail</li>
+      </ul>
+    </div>
+    <div class="venue">
+      <h3>Saruni Eagle View | 3 nights (Thu Nov 25 to Sun Nov 28)</h3>
+      <p>This one's properly luxurious. A hilltop camp in the Mara Naboisho Conservancy, with vast raised tents, private verandas, a pool, and a view over the plain that runs all the way to the horizon. A pool and a spa. Sip wine in the tub while you watch elephants stroll by.</p>
+      <ul class="d">
+        <li><b>Where:</b> on a hilltop in the Mara Naboisho Conservancy, looking over a natural salt lick where animals come to drink</li>
+        <li><b>On site:</b> infinity plunge pool, spa, viewing deck</li>
+        <li><b>In your tent:</b> private veranda, mosquito net, repellent, bottled water, tea + coffee, a yoga mat for your own practice</li>
+        <li><b>Wi-Fi:</b> yes, in the tents</li>
+        <li><b>Laundry:</b> select items included</li>
+      </ul>
+    </div>
+    <div class="frame"><p><b>The camps aren't fenced.</b> Animals walk through. Maasai askaris (camp guards) watch the camp day and night (24/7). You will receive a camp briefing on day 1.</p></div>
+    <h3>Rooms + roommates</h3>
+    <ul class="d">
+      <li>All tents are shared.</li>
+      <li>Coming with a friend? Tell us and we'll room you together.</li>
+      <li>Coming on your own? Name a preferred roommate, or we'll pair you based on your <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a>.</li>
+      <li>Room assignments go out before the retreat.</li>
+    </ul>
+  </section>
+
+  <!-- 06 -->
+  <section class="sec" id="getting-there">
+    <span class="num">06</span>
+    <h2 class="st">Getting there + getting home</h2>
+    <p>You book your own flights, so you can come from anywhere and add travel on either side. Booking your own doesn't mean you're on your own. Send us any flight before you book if you want our eyes on it.</p>
+    <div class="frame">
+      <h3 style="margin-top:0">The only two times you need</h3>
+      <div class="times">
+        <div><b>Arrive</b><p>Land at Jomo Kenyatta International Airport (NBO) in Nairobi by <b>Sunday, November 21</b>, the night before, and sleep near the airport. The bush flight is at <b>10am</b> on Monday. We'll have transport to the small airport that morning. Exact time shared closer to the date. If it's possible for you to fly in the morning of, make sure it lands early enough to make the flight. Most flights arrive into Nairobi, Kenya late in the evening.</p></div>
+        <div><b>Depart</b><p>We stay at Eagle View through lunch on <b>Sunday, November 28</b>, then take the afternoon bush flight back to Nairobi and transfer to JKIA. Book your flight home for <b>6:45pm at the earliest</b>, ideally later. Most flights to the US and Europe leave late in the evening anyway. Last year we had plenty of time, so we hung out and had dinner at the Crowne Plaza before heading to the airport.</p></div>
+      </div>
+      <p><b>Want to leave earlier, or stay longer?</b> Totally fine. We can put you on an earlier bush flight from the Mara. You'd just travel back separately from the group. Or add a night in Nairobi. Let us know so we can help.</p>
+    </div>
+    <p><b>Why the day before:</b> the drive to Wilson Airport is about 40 minutes, and the bush flight checks in an hour early. Most flights from the US land late at night anyway. Last year almost everyone landed between 10pm and 1:30am, slept that night near the airport, and was then ready to go for a very full day 1.</p>
+    <p><b>Lots of flight options.</b> We know there are a ton of different ways to get here. If you're looking at flights that don't line up with these times, send them to us and we'll help you coordinate.</p>
+    <h3>Transfers</h3>
+    <ul class="d">
+      <li><b>When you land:</b> there will be a designated person to meet + assist you, they will know your name and what you look like. We have this for you whether you land the night before or the day of. A rep meets you in arrivals at JKIA and walks you out. Look for the sign with your name on it. The arrivals hall is busy and drivers may try to approach you. Your designated assistant will help you navigate customs, collect your bag(s), and go to your vehicle/transfer to go to your hotel.</li>
+      <li><b>Sunday night:</b> sleep at a hotel near JKIA (see below; or fly in early that morning depending on what flight you have).</li>
+      <li><b>Monday morning:</b> Saruni's own vehicle picks the group up and drives us to Wilson Airport, Nairobi's small-plane airport, about 40 minutes. Then our 10am bush flight to the Mara, about an hour. A Saruni guide meets us at the airstrip and the first game drive starts the moment you step off the plane.</li>
+      <li><b>Sunday, November 28:</b> lunch at camp, a final game drive to the airstrip, bush flight back to Wilson, then Saruni drives us to JKIA.</li>
+      <li>We'll send exact pickup times in the group message, and put everyone into a small travel-day group chat the week before, grouped by arrival time.</li>
+    </ul>
+    <h3>Where to stay the night before</h3>
+    <p>Kennon + Carrigan will be at the <b>Crowne Plaza Nairobi Airport</b>. It's inside the airport complex, about 5 minutes from the terminal, with complimentary airport shuttle service, 24/7. Email your flight details to <a href="mailto:info@crowneplazanairobiairport.com">info@crowneplazanairobiairport.com</a> and they'll meet you. Feel free to stay there too, or pick whatever fits your budget. Other good options near JKIA:</p>
+    <ul class="d">
+      <li>Four Points by Sheraton Nairobi Airport</li>
+      <li>Hilton Garden Inn Nairobi Airport</li>
+      <li>Argyle Grand Hotel Nairobi Airport</li>
+    </ul>
+    <p>You don't have to stay at the Crowne Plaza to get a ride. On Monday morning we'll have transport from whichever hotel you're at. Being in one place just helps keep us all together. Put your hotel in your <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a> so we can plan the pickups.</p>
+    <h3>Bush flight luggage</h3>
+    <ul class="d">
+      <li>The airline's official rule: 15 kg (33 lb) total per person, including your carry-on, in a soft-sided bag up to 70 x 60 x 35 cm (28 x 24 x 14 in).</li>
+      <li>Last year nobody weighed our bags, and there were plenty of tourists with hard suitcases. It was no big deal. Pack light anyway. It makes the small planes and the safari vehicles easier for everyone.</li>
+      <li>Laundry is included at Eagle View (this is our second camp), so you can plan on doing wash half way through.</li>
+    </ul>
+    <h3>Our flight advice</h3>
+    <ul class="d">
+      <li>Look at flights first. Find prices and times you like.</li>
+      <li>For US to Nairobi in November, an international flight price sweet spot is about 6 months out, so around May 2027. If you want to lock yours in early, do it. It's completely up to you.</li>
+      <li>Land by Monday, November 22, 6:30am.</li>
+      <li>For home, book your flight out of NBO for 6:45pm at the earliest on Sunday, November 28, ideally later. Want an earlier one? Tell us before you book and we'll get you on an earlier bush flight.</li>
+      <li>Leave at least 2 hours for any connection &amp; note separate tickets don't protect you if the first flight is late.</li>
+      <li>Send us your flights before you book if you're unsure. We want to help.</li>
+      <li>Fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a> as soon as you book, and no later than Friday, October 22, 2027 (a month before the retreat), so we can arrange all travel. It's also where you tell us your dietary needs, health notes and emergency contact.</li>
+    </ul>
+    <h3>Running late or stuck?</h3>
+    <p>Email us at <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> as soon as you know. On travel day you can also text or WhatsApp Kennon (+1 512 627 2297) or Carrigan (+1 903 515 0061). The bush flight leaves on schedule, which is exactly why we ask everyone to land the day before.</p>
+    <h3>Extending your trip?</h3>
+    <p>If you're adding days before or after the retreat and want recommendations, give us a holler.</p>
+  </section>
+
+  <!-- 07 -->
+  <section class="sec" id="payments">
+    <span class="num">07</span>
+    <h2 class="st">Payments, cancellations + insurance</h2>
+    <h3 style="margin-top:0">Deposit + balance</h3>
+    <p>Your $1,000 deposit is paid and your spot is held. Your full balance is due by <b>Thursday, September 23, 2027</b> at the latest (60 days before the retreat), following the payment plan you chose at checkout. Payments come out automatically on the card saved at checkout and show on your statement as HABITAT RETREATS.</p>
+    <p><b>Late payments:</b> Because we pay the camps and vendors well in advance, every installment needs to land on time. Each one has a 5-day grace period. After that, a 3% late fee is added to the overdue amount. If you see a problem coming, tell us before the due date. We're always happy to work with you when we hear early.</p>
+    <h3>If you need to cancel</h3>
+    <p>Life happens. Here's how it works (full details in our <a href="https://www.habitatretreats.com/legal/terms-conditions" target="_blank" rel="noopener">Terms + Conditions</a>):</p>
+    <div class="tw"><table>
+      <tr><th>If you cancel</th><th>What happens</th></tr>
+      <tr><td>On or before Monday, July 5, 2027 (140+ days before)</td><td>Your payments (not your deposit) can be refunded, or moved to another Habitat retreat within 12 months</td></tr>
+      <tr><td>Tuesday, July 6 to Monday, August 23, 2027 (139 to 91 days before)</td><td>50% of the retreat total (not counting your deposit) is due and non-refundable. If you've paid less than that, the difference is charged at this time</td></tr>
+      <tr><td>Tuesday, August 24, 2027 or later (90 days or less)</td><td>No refunds. 100% of the retreat total is due at this time</td></tr>
+    </table></div>
+    <ul class="d">
+      <li>Your $1,000 deposit is non-refundable and non-transferable in every case. When someone signs up, we immediately pay vendors to secure their spot, and we can't get that money back.</li>
+      <li>If you cancel and part of your balance is kept under this policy, you can transfer that amount to a friend who takes your spot.</li>
+      <li>The card you booked with is saved on file, and any amount due under this policy is charged to it.</li>
+      <li>Cancel in writing to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a>.</li>
+      <li>No refunds if you're denied entry to Kenya or don't meet passport, eTA or entry requirements, so check yours now (see section 8).</li>
+      <li>No refunds for arriving late, leaving early, or skipping activities.</li>
+      <li>Weather, illness and flight problems don't change the policy. That's exactly what travel insurance is for. We wish we could accommodate everything life throws at us, but with the nature of group travel it's impossible.</li>
+    </ul>
+    <h3>Travel insurance</h3>
+    <p>Not required. We're in the bush, far from a hospital, with small planes in the mix. Insurance covers what we can't: missed flights, lost bags, medical care abroad, and cancelling for illness or emergencies. Some credit cards provide travel coverage depending on what company you use. Note: Kenya now also requires its own local health policy (section 8). It doesn't replace yours.</p>
+    <ul class="d">
+      <li>Look for: trip cancellation + interruption, medical + evacuation, baggage delay.</li>
+      <li>Buy it soon after booking. Many policies only cover pre-existing conditions if you buy within 14 to 21 days of your first payment.</li>
+      <li>Check your credit card. Some premium cards already include trip coverage.</li>
+      <li>Bringing a camera or other expensive gear? Check it's covered abroad.</li>
+      <li>We have used <a href="https://www.battleface.com/en-us/" target="_blank" rel="noopener">BattleFace</a> in the past.</li>
+    </ul>
+  </section>
+
+  <!-- 08 -->
+  <section class="sec" id="passports">
+    <span class="num">08</span>
+    <h2 class="st">Passports, health + safety</h2>
+    <p>If you're a US citizen, you need a valid passport, an approved eTA (Kenya's online travel authorization) and a Kenyan travel health insurance policy, bought online before you fly.</p>
+    <h3>Your passport</h3>
+    <ul class="d">
+      <li>It must be valid for at least 6 months after your trip, so valid until at least May 28, 2028. Check it today.</li>
+      <li>Have at least 2 blank pages.</li>
+      <li>Renewing? Do it this winter, not in the fall. Send us your new passport number when it arrives.</li>
+      <li>The name on your flights must match your name in your passport.</li>
+    </ul>
+    <h3>eTA (required)</h3>
+    <ul class="d">
+      <li>Every traveler applies for their own at <a href="https://www.etakenya.go.ke" target="_blank" rel="noopener">etakenya.go.ke</a>, the official government site. Any other site charging extra is not the government.</li>
+      <li>Apply once your flights and Nairobi hotel are booked, about 3 months before (late August 2027, <i>add this date to your calendar now</i>). Processing usually takes about 3 business days. Don't leave it to the last week.</li>
+      <li>Have ready: passport photo page, a headshot, flight confirmations, your hotel booking for Sunday, November 21, and our camp booking letter (we'll send it).</li>
+      <li>Download the approved eTA and keep it on your phone. Airlines check it at check-in.</li>
+      <li>We'll send a step-by-step walkthrough when the window opens.</li>
+    </ul>
+    <h3>Kenyan travel health insurance (required, new since October 2026)</h3>
+    <ul class="d">
+      <li>Since October 5, 2026, every tourist must buy a Kenyan travel health insurance policy before arrival. It costs about US$44 plus a US$8 fee.</li>
+      <li>You buy it inside the eTA application, or separately at <a href="https://insurance.ecitizen.go.ke" target="_blank" rel="noopener">insurance.ecitizen.go.ke</a>. Save the policy to your phone.</li>
+      <li>Airlines may check it before boarding, and you can be refused entry without it.</li>
+      <li>It doesn't replace your own travel insurance (section 7).</li>
+    </ul>
+    <p><b>Not a US citizen?</b> Check your own government's travel advice and tell us your nationality in your <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a> so we can help.</p>
+    <h3>Health</h3>
+    <ul class="d">
+      <li>No vaccines are required if you're flying from the US. If you're arriving from or connecting more than 12 hours through a country with yellow fever risk, you'll need a yellow fever certificate. <a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/kenya" target="_blank" rel="noopener">CDC: Kenya</a></li>
+      <li>Malaria tablets are up to you. Last time some people took them and some didn't. We definitely recommend talking to your doctor. The Mara sits at about 1,500 to 1,900 m (4,900 to 6,200 ft) and mosquitoes are rare at the camps. Every tent has a mosquito net and repellent. Cover up and use repellent after dusk.</li>
+      <li>Tell us about allergies, injuries, pregnancy or health conditions in your <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>. We only share it with who needs to know (the camps, the guides, your hosts). Please be thorough.</li>
+      <li>Bring prescriptions in their original packaging, with enough for the whole trip plus a few days.</li>
+      <li>Flying Doctors (AMREF) evacuation cover is included. In a real emergency in the bush, they fly you to a hospital in Nairobi.</li>
+      <li>Drink bottled water only, including for brushing your teeth. The camps provide it in your tent, at meals and in the vehicles.</li>
+      <li>The sun is strong on the equator. Hat, sunglasses, SPF, water.</li>
+    </ul>
+    <h3>Safety</h3>
+    <ul class="d">
+      <li>In the vehicle: stay seated, keep arms and legs inside, and never get out without the guide's OK.</li>
+      <li>In camp: follow the camp briefing. The camps aren't fenced and animals walk through.</li>
+      <li>Nairobi: normal big-city sense. Don't walk around alone after dark, keep valuables out of sight, use Uber or our transfers.</li>
+      <li>Emergency numbers in Kenya: 999 or 112. Good to have, but you won't need them since we are with you all week.</li>
+    </ul>
+  </section>
+
+  <!-- 09 -->
+  <section class="sec" id="know-before">
+    <span class="num">09</span>
+    <h2 class="st">Know before you go: Kenya</h2>
+    <h3 style="margin-top:0">Weather in late November</h3>
+    <p>November is green season, the "short rains". Expect warm, sunny days, cool mornings and nights, and short afternoon showers that usually blow through. The plains are green and full rather than dry. Game drives at dawn and after dark are cold in an open vehicle, so layers matter.</p>
+    <div class="tw"><table>
+      <tr><th>Late November</th><th>Day</th><th>Early morning + night</th><th>Rain</th></tr>
+      <tr><td><b>Maasai Mara</b></td><td>About 24 to 27°C / 75 to 81°F</td><td>About 13 to 16°C / 55 to 61°F</td><td>Short showers likely, usually in the afternoon during nap time</td></tr>
+    </table></div>
+    <h3>Time zone</h3>
+    <p>Kenya is 9 hours ahead of Austin and 11 hours ahead of Los Angeles in November.</p>
+    <h3>Money</h3>
+    <ul class="d">
+      <li>Currency: Kenyan shilling (KES). Roughly 129 KES = $1 USD. Exchange rates may change over time.</li>
+      <li>Everything on the retreat is paid for. You'll only need money for extras, the spa, souvenirs and tips which can all be done with card.</li>
+      <li>Cards (Visa, Mastercard) work at both camps, sometimes with a surcharge.</li>
+      <li>If you want to get out cash, make sure to bring your debit card.</li>
+    </ul>
+    <h3>Tipping</h3>
+    <p>Completely up to you. Never required, always appreciated. Had an incredible experience? Tip more. Felt more "meh"? That's OK too. Tip camp staff at the end of your stay at each camp. This can be done with card.</p>
+    <h3>Phone + data</h3>
+    <ul class="d">
+      <li>Both camps have Wi-Fi. There's cell coverage across much of Kenya, but it's patchy out on drives.</li>
+      <li>If you want cell coverage, get an international plan or day pass from your carrier, or an eSIM (Airalo, Holafly) before you go.</li>
+      <li>We'll communicate through the group message which is accessible in camp on Wi-Fi.</li>
+    </ul>
+    <h3>Plugs + power</h3>
+    <p>Type G (3 square pins, UK style), 230 to 240V. Bring a universal adapter.</p>
+    <h3>Plastic bag ban</h3>
+    <p>Kenya has one of the strictest plastic bag bans in the world. Plastic carrier bags, duty-free bags and zip-lock bags get taken at the airport and can mean a fine. Pack toiletries in a fabric pouch and leave any plastic bags on the plane.</p>
+    <h3>Local customs</h3>
+    <ul class="d">
+      <li>The Maasai are the people of the Mara. Your guides may be of the Maasai tribe or other local tribes, and the conservancies are Maasai land.</li>
+      <li>They are some of the kindest people in the world and truly wonderful to talk to. This is one of our favorite parts of this retreat and we encourage you to lean in and connect with the people at both camps.</li>
+      <li>A few words in Swahili: Jambo (hello) | Asante (thank you) | Karibu (welcome) | Pole pole (slowly, slowly)</li>
+    </ul>
+  </section>
+
+  <!-- 10 -->
+  <section class="sec" id="expect">
+    <span class="num">10</span>
+    <h2 class="st">What to expect on retreat</h2>
+    <h3 style="margin-top:0">Your hosts</h3>
+    <div class="host-card"><div class="host-name">KENNON GOLDREYER</div><div class="host-title">Founder, Habitat Retreats</div><div class="host-body"><img src="photos/host-kennon-vehicle.jpg" alt="Kennon waving from a safari vehicle on the plains" loading="lazy" style="object-position:38% 50%"><p>Kennon came into Habitat already believing the best trips are the ones you can't fully explain to people back home. She's your hype girl on the ground, the one who's already scoped the best swimming spot before anyone else wakes up.</p></div></div>
+    <figure class="photo host-together"><img src="photos/host-together-plains.jpg" alt="Kennon and Carrigan standing together on the Mara plains" loading="lazy"></figure>
+    <div class="host-card flip"><div class="host-name">CARRIGAN WHITELEY</div><div class="host-title">Founder, Habitat Retreats</div><div class="host-body"><img src="photos/host-carrigan-balloon.jpg" alt="Carrigan smiling from a hot air balloon basket" loading="lazy" style="object-position:50% 72%"><p>Carrigan started Habitat because she knew there was a way to take more intentional vacations, and build a community around it at the same time. She's the one who'll talk you into the ridge hike, then hand you a glass of wine at the top.</p></div></div>
+    <p>We're with you the whole week.</p>
+
+    <h3>Not a yoga retreat</h3>
+    <p>Unlike other Habitat Retreats, this one is not a yoga retreat. Instead, we create a more intentional experience through:</p>
+    <ul class="d">
+      <li>A custom journal, and prompts if you want them</li>
+      <li>Chatting about the book <i>A Lion Tracker's Guide to Life</i>. We highly encourage you to read this before the week starts. We will talk about it during the retreat, more on this soon.</li>
+      <li>Guided group discussion, opening and closing circles</li>
+      <li>Stretching and mindfulness, offered and optional</li>
+      <li>One no-phone day, maybe one of our favorite experiences in the world</li>
+    </ul>
+
+    <h3>The activities</h3>
+    <ul class="d">
+      <li><span class="q">Game drives (for the most part twice daily).</span> Open-sided 4x4 safari vehicles with a Maasai guide. Dawn drives leave in the dark and run about 3 to 4 hours, with coffee before you go &amp; snacks out in the bush. Evening drives head out in the late afternoon for golden hour. Bring layers and binoculars.</li>
+      <li><span class="q">Hot air balloon (Sat, Nov 27).</span> Pickup at camp between about 4 and 5:30am, a safety briefing from the pilot, then lift-off just before sunrise. After we land, breakfast set up in the grass, mimosas, breakfast, coffee, the works. Wear layers, the basket is cold at dawn.</li>
+      <li><span class="q">Walking safari (Fri, Nov 26).</span> A slow, guided walk with a Maasai guide to see the small stuff you miss from the vehicle. The distance is short and the pace is leisurely. Wear closed toe walking shoes (basic sneakers is great).</li>
+      <li><span class="q">Night game drive (Fri, Nov 26).</span> Our night drive features using a spotlight to locate nocturnal animals. Allowed in camp #2, not in #1.</li>
+      <li><span class="q">Bush breakfasts.</span> Breakfast set up out on the plains after the walking safari and after the balloon.</li>
+      <li><span class="q">Sundowners.</span> Drinks and snacks out in the bush as the sun goes down.</li>
+      <li><span class="q">Bonfire, dinner in the bush + stargazing.</span> An evening at Eagle View we stop the vehicles and eat dinner in the bush under the stars. A very special moment from the week.</li>
+      <li><span class="q">Saruni's community projects.</span> The Enjoolata Centre, about Maasai culture, and the Basecamp Maasai Brand shop, a fair-trade beadwork project run by Maasai women.</li>
+      <li><span class="q">Bird walk</span> along the Talek Trail at Basecamp.</li>
+      <li><span class="q">Group discussions + circles.</span> Opening circle on day 1, afternoon discussions on days 2 and 4, closing circle on day 6. Come to any or all.</li>
+      <li><span class="q">The spa + pool at Eagle View.</span> Massages and spa treatments are extra and booked at camp reception.</li>
+    </ul>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/do-bush-breakfast.jpg" alt="The group at a long breakfast table set up in the bush under an acacia tree" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/do-maasai-guide.jpg" alt="A Maasai guide in a red shuka at the wheel of the safari vehicle" loading="lazy"></figure>
+    </div>
+
+    <h3>What is possible to see</h3>
+    <p><b>The Big 5:</b> lion, leopard, elephant, buffalo and rhino (rhino is the rare one here). Plus so much more:</p>
+    <ul class="d">
+      <li><b>Cats + predators:</b> cheetah, spotted hyena, black-backed jackal, bat-eared fox and serval. If we're lucky: African wild dog, caracal, striped hyena, aardwolf</li>
+      <li><b>Grazers:</b> wildebeest, zebra, Maasai giraffe, eland, topi, impala, Thomson's and Grant's gazelle, waterbuck, hartebeest, dik-dik and warthog (aka Pumbaa)</li>
+      <li><b>In the river:</b> hippo and Nile crocodile</li>
+      <li><b>In the trees:</b> olive baboon and vervet monkey</li>
+      <li><b>After dark (night drive):</b> bushbaby, genet, springhare, porcupine, honey badger</li>
+      <li><b>Birds:</b> 450+ species, like ostrich, secretary bird, lilac-breasted roller, grey crowned crane, martial eagle and plenty of vultures</li>
+    </ul>
+    <p>Wildlife is wild, so nothing is guaranteed. One of the reasons we plan this retreat in November is because it's <i>baby season</i>!</p>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/see-lion-cubs.jpg" alt="Three young lions resting in the green grass" loading="lazy"></figure>
+      <figure class="photo"><img src="photos/see-elephant-family.jpg" alt="A family of elephants with a baby on the plains" loading="lazy" style="object-position:30% 50%"></figure>
+    </div>
+
+    <h3>Food</h3>
+    <ul class="d">
+      <li>All meals at camp, three a day, plus the bush breakfasts and lunch on departure day. Expect a big breakfast after the morning drive, then 3-course lunches and dinners.</li>
+      <li>Dietary needs go in your <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>. We pass them to both camps ahead of time.</li>
+      <li>Drinks: local beer and wine are included at both camps. The camps may ask you to sign for each drink. Habitat settles the local beer and wine at the end. Anything that is a specialty drink or outside this is on you. Bottled water is everywhere: your tent, meals and the vehicles.</li>
+    </ul>
+    <h3>Free time</h3>
+    <p>The middle of every day is yours: rest, journal, nap, the pool at Eagle View, the viewing deck.</p>
+    <h3>Staying in touch</h3>
+    <ul class="d">
+      <li><b>Email:</b> <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> is the best way to reach us before the retreat.</li>
+      <li><b>Group message:</b> there will be a retreat group chat for communication right before and during the retreat. Heads up: names and numbers are visible to everyone in it.</li>
+      <li><b>Travel-day group chats:</b> about a week before, grouped by arrival time.</li>
+      <li><b>Group call:</b> about a month before (30 minutes, notes sent after if you can't make it). We'll set the date about a month out, so stay tuned.</li>
+    </ul>
+    <h3>Anonymous feedback</h3>
+    <p>We want your week to be the best one. We also know it's hard to tell the hosts something isn't working. So during the retreat, an anonymous form stays open and we check it every day. Wishing there was more of something? Someone making you uncomfortable? Room issue? Tell us early so we can fix it before you go home. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a></p>
+    <h3>Arrival + departure day</h3>
+    <p>Monday is a travel day: the bush flight, a game drive on the way in, then camp. Sunday is slow: sleep in, pack, lunch, one last drive to the airstrip. We land at Wilson in the afternoon and most flights home leave late in the evening, so there's time to spare. Last year we hung out and had dinner at the Crowne Plaza before heading to the airport.</p>
+    <h3>If you get sick or hurt</h3>
+    <p>Tell us right away, day or night. We'll help you get the care you need, and Flying Doctors evacuation cover is included for anything serious. We will take good care of you!</p>
+    <h3>Valuables</h3>
+    <p>Habitat isn't responsible for lost or damaged belongings, so bring nothing you'd be heartbroken to lose. Leave expensive jewelry and watches at home.</p>
+    <h3>Photos + extras</h3>
+    <p>Bring a camera with a zoom if you have one. Phones work great for the landscapes. Binoculars make game drives so much better.</p>
+    <h3>After the retreat</h3>
+    <p>A fully anonymous survey and a shared photo album. Left something behind? Tell us and we'll help where we can.</p>
+    <h3>A few house rules</h3>
+    <ul class="d">
+      <li>Be on time. Game drives and the bush flight leave on schedule.</li>
+      <li>Anything you book on your own is at your own risk.</li>
+      <li>Your liability waiver is attached to the email with this guide. Fill it out, sign it and email it back to <a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a> before you arrive. You can't take part without it.</li>
+    </ul>
+  </section>
+
+  <!-- 11 -->
+  <section class="sec" id="packing">
+    <span class="num">11</span>
+    <h2 class="st">Packing list</h2>
+    <p>The official bush flight rule is 15 kg (33 lb) total, including your carry-on, in a soft-sided bag. Last year nobody weighed anything, but pack light anyway. Pack neutral: khaki, tan, olive, brown and green. Skip black because flies are more attracted to it.</p>
+    <div class="frame"><p><b>Pack a carry-on like your checked bag might be late.</b> Change of clothes, meds, chargers, toiletries.</p></div>
+    <div class="two">
+      <div><h3>Travel essentials</h3><ul class="d check">
+        <li>Passport (valid until at least May 28, 2028) + approved eTA on your phone</li>
+        <li>Kenyan travel health insurance policy on your phone</li>
+        <li>Your own travel insurance details</li>
+        <li>Soft-sided duffel (no hard shell)</li>
+        <li>Universal adapter (Type G) + charger + power bank</li>
+        <li>Some cash for tips</li>
+      </ul></div>
+      <div><h3>Game drives + activities</h3><ul class="d check">
+        <li>Fleece or puffer for dawn drives, the balloon and night drives</li>
+        <li>Light scarf + gloves + maybe a hat for early mornings (sometimes the weeks can be cooler than others, better to be prepared)</li>
+        <li>Windbreaker or light rain jacket</li>
+        <li>Closed walking shoes or hiking boots (needed for the walking safari)</li>
+        <li>Sun hat with a brim/baseball cap + polarized sunglasses</li>
+        <li>Binoculars (not required of course but really nice to have)</li>
+        <li>Small daypack</li>
+        <li>Reusable water bottle</li>
+      </ul></div>
+      <div><h3>Days</h3><ul class="d check">
+        <li>Long trousers (khaki, cargo, whatever you want), shorts</li>
+        <li>Long and short-sleeve tops in neutral colors</li>
+        <li>Swimsuit (pool at Eagle View)</li>
+        <li>Sandals or shoes of your choice for being around camp and during chill/free time</li>
+      </ul></div>
+      <div><h3>Evenings</h3><ul class="d check">
+        <li>Light sweater or sweatshirt</li>
+        <li>Comfortable layers for dinner. Dress is casual</li>
+        <li>Warm sleepwear (nights can be cool)</li>
+      </ul></div>
+      <div><h3>Toiletries + health</h3><ul class="d check">
+        <li>Prescriptions in original packaging</li>
+        <li>SPF + lip balm with SPF</li>
+        <li>Insect repellent + after-bite cream</li>
+        <li>Antimalarials if your doctor recommends them or you want them</li>
+        <li>Eye drops + glasses if you wear contacts (the dust gets some people)</li>
+        <li>Allergy meds (I repeat, the dust gets some people)</li>
+        <li>Toiletries in a fabric pouch (no zip-lock bags in Kenya)</li>
+      </ul></div>
+      <div><h3>Nice to have</h3><ul class="d check">
+        <li>Camera if you have one</li>
+        <li>A good book</li>
+        <li>A fun game</li>
+      </ul>
+      <h3>Leave at home</h3><ul class="d">
+        <li>Plastic bags of any kind, including zip-locks</li>
+        <li>Expensive jewelry and watches</li>
+        <li>Hard-shell suitcase</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="sec" id="timeline">
+    <span class="num">12</span>
+    <h2 class="st">Your timeline + to-do list</h2>
+    <div class="tls">
+      <div class="tl"><div>Now</div><ul class="d check">
+        <li>Check your passport is valid until at least May 28, 2028, with 2 blank pages</li>
+        <li>Sign and return your waiver</li>
+        <li>Buy travel insurance (not required, strongly recommended if your credit card doesn't already provide protection)</li>
+        <li>Put Nov 21 to 28 in your calendar</li>
+        <li>Take the <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7u2kuV1fyHj5GzP_kXplLgOZrj8qUxyGzDWy-2w_G9Jx1SQ/viewform" target="_blank" rel="noopener">Roommate Matching Quiz</a></li>
+      </ul></div>
+      <div class="tl"><div>May 2027<br><span class="note">About 6 months out</span></div><ul class="d check">
+        <li>Book flights. Send us your flights if unsure</li>
+        <li>Book your Nairobi hotel for Nov 21</li>
+        <li>Fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a></li>
+      </ul></div>
+      <div class="tl"><div>Late August 2027<br><span class="note">About 3 months out</span></div><ul class="d check">
+        <li>Apply for your eTA at <a href="https://www.etakenya.go.ke" target="_blank" rel="noopener">etakenya.go.ke</a> and buy the Kenyan travel health insurance. We'll send a walkthrough</li>
+      </ul></div>
+      <div class="tl"><div>By Thu, Sept 23, 2027</div><ul class="d check">
+        <li>Full balance paid</li>
+      </ul></div>
+      <div class="tl"><div>1 month out</div><ul class="d check">
+        <li>Waiver returned</li>
+        <li>RSVP to the group call</li>
+      </ul></div>
+      <div class="tl"><div>By Fri, Oct 22, 2027</div><ul class="d check">
+        <li>Final flights in the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a></li>
+      </ul></div>
+      <div class="tl"><div>November 2027</div><ul class="d check">
+        <li>Pack and get so unbelievably giddy.</li>
+      </ul></div>
+      <div class="tl"><div>Travel day</div><ul class="d check">
+        <li>Passport, eTA, Kenyan insurance policy and hotel booking on your phone</li>
+        <li>Text us when you land</li>
+      </ul></div>
+    </div>
+    <div class="photo-pair">
+      <figure class="photo"><img src="photos/close-picnic.jpg" alt="The group sitting on the grass by the safari vehicles during a picnic stop" loading="lazy" style="object-position:62% 50%"></figure>
+      <figure class="photo"><img src="photos/close-sundowner-bar.jpg" alt="A guide pouring drinks at a sundowner bar out in the bush" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="sec" id="faq">
+    <span class="num">13</span>
+    <h2 class="st">FAQ</h2>
+    <h3 style="margin-top:0">Before you go</h3>
+    <p><span class="q">Is it weird to come alone?</span><br>Not even a little. Most people do. We'll match you with a roommate.</p>
+    <p><span class="q">Can I bring a friend?</span><br>Yes. Tell us and we'll room you together.</p>
+    <p><span class="q">Who comes on this one?</span><br>Everyone is welcome. This group is mixed, and most guests are between 25 and 40.</p>
+    <p><span class="q">Is this a yoga retreat?</span><br>No, this one's different on purpose. What you get instead: space to think, a custom journal, lots of intriguing conversation with a group willing to actually talk. Stretching and mindfulness are offered, but optional.</p>
+    <p><span class="q">Do I need a visa?</span><br>You need an eTA and the Kenyan travel health insurance, both online before you fly. See section 8.</p>
+    <p><span class="q">Do I need vaccines or malaria tablets?</span><br>None are required flying from the US. Malaria tablets are up to you. Talk to your doctor. See section 8.</p>
+    <h3>Travel</h3>
+    <p><span class="q">Why should I land the day before?</span><br>Most flights from the US land late at night, and the bush flight leaves at 10am. Landing Sunday takes the stress out of Monday.</p>
+    <p><span class="q">Where should I stay?</span><br>Carrigan and Kennon will be at the Crowne Plaza Nairobi Airport (free airport shuttle). Stay there or anywhere near JKIA. See section 6.</p>
+    <p><span class="q">Will they really weigh my bag?</span><br>That's the official rule, but last year nobody weighed any bags and lots of tourists had large hard shell suitcases. Pack light anyway.</p>
+    <p><span class="q">Can I come early or stay longer?</span><br>Yes. Give us a holler and we'll help you plan.</p>
+    <h3>On retreat</h3>
+    <p><span class="q">What's the pace?</span><br>Early mornings, slow mid-day, golden-hour evenings. You can rest every day.</p>
+    <p><span class="q">Do I have to do everything?</span><br>No. Every activity is optional.</p>
+    <p><span class="q">I have a food allergy.</span><br>Put it in your <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDAolal4tbXykqFk0gzcOu7YR_brMBNZykrRxafM05uKukA/viewform" target="_blank" rel="noopener">Flight + Info Form</a>. We pass it to both camps ahead of time.</p>
+    <p><span class="q">Is alcohol included?</span><br>Local beer and wine are included at both camps. You may be asked to sign for each drink. Habitat settles the local beer and wine at the end. Anything that is a specialty drink or outside this is on you.</p>
+    <p><span class="q">Can I get a massage?</span><br>Yes, at Eagle View. It's extra and booked on the spot.</p>
+    <p><span class="q">What if my roommate and I don't click?</span><br>Tell us early, privately or through the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhxK-NMTiS4dZI3Ii6eDYjHri0FCyWcgNDHn8eDjxqHDwxAQ/viewform" target="_blank" rel="noopener">Anonymous Feedback Form</a>. We'll sort it out.</p>
+    <p><span class="q">What do I wear to dinner?</span><br>Whatever's comfortable. Safari is casual.</p>
+    <p><span class="q">Is it safe with the animals around?</span><br>Yes, if you follow the guides and the camp briefing. Askaris (Maasai camp guards) watch the camps day and night and will walk you to and from your tent before sunrise and after sunset.</p>
+    <p><span class="q">What about bugs?</span><br>Fewer than you'd think. Mosquitoes are rare at the camps because of the altitude. Every tent has a net and repellent.</p>
+    <p><span class="q">Will I have phone service or Wi-Fi?</span><br>Yes! Both camps have Wi-Fi in the tents.</p>
+    <h3>Money</h3>
+    <p><span class="q">Should I tip?</span><br>See Tipping in section 9.</p>
+    <p><span class="q">Do I need cash?</span><br>Not really, you can get out cash if you would like to. Cards work at the camps.</p>
+  </section>
+
+  <!-- 14 -->
+  <section class="sec" id="contacts">
+    <span class="num">14</span>
+    <h2 class="st">Contacts + emergencies</h2>
+    <p>Screenshot this one.</p>
+    <div class="ctw"><table>
+      <tr><th>Who</th><th>How to reach</th><th>When</th></tr>
+      <tr><td><b>Habitat</b></td><td><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></td><td>All logistics, anytime. The best way to reach us</td></tr>
+      <tr><td><b>Kennon</b></td><td>+1 512 627 2297 (call, text, WhatsApp)</td><td>Anytime before the retreat, travel day + on the ground</td></tr>
+      <tr><td><b>Carrigan</b></td><td>+1 903 515 0061 (call, text, WhatsApp)</td><td>Anytime before the retreat, travel day + on the ground</td></tr>
+      <tr><td><b>Saruni Basecamp</b><br><span class="note">Both camps + transfers</span></td><td>Beth Makau, +254 796 222 555, <a href="mailto:Beth@sarunibasecamp.com">Beth@sarunibasecamp.com</a><br>Reservations: +254 735 950 903, <a href="mailto:reservations@sarunibasecamp.com">reservations@sarunibasecamp.com</a></td><td>If you can't reach us</td></tr>
+      <tr><td><b>Emergency in Kenya</b></td><td>999 or 112</td><td>Police, ambulance, fire</td></tr>
+      <tr><td><b>US Embassy Nairobi</b></td><td>+254 20 363 6000. After-hours emergencies: +254 20 363 6170. United Nations Avenue, Gigiri, Nairobi</td><td>Lost passport, serious emergencies</td></tr>
+    </table></div>
+    <div class="addr"><span>Saruni Basecamp</span>Talek River, Maasai Mara, Kenya</div>
+    <div class="addr"><span>Saruni Eagle View</span>Mara Naboisho Conservancy, Maasai Mara, Kenya</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big">We can't wait to see you in Kenya.</div>
+    <div class="meta2">xx, Kennon + Carrigan<br><a href="mailto:habitat@habitatretreats.com">habitat@habitatretreats.com</a></div>
+  </div>
+</footer>
+<a class="totop" href="#contents">&#8593; Contents</a>
+</body>
+</html>
